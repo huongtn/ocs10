@@ -859,7 +859,7 @@ Begin VB.Form FrmMain
       Width           =   18585
       _ExtentX        =   32782
       _ExtentY        =   635
-      ButtonWidth     =   2461
+      ButtonWidth     =   2619
       ButtonHeight    =   582
       Appearance      =   1
       Style           =   1
@@ -875,7 +875,7 @@ Begin VB.Form FrmMain
             Style           =   4
          EndProperty
          BeginProperty Button3 {66833FEA-8583-11D1-B16A-00C0F0283628} 
-            Caption         =   "New"
+            Caption         =   "Them Moi"
             Key             =   "KeyNew"
             Object.ToolTipText     =   "Add new Car's testing result"
             ImageIndex      =   1
@@ -884,7 +884,7 @@ Begin VB.Form FrmMain
             Style           =   4
          EndProperty
          BeginProperty Button5 {66833FEA-8583-11D1-B16A-00C0F0283628} 
-            Caption         =   "Edit"
+            Caption         =   "Chinh Sua"
             Key             =   "KeyEdit"
             Object.ToolTipText     =   "Edit"
             ImageIndex      =   2
@@ -893,7 +893,7 @@ Begin VB.Form FrmMain
             Style           =   4
          EndProperty
          BeginProperty Button7 {66833FEA-8583-11D1-B16A-00C0F0283628} 
-            Caption         =   "Abort"
+            Caption         =   "Huy Bo"
             Key             =   "KeyAbort"
             Object.ToolTipText     =   "Abort any change"
             ImageIndex      =   3
@@ -902,7 +902,7 @@ Begin VB.Form FrmMain
             Style           =   4
          EndProperty
          BeginProperty Button9 {66833FEA-8583-11D1-B16A-00C0F0283628} 
-            Caption         =   "Save"
+            Caption         =   "Luu Lai"
             Key             =   "KeySave"
             Object.ToolTipText     =   "Save changed Parameters"
             ImageIndex      =   4
@@ -911,7 +911,7 @@ Begin VB.Form FrmMain
             Style           =   4
          EndProperty
          BeginProperty Button11 {66833FEA-8583-11D1-B16A-00C0F0283628} 
-            Caption         =   "Delete"
+            Caption         =   "Xoa"
             Key             =   "KeyDelete"
             Object.ToolTipText     =   "Delete one Car's Testing Result"
             ImageIndex      =   5
@@ -920,7 +920,7 @@ Begin VB.Form FrmMain
             Style           =   4
          EndProperty
          BeginProperty Button13 {66833FEA-8583-11D1-B16A-00C0F0283628} 
-            Caption         =   "Update"
+            Caption         =   "Refresh"
             Key             =   "KeyUpdate"
             Object.ToolTipText     =   "Update all new parameters of Database"
             ImageIndex      =   6
@@ -929,7 +929,7 @@ Begin VB.Form FrmMain
             Style           =   4
          EndProperty
          BeginProperty Button15 {66833FEA-8583-11D1-B16A-00C0F0283628} 
-            Caption         =   "Report"
+            Caption         =   "Bao Cao"
             Key             =   "KeyReport"
             Object.ToolTipText     =   "Print report seperate"
             ImageIndex      =   7
@@ -950,7 +950,7 @@ Begin VB.Form FrmMain
             Style           =   4
          EndProperty
          BeginProperty Button17 {66833FEA-8583-11D1-B16A-00C0F0283628} 
-            Caption         =   "  Parameter  "
+            Caption         =   "  Tieu Chuan  "
             Key             =   "KeyParameter"
             Object.ToolTipText     =   "Table Registered Parameters Of Cars"
             ImageIndex      =   8
@@ -3086,9 +3086,9 @@ Begin VB.Form FrmMain
       End
    End
    Begin VB.Menu MnuFileOCS10 
-      Caption         =   "&File"
+      Caption         =   "He Thong"
       Begin VB.Menu MnuSaveAsDataBase 
-         Caption         =   "Save as Database"
+         Caption         =   "Sao Luu CSDL"
          Shortcut        =   ^A
       End
       Begin VB.Menu c 
@@ -3100,78 +3100,48 @@ Begin VB.Form FrmMain
       Begin VB.Menu cc 
          Caption         =   "-"
       End
+      Begin VB.Menu ChangePass 
+         Caption         =   "Thay Doi Mat Khau"
+      End
+      Begin VB.Menu ccc 
+         Caption         =   "-"
+      End
       Begin VB.Menu MnuExit 
          Caption         =   "&Exit"
          Shortcut        =   ^X
       End
    End
-   Begin VB.Menu MnuEdit 
-      Caption         =   "&Edit"
-      Begin VB.Menu MnuEditResult 
-         Caption         =   "Edit Parameters"
-      End
-      Begin VB.Menu d 
-         Caption         =   "-"
-      End
-      Begin VB.Menu MnuAddNew 
-         Caption         =   "Add new Parameters"
-      End
-      Begin VB.Menu e 
-         Caption         =   "-"
-      End
-      Begin VB.Menu MnuAbort 
-         Caption         =   "Abort Parameters"
-      End
-      Begin VB.Menu f 
-         Caption         =   "-"
-      End
-      Begin VB.Menu MnuSave 
-         Caption         =   "Save Parameters"
-      End
-      Begin VB.Menu g 
-         Caption         =   "-"
-      End
-      Begin VB.Menu MnuUpdateParameter 
-         Caption         =   "Update Parameter"
-      End
-      Begin VB.Menu h 
-         Caption         =   "-"
-      End
-      Begin VB.Menu MnuDeleteParameter 
-         Caption         =   "Delete Parameters"
-      End
-   End
    Begin VB.Menu MnuReport 
-      Caption         =   "&Report"
+      Caption         =   "Bao Cao"
       Begin VB.Menu MnuReportSelected 
-         Caption         =   "&Report Selected"
+         Caption         =   "Xe Hien Tai"
       End
       Begin VB.Menu i 
          Caption         =   "-"
       End
       Begin VB.Menu MnuReportTotal 
-         Caption         =   "Report Total"
+         Caption         =   "Tat Ca Xe"
       End
    End
    Begin VB.Menu MnuTable 
-      Caption         =   "&Table"
+      Caption         =   "Du Lieu Khac"
       Begin VB.Menu MnuTester 
-         Caption         =   "Testers"
+         Caption         =   "Nguoi Kiem Tra"
       End
       Begin VB.Menu MnuRegisteredParameter 
-         Caption         =   "Parameter Checking"
+         Caption         =   "Bang Tieu Chuan Xe"
       End
    End
    Begin VB.Menu MnuHelp 
-      Caption         =   "&Help"
+      Caption         =   "Tro Giup"
       Begin VB.Menu MnuHelpGuide 
-         Caption         =   "User's Guide"
+         Caption         =   "Phan Mem OCS10"
       End
       Begin VB.Menu k 
          Caption         =   "-"
       End
       Begin VB.Menu MnuHelpAboutOCS10DBS 
-         Caption         =   "About OCS10-DBS"
+         Caption         =   "ThietBiCongNghiep.vn"
       End
       Begin VB.Menu L 
          Caption         =   "-"
@@ -3898,7 +3868,6 @@ DatCheckingParameter.RecordSource = "select * from TblCheckingParameter"
 
 ColorGreen = &HFF00&
 ColorOrange = &HFFFF&
-ToolBarEnable
 SearchingFramePosition
 ListNameUpdate
 ListNameSearch
@@ -3919,13 +3888,6 @@ freSearch(1).Enabled = False
 freSearch(2).Enabled = False
 freSearch(3).Enabled = False
 freSearch(4).Enabled = False
-End Sub
-
-Private Sub ToolBarEnable()
-TbrMain.Buttons(7).Enabled = False
-TbrMain.Buttons(9).Enabled = False
-TbrMain.Buttons(13).Enabled = False
-MnuUpdateParameter.Enabled = False
 End Sub
 
 
