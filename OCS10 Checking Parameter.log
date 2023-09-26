@@ -1,1 +1,21 @@
 Line 14: Class MSDBGrid.DBGrid of control DBGCheckingUpdate was not a loaded control class.
+Line 40: Class MSComctlLib.ImageList of control ImageList1 was not a loaded control class.
+Line 90: Class MSComctlLib.Toolbar of control TbrMain was not a loaded control class.
+Line 15: The property name Bindings in DBGCheckingUpdate is invalid.
+Line 18: The property name OleObjectBlob in DBGCheckingUpdate is invalid.
+Line 43: The property name _ExtentX in ImageList1 is invalid.
+Line 44: The property name _ExtentY in ImageList1 is invalid.
+Line 46: The property name ImageWidth in ImageList1 is invalid.
+Line 47: The property name ImageHeight in ImageList1 is invalid.
+Line 48: The property name MaskColor in ImageList1 is invalid.
+Line 49: The property name _Version in ImageList1 is invalid.
+Line 88: The property name Images in ImageList1 is invalid.
+Line 97: The property name _ExtentX in TbrMain is invalid.
+Line 98: The property name _ExtentY in TbrMain is invalid.
+Line 99: The property name ButtonWidth in TbrMain is invalid.
+Line 100: The property name ButtonHeight in TbrMain is invalid.
+Line 102: The property name Style in TbrMain is invalid.
+Line 103: The property name TextAlignment in TbrMain is invalid.
+Line 104: The property name ImageList in TbrMain is invalid.
+Line 105: The property name _Version in TbrMain is invalid.
+Line 185: The property name Buttons in TbrMain is invalid.
