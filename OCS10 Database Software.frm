@@ -6,14 +6,14 @@ Object = "{8E27C92E-1264-101C-8A2F-040224009C02}#7.0#0"; "MSCAL.OCX"
 Begin VB.Form FrmMain 
    BorderStyle     =   0  'None
    Caption         =   "DBS10 - Database Software  -  Designed by INDUSTRY SOLUTION Co.  -   www.thietbicongnghiep.vn"
-   ClientHeight    =   10845
+   ClientHeight    =   10800
    ClientLeft      =   45
    ClientTop       =   615
    ClientWidth     =   18585
    FillColor       =   &H00808080&
    Icon            =   "OCS10 Database Software.frx":0000
    LinkTopic       =   "Form1"
-   ScaleHeight     =   10409.25
+   ScaleHeight     =   10366.06
    ScaleMode       =   0  'User
    ScaleWidth      =   21278.55
    StartUpPosition =   2  'CenterScreen
@@ -3805,7 +3805,7 @@ End Sub
 
 Private Sub CmdShowAll_Click()
 DatTestingParameter.Refresh
-txtSqlReport.Text = "SELECT * From TblTestingParameter"
+txtSqlReport.Text = "SELECT * From TblTestingParameter  order by STT desc"
 End Sub
 
 Private Sub CmdTester_Click()
@@ -3854,13 +3854,13 @@ End Sub
 
 Private Sub Form_Load()
 Dim Index As Integer
-For Index = 1 To 13
+For Index = 1 To 12
     TbrMain.Buttons.Item(Index).Visible = False
 Next Index
     
 txtSqlReport.Text = "SELECT * FROM TblTestingParameter"
 DatTestingParameter.DatabaseName = App.Path & "\OCS10_DataBase_97.mdb"
-DatTestingParameter.RecordSource = "select * from TblTestingParameter"
+DatTestingParameter.RecordSource = "select * from TblTestingParameter order by STT desc"
 
 DatCheckingParameter.DatabaseName = App.Path & "\OCS10_DataBase_97.mdb"
 DatCheckingParameter.RecordSource = "select * from TblCheckingParameter"
@@ -3976,7 +3976,11 @@ Dim rs_ln As Recordset
     ' Load the ComboBox.
     rs_ln.MoveFirst
     Do While Not rs_ln.EOF
-      LstEngineSearch.AddItem rs_ln!EngineNumber
+        If rs_ln!EngineNumber <> "" Then
+            LstEngineSearch.AddItem rs_ln!EngineNumber
+        End If
+        
+     
         rs_ln.MoveNext
     Loop
 
@@ -4009,8 +4013,10 @@ Dim rs_ln As Recordset
     ' Load the ComboBox.
     rs_ln.MoveFirst
     Do While Not rs_ln.EOF
-      LstChassisSearch.AddItem rs_ln!ChassisNumber
-        rs_ln.MoveNext
+      If rs_ln!ChassisNumber <> "" Then
+        LstChassisSearch.AddItem rs_ln!ChassisNumber
+        End If
+      rs_ln.MoveNext
     Loop
 
     rs_ln.Close
@@ -4089,6 +4095,11 @@ End Sub
 
 
 Private Sub Login_Click()
+FrmLogin.Show
+
+End Sub
+Sub BeginUpdate()
+
 Dim Index As Integer
 For Index = 1 To 13
     TbrMain.Buttons.Item(Index).Visible = True
@@ -4147,7 +4158,7 @@ Private Sub TabSearch_Click()
   freSearch(1).Enabled = False
   freSearch(2).Enabled = False
   freSearch(3).Enabled = False
-  DatTestingParameter.RecordSource = "SELECT * FROM TblTestingParameter"
+  DatTestingParameter.RecordSource = "SELECT * FROM TblTestingParameter order by STT desc"
   
   '----------------------------------------------------------------------------
   
@@ -4185,11 +4196,7 @@ TbrMain.Buttons(11).Enabled = True
 TbrMain.Buttons(15).Enabled = True
 TbrMain.Buttons(17).Enabled = True
 
-MnuAddNew.Enabled = True
-MnuEditResult.Enabled = True
-MnuAbort.Enabled = False
-MnuSave.Enabled = False
-MnuDeleteParameter.Enabled = True
+ 
 MnuReportSelected.Enabled = True
 MnuReportTotal.Enabled = True
 MnuRegisteredParameter.Enabled = True
@@ -4211,10 +4218,7 @@ TbrMain.Buttons(5).Enabled = False
 TbrMain.Buttons(11).Enabled = False
 TbrMain.Buttons(15).Enabled = False
 TbrMain.Buttons(17).Enabled = False
-
-MnuEditResult.Enabled = False
-MnuSave.Enabled = True
-MnuDeleteParameter.Enabled = False
+ 
 MnuReportSelected.Enabled = False
 MnuReportTotal.Enabled = False
 MnuRegisteredParameter.Enabled = False
@@ -4277,11 +4281,6 @@ TbrMain.Buttons(9).Enabled = True
 TbrMain.Buttons(11).Enabled = False
 TbrMain.Buttons(15).Enabled = False
 TbrMain.Buttons(17).Enabled = False
-MnuAddNew.Enabled = False
-MnuEditResult.Enabled = False
-MnuAbort.Enabled = True
-MnuSave.Enabled = True
-MnuDeleteParameter.Enabled = False
 MnuReportSelected.Enabled = False
 MnuReportTotal.Enabled = False
 MnuRegisteredParameter.Enabled = False
@@ -4347,12 +4346,6 @@ TbrMain.Buttons(11).Enabled = True
 TbrMain.Buttons(15).Enabled = True
 TbrMain.Buttons(17).Enabled = True
 
-
-MnuAddNew.Enabled = True
-MnuEditResult.Enabled = True
-MnuAbort.Enabled = False
-MnuSave.Enabled = False
-MnuDeleteParameter.Enabled = False
 MnuReportSelected.Enabled = False
 MnuReportTotal.Enabled = False
 MnuRegisteredParameter.Enabled = False
