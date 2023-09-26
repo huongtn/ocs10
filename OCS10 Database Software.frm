@@ -868,15 +868,6 @@ Begin VB.Form FrmMain
             Style           =   4
          EndProperty
          BeginProperty Button13 {66833FEA-8583-11D1-B16A-00C0F0283628} 
-            Caption         =   "Refresh"
-            Key             =   "KeyUpdate"
-            Object.ToolTipText     =   "Update all new parameters of Database"
-            ImageIndex      =   6
-         EndProperty
-         BeginProperty Button14 {66833FEA-8583-11D1-B16A-00C0F0283628} 
-            Style           =   4
-         EndProperty
-         BeginProperty Button15 {66833FEA-8583-11D1-B16A-00C0F0283628} 
             Caption         =   "Bao Cao"
             Key             =   "KeyReport"
             Object.ToolTipText     =   "Print report seperate"
@@ -886,22 +877,29 @@ Begin VB.Form FrmMain
                NumButtonMenus  =   2
                BeginProperty ButtonMenu1 {66833FEE-8583-11D1-B16A-00C0F0283628} 
                   Key             =   "KeyReportSelected"
-                  Text            =   "ReportSelected"
+                  Text            =   "Xe Hien Tai"
                EndProperty
                BeginProperty ButtonMenu2 {66833FEE-8583-11D1-B16A-00C0F0283628} 
                   Key             =   "KeyReportResultSearch"
-                  Text            =   "ReportResultSearch"
+                  Text            =   "Tat Ca Xe"
                EndProperty
             EndProperty
+         EndProperty
+         BeginProperty Button14 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Style           =   4
+         EndProperty
+         BeginProperty Button15 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Caption         =   "  Tieu Chuan  "
+            Key             =   "KeyParameter"
+            Object.ToolTipText     =   "Table Registered Parameters Of Cars"
+            ImageIndex      =   8
          EndProperty
          BeginProperty Button16 {66833FEA-8583-11D1-B16A-00C0F0283628} 
             Style           =   4
          EndProperty
          BeginProperty Button17 {66833FEA-8583-11D1-B16A-00C0F0283628} 
-            Caption         =   "  Tieu Chuan  "
-            Key             =   "KeyParameter"
-            Object.ToolTipText     =   "Table Registered Parameters Of Cars"
-            ImageIndex      =   8
+            Caption         =   "Refresh"
+            Key             =   "KeyRefresh"
          EndProperty
          BeginProperty Button18 {66833FEA-8583-11D1-B16A-00C0F0283628} 
             Style           =   4
@@ -4514,7 +4512,7 @@ MnuSave_Click
 Case "KeyDelete"
 MnuDeleteParameter_Click
 
-Case "KeyUpdate"
+Case "KeyRefresh"
 MnuUpdateParameter_Click
 
 Case "KeyReport"
