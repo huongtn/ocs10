@@ -2,12 +2,12 @@ VERSION 5.00
 Object = "{0D452EE1-E08F-101A-852E-02608C4D0BB4}#2.0#0"; "FM20.DLL"
 Begin VB.Form FrmLogin 
    Caption         =   "Login"
-   ClientHeight    =   2325
+   ClientHeight    =   1755
    ClientLeft      =   120
    ClientTop       =   465
    ClientWidth     =   4500
    LinkTopic       =   "Form1"
-   ScaleHeight     =   2325
+   ScaleHeight     =   1755
    ScaleWidth      =   4500
    StartUpPosition =   3  'Windows Default
    Begin VB.TextBox txtPassword 
@@ -23,7 +23,7 @@ Begin VB.Form FrmLogin
       Height          =   495
       Left            =   1080
       TabIndex        =   3
-      Top             =   1320
+      Top             =   1080
       Width           =   975
       Caption         =   "OK"
       Size            =   "1720;873"
@@ -37,7 +37,7 @@ Begin VB.Form FrmLogin
       Height          =   495
       Left            =   2640
       TabIndex        =   2
-      Top             =   1320
+      Top             =   1080
       Width           =   975
       Caption         =   "Cancel"
       Size            =   "1720;873"
@@ -48,15 +48,15 @@ Begin VB.Form FrmLogin
       ParagraphAlign  =   3
    End
    Begin MSForms.Label Label1 
-      Height          =   240
-      Left            =   0
+      Height          =   270
+      Left            =   120
       TabIndex        =   1
-      Top             =   562
-      Width           =   795
+      Top             =   555
+      Width           =   885
       VariousPropertyBits=   276824091
-      Caption         =   "Mat khau"
-      Size            =   "1402;423"
-      FontName        =   "Tahoma"
+      Caption         =   "Maät khaåu"
+      Size            =   "1561;476"
+      FontName        =   "VNI-Centur"
       FontHeight      =   195
       FontCharSet     =   0
       FontPitchAndFamily=   2
@@ -96,3 +96,6 @@ Private Sub btnOK_Click()
     
 End Sub
 
+Private Sub Form_Load()
+Move (Screen.Width - Width) * 0.5!, (Screen.Height - Height) * 0.5!
+End Sub
