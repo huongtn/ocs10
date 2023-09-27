@@ -701,7 +701,7 @@ Begin VB.Form FrmMain
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   1020
+      Height          =   3420
       ItemData        =   "OCS10 Database Software.frx":0456
       Left            =   7080
       List            =   "OCS10 Database Software.frx":0458
@@ -723,7 +723,7 @@ Begin VB.Form FrmMain
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   1260
+      Height          =   3660
       ItemData        =   "OCS10 Database Software.frx":045A
       Left            =   7080
       List            =   "OCS10 Database Software.frx":045C
@@ -3965,18 +3965,7 @@ InitializeCheckingParameter
 End Sub
 
 
-Private Sub DBGTestingUpdate_Click()
-Dim i As Integer
-Dim ArrayOrder(10000) As Integer
-RowCount = DatTestingParameter.Recordset.RecordCount
-DatTestingParameter.Recordset.MoveFirst
-For i = 0 To RowCount - 2
- ArrayOrder(i) = DatTestingParameter.Recordset.Fields(0).Value
- 'DatTestingParameter.Recordset.MoveNext
- 'Code tren day se lam cho viec Click moi lan row se tu dong nhay sang mot row khac, khong dung
-Next i
-
-End Sub
+ 
 
 Private Sub Form_Load()
 Dim Index As Integer
@@ -4219,6 +4208,8 @@ End Sub
 
 
 
+
+ 
 
 Private Sub Login_Click()
 FrmLogin.Show
