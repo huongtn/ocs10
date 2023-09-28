@@ -19,9 +19,9 @@ Begin VB.Form FrmMain
    StartUpPosition =   2  'CenterScreen
    Begin MSACAL.Calendar cldToDate 
       Height          =   2295
-      Left            =   3360
+      Left            =   3480
       TabIndex        =   72
-      Top             =   8880
+      Top             =   8520
       Visible         =   0   'False
       Width           =   3015
       _Version        =   524288
@@ -76,9 +76,9 @@ Begin VB.Form FrmMain
    End
    Begin MSACAL.Calendar cldFromDate 
       Height          =   2415
-      Left            =   720
+      Left            =   480
       TabIndex        =   71
-      Top             =   8760
+      Top             =   8520
       Visible         =   0   'False
       Width           =   3255
       _Version        =   524288
