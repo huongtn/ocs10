@@ -19,9 +19,9 @@ Begin VB.Form FrmMain
    StartUpPosition =   2  'CenterScreen
    Begin MSACAL.Calendar cldToDate 
       Height          =   2295
-      Left            =   3960
+      Left            =   3360
       TabIndex        =   72
-      Top             =   9000
+      Top             =   8880
       Visible         =   0   'False
       Width           =   3015
       _Version        =   524288
@@ -78,7 +78,7 @@ Begin VB.Form FrmMain
       Height          =   2415
       Left            =   720
       TabIndex        =   71
-      Top             =   9000
+      Top             =   8760
       Visible         =   0   'False
       Width           =   3255
       _Version        =   524288
@@ -205,7 +205,7 @@ Begin VB.Form FrmMain
       Height          =   1695
       Left            =   9840
       TabIndex        =   92
-      Top             =   6330
+      Top             =   6240
       Width           =   8655
       Begin VB.TextBox TxtHLLowLeftLR 
          DataField       =   "HLLowLeftLR"
@@ -455,13 +455,13 @@ Begin VB.Form FrmMain
          Left            =   120
          List            =   "OCS10 Database Software.frx":0448
          TabIndex        =   67
-         Top             =   720
+         Top             =   600
          Width           =   4095
       End
       Begin VB.CommandButton CmdShowAll 
-         Caption         =   "Show All"
+         Caption         =   "Click ñeå xem"
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
+            Name            =   "VNI-Centur"
             Size            =   9.75
             Charset         =   0
             Weight          =   400
@@ -472,7 +472,7 @@ Begin VB.Form FrmMain
          Height          =   375
          Left            =   120
          TabIndex        =   66
-         Top             =   240
+         Top             =   120
          Width           =   4095
       End
    End
@@ -499,7 +499,7 @@ Begin VB.Form FrmMain
          Left            =   120
          List            =   "OCS10 Database Software.frx":044C
          TabIndex        =   68
-         Top             =   720
+         Top             =   600
          Width           =   4095
       End
       Begin VB.TextBox TxtDateFrom 
@@ -517,7 +517,7 @@ Begin VB.Form FrmMain
          Left            =   720
          TabIndex        =   64
          Text            =   "1/1/2012"
-         Top             =   240
+         Top             =   120
          Width           =   1455
       End
       Begin VB.CommandButton CmdDateSearchTo 
@@ -534,7 +534,7 @@ Begin VB.Form FrmMain
          Height          =   375
          Left            =   2280
          TabIndex        =   55
-         Top             =   240
+         Top             =   120
          Width           =   495
       End
       Begin VB.CommandButton CmdDateSearchFrom 
@@ -551,7 +551,7 @@ Begin VB.Form FrmMain
          Height          =   375
          Left            =   120
          TabIndex        =   54
-         Top             =   240
+         Top             =   120
          Width           =   495
       End
       Begin VB.TextBox TxtDateTo 
@@ -569,7 +569,7 @@ Begin VB.Form FrmMain
          Left            =   2880
          TabIndex        =   53
          Text            =   "12/30/2012"
-         Top             =   240
+         Top             =   120
          Width           =   1335
       End
    End
@@ -579,7 +579,7 @@ Begin VB.Form FrmMain
       Index           =   1
       Left            =   5160
       TabIndex        =   51
-      Top             =   7560
+      Top             =   8400
       Width           =   4359
       Begin VB.TextBox TxtChassisSearch 
          BeginProperty Font 
@@ -594,7 +594,7 @@ Begin VB.Form FrmMain
          Height          =   375
          Left            =   120
          TabIndex        =   63
-         Top             =   240
+         Top             =   120
          Width           =   3375
       End
       Begin VB.ListBox LstChassisSearch 
@@ -612,14 +612,14 @@ Begin VB.Form FrmMain
          Left            =   120
          List            =   "OCS10 Database Software.frx":0450
          TabIndex        =   60
-         Top             =   720
+         Top             =   600
          Width           =   4095
       End
       Begin MSForms.CommandButton CmdChassisSearch 
          Height          =   375
          Left            =   3600
          TabIndex        =   75
-         Top             =   240
+         Top             =   120
          Width           =   615
          VariousPropertyBits=   25
          Caption         =   "Tim"
@@ -653,7 +653,7 @@ Begin VB.Form FrmMain
          Height          =   375
          Left            =   120
          TabIndex        =   62
-         Top             =   480
+         Top             =   120
          Width           =   3375
       End
       Begin VB.ListBox LstEngineSearch 
@@ -671,14 +671,14 @@ Begin VB.Form FrmMain
          Left            =   120
          List            =   "OCS10 Database Software.frx":0454
          TabIndex        =   59
-         Top             =   960
+         Top             =   600
          Width           =   4095
       End
       Begin MSForms.CommandButton CmdEngineSearch 
          Height          =   375
          Left            =   3600
          TabIndex        =   74
-         Top             =   480
+         Top             =   120
          Width           =   615
          VariousPropertyBits=   25
          Caption         =   "Tim"
@@ -3989,7 +3989,7 @@ ListNameSearch
 ListChassisSearch
 ListEngineSearch
 ListTesterUpdate
-TabSearchEnable
+'TabSearchEnable
 'DBGridOptionShow_Sub
 End Sub
 
@@ -4182,7 +4182,7 @@ Dim i As Integer
 
     ' Move all the frames to the same position
     ' and make them all invisible.
-    For i = 1 To freSearch.UBound
+    For i = 0 To freSearch.UBound
         freSearch(i).Move _
             freSearch(0).Left, _
             freSearch(0).Top, _
@@ -4255,26 +4255,25 @@ Private Sub TabSearch_Click()
     freSearch(SelectedTab - 1).Visible = True
     Select Case SelectedTab
     Case 1
-    freSearch(0).Enabled = True
-    TxtNameSearch.SetFocus
-    
+        freSearch(0).Enabled = True
+        TxtNameSearch.SetFocus
     Case 2
-    freSearch(1).Enabled = True
-    TxtChassisSearch.SetFocus
+        freSearch(1).Enabled = True
+        TxtChassisSearch.SetFocus
      
     Case 3
-    freSearch(2).Enabled = True
-    TxtEngineSearch.SetFocus
+        freSearch(2).Enabled = True
+        TxtEngineSearch.SetFocus
     
     Case 4
-    freSearch(3).Enabled = True
-    TxtDate.Enabled = True
+        freSearch(3).Enabled = True
+        TxtDate.Enabled = True
     Case 5
-    freSearch(4).Enabled = True
-  freSearch(0).Enabled = False
-  freSearch(1).Enabled = False
-  freSearch(2).Enabled = False
-  freSearch(3).Enabled = False
+        freSearch(4).Enabled = True
+  'freSearch(0).Enabled = False
+  'freSearch(1).Enabled = False
+  'freSearch(2).Enabled = False
+  'freSearch(3).Enabled = False
   DatTestingParameter.RecordSource = "SELECT * FROM TblTestingParameter order by STT desc"
   
   '----------------------------------------------------------------------------
