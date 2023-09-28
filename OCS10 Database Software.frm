@@ -4958,7 +4958,7 @@ Dim sSQL As String
 sSQL = "Select * From TblTestingParameter Where STT = " & Val(txtCurrentID.Text) & ""
 RST.Open sSQL, connect, adOpenDynamic, adLockOptimistic
 If Not RST.EOF Then
-RST("SelectedDateTime") = Date
+RST("SelectedDateTime") = Now()
 RST.Update
 Else
 MsgBox "Record Not Found..."
