@@ -3850,6 +3850,10 @@ BD = FormatNumber(BD, 2, True, True, True)
 TxtBrakeStopDif.Text = Str(BD)
 End Sub
 
+Private Sub ChangePass_Click()
+UpdateLatest
+End Sub
+
 Private Sub cldDate_Click()
 TxtDate.Text = cldDate.Value
 cldDate.Visible = False
@@ -4196,20 +4200,6 @@ Dim i As Integer
     TabSearch.SelectedItem = TabSearch.Tabs(SelectedTab)
     freSearch(SelectedTab - 1).Visible = True
 End Sub
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
 
 Private Sub Login_Click()
 FrmLogin.Show
@@ -4954,3 +4944,26 @@ ErrHandling:
  
 Resume EndIt
 End Sub
+
+
+Sub UpdateLatest()
+Dim connect As New ADODB.Connection
+Dim RST As New ADODB.Recordset
+
+If connect.State = 1 Then connect.Close
+If RST.State = 1 Then RST.Close
+connect.Open "Provider=Microsoft.jet.OLEDB.4.0;Data Source=" & App.Path & "\OCS10_DataBase_97.mdb;Persist Security Info=False"
+
+Dim sSQL As String
+sSQL = "Select * From TblTestingParameter Where STT = " & Val(txtCurrentID.Text) & ""
+RST.Open sSQL, connect, adOpenDynamic, adLockOptimistic
+If Not RST.EOF Then
+RST("SelectedDateTime") = Date
+RST.Update
+Else
+MsgBox "Record Not Found..."
+End If
+RST.Close
+
+End Sub
+
