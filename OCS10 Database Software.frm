@@ -767,7 +767,7 @@ Begin VB.Form FrmMain
       MaskColor       =   12632256
       _Version        =   393216
       BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
-         NumListImages   =   9
+         NumListImages   =   11
          BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
             Picture         =   "OCS10 Database Software.frx":045E
             Key             =   "KeyNew"
@@ -804,6 +804,14 @@ Begin VB.Form FrmMain
             Picture         =   "OCS10 Database Software.frx":0CEE
             Key             =   "KeyExit"
          EndProperty
+         BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "OCS10 Database Software.frx":0E00
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "OCS10 Database Software.frx":147A
+            Key             =   ""
+         EndProperty
       EndProperty
    End
    Begin MSComctlLib.Toolbar TbrMain 
@@ -823,7 +831,7 @@ Begin VB.Form FrmMain
       ImageList       =   "ImageList1"
       _Version        =   393216
       BeginProperty Buttons {66833FE8-8583-11D1-B16A-00C0F0283628} 
-         NumButtons      =   21
+         NumButtons      =   25
          BeginProperty Button1 {66833FEA-8583-11D1-B16A-00C0F0283628} 
             Style           =   4
          EndProperty
@@ -876,6 +884,25 @@ Begin VB.Form FrmMain
             Style           =   4
          EndProperty
          BeginProperty Button13 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Caption         =   "Import xe"
+            Key             =   "KeyImport"
+            Object.ToolTipText     =   "Import danh sách xe"
+            ImageIndex      =   10
+         EndProperty
+         BeginProperty Button14 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            ImageIndex      =   11
+            Style           =   4
+         EndProperty
+         BeginProperty Button15 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Caption         =   "Chon xe test"
+            Key             =   "KeySelectVehicle"
+            Object.ToolTipText     =   "Chon xe de test"
+            ImageIndex      =   11
+         EndProperty
+         BeginProperty Button16 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Style           =   4
+         EndProperty
+         BeginProperty Button17 {66833FEA-8583-11D1-B16A-00C0F0283628} 
             Caption         =   "Bao Cao"
             Key             =   "KeyReport"
             Object.ToolTipText     =   "Print report seperate"
@@ -893,34 +920,34 @@ Begin VB.Form FrmMain
                EndProperty
             EndProperty
          EndProperty
-         BeginProperty Button14 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+         BeginProperty Button18 {66833FEA-8583-11D1-B16A-00C0F0283628} 
             Style           =   4
          EndProperty
-         BeginProperty Button15 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+         BeginProperty Button19 {66833FEA-8583-11D1-B16A-00C0F0283628} 
             Caption         =   "  Tieu Chuan  "
             Key             =   "KeyParameter"
             Object.ToolTipText     =   "Table Registered Parameters Of Cars"
             ImageIndex      =   8
          EndProperty
-         BeginProperty Button16 {66833FEA-8583-11D1-B16A-00C0F0283628} 
-            Style           =   4
-         EndProperty
-         BeginProperty Button17 {66833FEA-8583-11D1-B16A-00C0F0283628} 
-            Caption         =   "Refresh"
-            Key             =   "KeyRefresh"
-         EndProperty
-         BeginProperty Button18 {66833FEA-8583-11D1-B16A-00C0F0283628} 
-            Style           =   4
-         EndProperty
-         BeginProperty Button19 {66833FEA-8583-11D1-B16A-00C0F0283628} 
-            Caption         =   "Exit"
-            Key             =   "KeyExit"
-            ImageIndex      =   9
-         EndProperty
          BeginProperty Button20 {66833FEA-8583-11D1-B16A-00C0F0283628} 
             Style           =   4
          EndProperty
          BeginProperty Button21 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Caption         =   "Refresh"
+            Key             =   "KeyRefresh"
+         EndProperty
+         BeginProperty Button22 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Style           =   4
+         EndProperty
+         BeginProperty Button23 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Caption         =   "Exit"
+            Key             =   "KeyExit"
+            ImageIndex      =   9
+         EndProperty
+         BeginProperty Button24 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Style           =   4
+         EndProperty
+         BeginProperty Button25 {66833FEA-8583-11D1-B16A-00C0F0283628} 
             Style           =   4
          EndProperty
       EndProperty
@@ -1037,7 +1064,7 @@ Begin VB.Form FrmMain
       End
       Begin VB.CommandButton CmdCalendarCall 
          Caption         =   "..."
-         DragIcon        =   "OCS10 Database Software.frx":0E00
+         DragIcon        =   "OCS10 Database Software.frx":1AF4
          Enabled         =   0   'False
          BeginProperty Font 
             Name            =   "MS Sans Serif"
@@ -1050,7 +1077,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   3360
-         MouseIcon       =   "OCS10 Database Software.frx":1242
+         MouseIcon       =   "OCS10 Database Software.frx":1F36
          TabIndex        =   48
          Top             =   2880
          Width           =   375
@@ -1255,10 +1282,10 @@ Begin VB.Form FrmMain
       Top             =   480
       Width           =   4935
       Begin MSDBGrid.DBGrid DBGTestingUpdate 
-         Bindings        =   "OCS10 Database Software.frx":1684
+         Bindings        =   "OCS10 Database Software.frx":2378
          Height          =   6255
          Left            =   240
-         OleObjectBlob   =   "OCS10 Database Software.frx":16A6
+         OleObjectBlob   =   "OCS10 Database Software.frx":239A
          TabIndex        =   46
          Top             =   480
          Width           =   4575
@@ -3222,10 +3249,16 @@ Begin VB.Form FrmMain
    Begin VB.Menu MnuFileOCS10 
       Caption         =   "He Thong"
       Begin VB.Menu MnuImportVehicles 
-         Caption         =   "Them xe"
+         Caption         =   "Import xe"
          Shortcut        =   ^I
       End
       Begin VB.Menu b 
+         Caption         =   "-"
+      End
+      Begin VB.Menu MnuSelectVehicle 
+         Caption         =   "Chon xe test"
+      End
+      Begin VB.Menu a 
          Caption         =   "-"
       End
       Begin VB.Menu MnuSaveAsDataBase 
@@ -3865,10 +3898,6 @@ BD = FormatNumber(BD, 2, True, True, True)
 TxtBrakeStopDif.Text = Str(BD)
 End Sub
 
-Private Sub ChangePass_Click()
-UpdateLatest
-End Sub
-
 Private Sub cldDate_Click()
 TxtDate.Text = cldDate.Value
 cldDate.Visible = False
@@ -4293,9 +4322,8 @@ If CommonDialog1.FileName <> "" Then
     Set ExcelSheet = Nothing
     Set ExcelBook = Nothing
     Set ExcelObj = Nothing
-    MsgBox "Thêm thành công " & CStr(i - 3) & " xe"
     DatTestingParameter.Refresh
-    
+    MsgBox "Thêm thành công " & CStr(i - 3) & " xe"
 End If
 End Sub
  
@@ -4306,6 +4334,29 @@ End Sub
 Private Sub MnuSaveAsDataBase_Click()
 Unload Me
 FrmBackupDB.Show
+End Sub
+
+Private Sub MnuSelectVehicle_Click()
+    Dim connect As New ADODB.Connection
+    Dim RST As New ADODB.Recordset
+    
+    If connect.State = 1 Then connect.Close
+    If RST.State = 1 Then RST.Close
+    connect.Open "Provider=Microsoft.jet.OLEDB.4.0;Data Source=" & App.Path & "\OCS10_DataBase_97.mdb;Persist Security Info=False"
+    
+    Dim sSQL As String
+    sSQL = "Select * From TblTestingParameter Where STT = " & Val(txtCurrentID.Text) & ""
+    RST.Open sSQL, connect, adOpenDynamic, adLockOptimistic
+    If Not RST.EOF Then
+    RST("SelectedDateTime") = Now()
+    RST.Update
+    MsgBox "Ban da chon xe test(" & RST("ProducedNumber") & ")"
+    Else
+    MsgBox "Record Not Found..."
+    End If
+    RST.Close
+    
+    DatTestingParameter.Refresh
 End Sub
 
 Private Sub MnuTester_Click()
@@ -4591,6 +4642,12 @@ MnuDeleteParameter_Click
 
 Case "KeyRefresh"
 MnuUpdateParameter_Click
+
+Case "KeyImport"
+MnuImportVehicles_Click
+
+Case "KeySelectVehicle"
+MnuSelectVehicle_Click
 
 Case "KeyReport"
 MnuReportSeperate_Click
@@ -5043,24 +5100,5 @@ Resume EndIt
 End Sub
 
 
-Sub UpdateLatest()
-Dim connect As New ADODB.Connection
-Dim RST As New ADODB.Recordset
-
-If connect.State = 1 Then connect.Close
-If RST.State = 1 Then RST.Close
-connect.Open "Provider=Microsoft.jet.OLEDB.4.0;Data Source=" & App.Path & "\OCS10_DataBase_97.mdb;Persist Security Info=False"
-
-Dim sSQL As String
-sSQL = "Select * From TblTestingParameter Where STT = " & Val(txtCurrentID.Text) & ""
-RST.Open sSQL, connect, adOpenDynamic, adLockOptimistic
-If Not RST.EOF Then
-RST("SelectedDateTime") = Now()
-RST.Update
-Else
-MsgBox "Record Not Found..."
-End If
-RST.Close
-
-End Sub
+ 
 
