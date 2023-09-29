@@ -6,27 +6,27 @@ Object = "{8E27C92E-1264-101C-8A2F-040224009C02}#7.0#0"; "MSCAL.OCX"
 Begin VB.Form FrmMain 
    BorderStyle     =   0  'None
    Caption         =   "DBS10 - Database Software  -  Designed by INDUSTRY SOLUTION Co.  -   www.thietbicongnghiep.vn"
-   ClientHeight    =   10785
+   ClientHeight    =   11580
    ClientLeft      =   45
    ClientTop       =   615
    ClientWidth     =   18660
    FillColor       =   &H00808080&
    Icon            =   "OCS10 Database Software.frx":0000
    LinkTopic       =   "Form1"
-   ScaleHeight     =   10351.66
+   ScaleHeight     =   11114.72
    ScaleMode       =   0  'User
    ScaleWidth      =   21364.42
    StartUpPosition =   2  'CenterScreen
    Begin MSACAL.Calendar cldToDate 
-      Height          =   2295
+      Height          =   2415
       Left            =   3480
       TabIndex        =   72
       Top             =   8520
       Visible         =   0   'False
-      Width           =   3015
+      Width           =   3255
       _Version        =   524288
-      _ExtentX        =   5318
-      _ExtentY        =   4048
+      _ExtentX        =   5741
+      _ExtentY        =   4260
       _StockProps     =   1
       BackColor       =   -2147483633
       Year            =   2012
@@ -707,7 +707,7 @@ Begin VB.Form FrmMain
       List            =   "OCS10 Database Software.frx":0458
       TabIndex        =   50
       Top             =   1200
-      Width           =   2055
+      Width           =   2175
    End
    Begin VB.Timer Tmr1 
       Left            =   8520
@@ -729,7 +729,7 @@ Begin VB.Form FrmMain
       List            =   "OCS10 Database Software.frx":045C
       TabIndex        =   47
       Top             =   2280
-      Width           =   2055
+      Width           =   2175
    End
    Begin VB.Data DatCheckingParameter 
       Caption         =   "Database Checking Parameters"
@@ -4318,7 +4318,16 @@ Private Sub MnuAddNew_Click()
 TbrMain.Buttons(9).Enabled = True
 
 On Error GoTo ErrHandling
-DatTestingParameter.Recordset.AddNew
+'DatTestingParameter.Recordset.AddNew
+
+With DatTestingParameter.Recordset
+        .AddNew
+        !Name = "Name"
+        .Update
+    End With
+    DatTestingParameter.Refresh
+DatTestingParameter.Recordset.Edit
+
 TbrMain.Buttons(5).Enabled = False
 
 TbrMain.Buttons(11).Enabled = False
@@ -4478,8 +4487,23 @@ Private Sub TbrMain_ButtonClick(ByVal Button As MSComctlLib.Button)
 Select Case Button.Key
 
 Case "KeyNew"
-MnuAddNew_Click
-
+'MnuAddNew_Click
+MsgBox TxtName.Text
+Dim curentName As String
+Dim curentTester As String
+curentName = TxtName.Text
+curentTester = TxtTester.Text
+With DatTestingParameter.Recordset
+        .AddNew
+        !Name = curentName
+        !Tester = curentTester
+        !Date = Date
+        .Update
+    End With
+    DatTestingParameter.Refresh
+    
+MnuEditResult_Click
+TbrMain.Buttons(7).Enabled = False
 Case "KeyEdit"
 MnuEditResult_Click
 
