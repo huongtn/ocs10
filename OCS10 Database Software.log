@@ -1,13 +1,4 @@
-Line 20: Class MSACAL.Calendar of control cldDate was not a loaded control class.
-Line 294: Class MSACAL.Calendar of control cldToDate was not a loaded control class.
-Line 351: Class MSACAL.Calendar of control cldFromDate was not a loaded control class.
-Line 611: Class MSForms.CommandButton of control CmdChassisSearch was not a loaded control class.
-Line 670: Class MSForms.CommandButton of control CmdEngineSearch was not a loaded control class.
-Line 729: Class MSForms.CommandButton of control CmdNameSearch was not a loaded control class.
-Line 803: Class MSComctlLib.ImageList of control ImageList1 was not a loaded control class.
-Line 853: Class MSComctlLib.Toolbar of control TbrMain was not a loaded control class.
-Line 1162: Class MSForms.Label of control Label37 was not a loaded control class.
-Line 1569: Class MSDBGrid.DBGrid of control DBGTestingUpdate was not a loaded control class.
-Line 1596: Class MSComctlLib.TabStrip of control TabSearch was not a loaded control class.
-Line 1900: Class MSForms.Label of control Label23 was not a loaded control class.
-Line 1913: Class MSForms.Label of control Label19 was not a loaded control class.
+Line 21: Class MSComDlg.CommonDialog of control CommonDialog1 was not a loaded control class.
+Line 24: The property name _ExtentX in CommonDialog1 is invalid.
+Line 25: The property name _ExtentY in CommonDialog1 is invalid.
+Line 26: The property name _Version in CommonDialog1 is invalid.
