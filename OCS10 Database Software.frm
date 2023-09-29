@@ -18,84 +18,84 @@ Begin VB.Form FrmMain
    ScaleWidth      =   21295.72
    StartUpPosition =   2  'CenterScreen
    Begin VB.TextBox TxtSelectedEngineNumber 
-      DataField       =   "EngineNumber"
-      DataSource      =   "DatTestingParameter"
+      BackColor       =   &H00FFFFFF&
       Enabled         =   0   'False
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   9.75
+         Size            =   12
          Charset         =   0
-         Weight          =   400
+         Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
+      ForeColor       =   &H000000FF&
       Height          =   375
-      Left            =   15120
+      Left            =   15960
       TabIndex        =   176
-      Top             =   600
-      Width           =   2055
+      Top             =   720
+      Width           =   2535
    End
    Begin VB.TextBox TxtSelectedProducedNumber 
-      DataField       =   "ProducedNumber"
-      DataSource      =   "DatTestingParameter"
+      BackColor       =   &H00FFFFFF&
       Enabled         =   0   'False
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   9.75
+         Size            =   12
          Charset         =   0
-         Weight          =   400
+         Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
+      ForeColor       =   &H000000FF&
       Height          =   375
-      Left            =   11400
+      Left            =   11910
       TabIndex        =   174
-      Top             =   600
-      Width           =   2055
+      Top             =   720
+      Width           =   2535
    End
    Begin VB.TextBox TxtSelectedChassisNumber 
-      DataField       =   "ChassisNumber"
-      DataSource      =   "DatTestingParameter"
+      BackColor       =   &H00FFFFFF&
       Enabled         =   0   'False
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   9.75
+         Size            =   12
          Charset         =   0
-         Weight          =   400
+         Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
+      ForeColor       =   &H000000FF&
       Height          =   375
-      Left            =   7560
+      Left            =   7860
       TabIndex        =   172
-      Top             =   600
-      Width           =   2055
+      Top             =   720
+      Width           =   2535
    End
    Begin VB.TextBox TxtSelectedName 
-      DataField       =   "Name"
-      DataSource      =   "DatTestingParameter"
+      BackColor       =   &H00FFFFFF&
       Enabled         =   0   'False
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   9.75
+         Size            =   12
          Charset         =   0
-         Weight          =   400
+         Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
+      ForeColor       =   &H000000FF&
       Height          =   375
-      Left            =   4080
+      Left            =   3810
       TabIndex        =   170
-      Top             =   600
-      Width           =   1815
+      Top             =   720
+      Width           =   2535
    End
    Begin VB.CommandButton btnSelectTest 
       BackColor       =   &H8000000D&
-      Caption         =   "Choïn xe test"
+      Caption         =   "CHOÏN XE TEST"
       BeginProperty Font 
          Name            =   "VNI-Centur"
          Size            =   9.75
@@ -105,7 +105,7 @@ Begin VB.Form FrmMain
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   495
+      Height          =   615
       Left            =   240
       TabIndex        =   169
       Top             =   480
@@ -3318,9 +3318,9 @@ Begin VB.Form FrmMain
          Strikethrough   =   0   'False
       EndProperty
       Height          =   270
-      Left            =   13680
+      Left            =   15960
       TabIndex        =   177
-      Top             =   600
+      Top             =   360
       Width           =   735
    End
    Begin VB.Label Label60 
@@ -3336,9 +3336,9 @@ Begin VB.Form FrmMain
          Strikethrough   =   0   'False
       EndProperty
       Height          =   270
-      Left            =   9960
+      Left            =   11910
       TabIndex        =   175
-      Top             =   600
+      Top             =   360
       Width           =   1110
    End
    Begin VB.Label Label59 
@@ -3354,9 +3354,9 @@ Begin VB.Form FrmMain
          Strikethrough   =   0   'False
       EndProperty
       Height          =   270
-      Left            =   6480
+      Left            =   7860
       TabIndex        =   173
-      Top             =   600
+      Top             =   360
       Width           =   915
    End
    Begin VB.Label Label58 
@@ -3372,9 +3372,9 @@ Begin VB.Form FrmMain
          Strikethrough   =   0   'False
       EndProperty
       Height          =   270
-      Left            =   3000
+      Left            =   3840
       TabIndex        =   171
-      Top             =   600
+      Top             =   360
       Width           =   735
    End
    Begin VB.Label Label56 
@@ -4065,6 +4065,10 @@ BD = FormatNumber(BD, 2, True, True, True)
 TxtBrakeStopDif.Text = Str(BD)
 End Sub
 
+Private Sub btnSelectTest_Click()
+MnuSelectVehicle_Click
+End Sub
+
 Private Sub cldDate_Click()
 TxtDate.Text = cldDate.Value
 cldDate.Visible = False
@@ -4517,6 +4521,10 @@ Private Sub MnuSelectVehicle_Click()
     If Not RST.EOF Then
     RST("SelectedDateTime") = Now()
     RST.Update
+    TxtSelectedName.Text = RST("Name")
+    TxtSelectedChassisNumber.Text = RST("ChassisNumber")
+    TxtSelectedProducedNumber.Text = RST("ProducedNumber")
+    TxtSelectedEngineNumber.Text = RST("EngineNumber")
     MsgBox "Ban da chon xe test(" & RST("ProducedNumber") & ")"
     Else
     MsgBox "Record Not Found..."
