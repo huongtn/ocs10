@@ -3,20 +3,28 @@ Object = "{0D452EE1-E08F-101A-852E-02608C4D0BB4}#2.0#0"; "FM20.DLL"
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.1#0"; "MSCOMCTL.OCX"
 Object = "{00028C01-0000-0000-0000-000000000046}#1.0#0"; "DBGRID32.OCX"
 Object = "{8E27C92E-1264-101C-8A2F-040224009C02}#7.0#0"; "MSCAL.OCX"
+Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "comdlg32.ocx"
 Begin VB.Form FrmMain 
    BorderStyle     =   0  'None
    Caption         =   "DBS10 - Database Software  -  Designed by INDUSTRY SOLUTION Co.  -   www.thietbicongnghiep.vn"
-   ClientHeight    =   11580
+   ClientHeight    =   10770
    ClientLeft      =   45
    ClientTop       =   615
    ClientWidth     =   18660
    FillColor       =   &H00808080&
    Icon            =   "OCS10 Database Software.frx":0000
    LinkTopic       =   "Form1"
-   ScaleHeight     =   11114.72
+   ScaleHeight     =   10337.26
    ScaleMode       =   0  'User
    ScaleWidth      =   21364.42
    StartUpPosition =   2  'CenterScreen
+   Begin MSComDlg.CommonDialog CommonDialog1 
+      Left            =   13800
+      Top             =   10800
+      _ExtentX        =   847
+      _ExtentY        =   847
+      _Version        =   393216
+   End
    Begin MSACAL.Calendar cldToDate 
       Height          =   2415
       Left            =   3480
@@ -3213,6 +3221,13 @@ Begin VB.Form FrmMain
    End
    Begin VB.Menu MnuFileOCS10 
       Caption         =   "He Thong"
+      Begin VB.Menu MnuImportVehicles 
+         Caption         =   "Them xe"
+         Shortcut        =   ^I
+      End
+      Begin VB.Menu b 
+         Caption         =   "-"
+      End
       Begin VB.Menu MnuSaveAsDataBase 
          Caption         =   "Sao Luu CSDL"
          Shortcut        =   ^A
@@ -3338,7 +3353,7 @@ DatCheckingParameter.Recordset.MoveNext
 ' Phai MoveNext truoc khi kiem tra EOF
     If DatCheckingParameter.Recordset.EOF = True Then
      DatCheckingParameter.Recordset.MoveLast
-     MsgBox ("Have not this car, Pls update !")
+     'MsgBox ("Have not this car, Pls update !")
      GoTo NoName
      'Thoat khoi vong lap khong ket thuc khi dieu kien Do While not khong thoat duoc
        End If
@@ -4226,6 +4241,64 @@ Private Sub LstNameSearch_MouseUp(Button As Integer, Shift As Integer, X As Sing
 TxtNameSearch = LstNameSearch
 End Sub
 
+Private Sub MnuImportVehicles_Click()
+CommonDialog1.Filter = "Excel (*.xlsx)|*.xlsx|All files (*.*)|*.*"
+CommonDialog1.DefaultExt = "txt"
+CommonDialog1.DialogTitle = "Select File"
+CommonDialog1.ShowOpen
+
+Dim ExcelObj As Object
+Dim ExcelBook As Object
+Dim ExcelSheet As Object
+Dim i As Integer
+If CommonDialog1.FileName <> "" Then
+    Set ExcelObj = CreateObject("Excel.Application")
+    Set ExcelSheet = CreateObject("Excel.Sheet")
+    
+    ExcelObj.WorkBooks.Open CommonDialog1.FileName
+    
+    Set ExcelBook = ExcelObj.WorkBooks(1)
+    Set ExcelSheet = ExcelBook.WorkSheets(1)
+     
+    Dim curentTester As String
+    Dim curentName As String
+    Dim curentChassisNumber As String
+    Dim curentProducedNumber As String
+    Dim curentEngineNumber As String
+    curentTester = TxtTester.Text
+    With ExcelSheet
+    i = 3
+    Do Until .cells(i, 2) & "" = ""
+    curentName = .cells(i, 2)
+    curentProducedNumber = .cells(i, 3)
+    curentChassisNumber = .cells(i, 4)
+    curentEngineNumber = .cells(i, 5)
+       With DatTestingParameter.Recordset
+        .AddNew
+        !Name = curentName
+        !ChassisNumber = curentChassisNumber
+        !ProducedNumber = curentProducedNumber
+        !EngineNumber = curentEngineNumber
+        !Tester = curentTester
+        !Date = Date
+        .Update
+        End With
+        i = i + 1
+    Loop
+    
+    End With
+    
+    ExcelObj.WorkBooks.Close
+    
+    Set ExcelSheet = Nothing
+    Set ExcelBook = Nothing
+    Set ExcelObj = Nothing
+    MsgBox "Thêm thành công " & CStr(i - 3) & " xe"
+    DatTestingParameter.Refresh
+    
+End If
+End Sub
+ 
 Private Sub MnuReportTotal_Click()
 FrmReportSeperate.Show
 End Sub
