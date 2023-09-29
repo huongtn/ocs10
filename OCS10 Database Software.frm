@@ -4355,8 +4355,6 @@ Private Sub MnuSelectVehicle_Click()
     MsgBox "Record Not Found..."
     End If
     RST.Close
-    
-    DatTestingParameter.Refresh
 End Sub
 
 Private Sub MnuTester_Click()
