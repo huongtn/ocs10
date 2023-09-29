@@ -3,20 +3,28 @@ Object = "{0D452EE1-E08F-101A-852E-02608C4D0BB4}#2.0#0"; "FM20.DLL"
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.1#0"; "MSCOMCTL.OCX"
 Object = "{00028C01-0000-0000-0000-000000000046}#1.0#0"; "DBGRID32.OCX"
 Object = "{8E27C92E-1264-101C-8A2F-040224009C02}#7.0#0"; "MSCAL.OCX"
+Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "comdlg32.ocx"
 Begin VB.Form FrmMain 
    BorderStyle     =   0  'None
    Caption         =   "DBS10 - Database Software  -  Designed by INDUSTRY SOLUTION Co.  -   www.thietbicongnghiep.vn"
-   ClientHeight    =   11745
+   ClientHeight    =   11760
    ClientLeft      =   45
    ClientTop       =   615
    ClientWidth     =   18615
    FillColor       =   &H00808080&
    Icon            =   "OCS10 Database Software.frx":0000
    LinkTopic       =   "Form1"
-   ScaleHeight     =   11273.08
+   ScaleHeight     =   11287.48
    ScaleMode       =   0  'User
    ScaleWidth      =   21312.9
    StartUpPosition =   2  'CenterScreen
+   Begin MSComDlg.CommonDialog CommonDialog2 
+      Left            =   9480
+      Top             =   12000
+      _ExtentX        =   847
+      _ExtentY        =   847
+      _Version        =   393216
+   End
    Begin VB.TextBox TxtSelectedEngineNumber 
       BackColor       =   &H00FFFFFF&
       Enabled         =   0   'False
@@ -240,7 +248,7 @@ Begin VB.Form FrmMain
       Index           =   0
       Left            =   480
       TabIndex        =   57
-      Top             =   9000
+      Top             =   9240
       Width           =   4260
       Begin VB.TextBox TxtNameSearch 
          BeginProperty Font 
@@ -3246,13 +3254,13 @@ Begin VB.Form FrmMain
       Height          =   3255
       Left            =   240
       TabIndex        =   32
-      Top             =   8160
+      Top             =   8400
       Width           =   4935
       Begin MSComctlLib.TabStrip TabSearch 
          Height          =   2775
          Left            =   120
          TabIndex        =   45
-         Top             =   840
+         Top             =   360
          Width           =   4575
          _ExtentX        =   8070
          _ExtentY        =   4895
@@ -4504,20 +4512,20 @@ TxtNameSearch = LstNameSearch
 End Sub
 
 Private Sub MnuImportVehicles_Click()
-CommonDialog1.Filter = "Excel (*.xlsx)|*.xlsx|All files (*.*)|*.*"
-CommonDialog1.DefaultExt = "txt"
-CommonDialog1.DialogTitle = "Select File"
-CommonDialog1.ShowOpen
+CommonDialog2.Filter = "Excel (*.xlsx)|*.xlsx|All files (*.*)|*.*"
+CommonDialog2.DefaultExt = "txt"
+CommonDialog2.DialogTitle = "Select File"
+CommonDialog2.ShowOpen
 
 Dim ExcelObj As Object
 Dim ExcelBook As Object
 Dim ExcelSheet As Object
 Dim i As Integer
-If CommonDialog1.FileName <> "" Then
+If CommonDialog2.FileName <> "" Then
     Set ExcelObj = CreateObject("Excel.Application")
     Set ExcelSheet = CreateObject("Excel.Sheet")
     
-    ExcelObj.WorkBooks.Open CommonDialog1.FileName
+    ExcelObj.WorkBooks.Open CommonDialog2.FileName
     
     Set ExcelBook = ExcelObj.WorkBooks(1)
     Set ExcelSheet = ExcelBook.WorkSheets(1)
