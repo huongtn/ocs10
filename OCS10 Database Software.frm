@@ -4136,9 +4136,24 @@ If Not RST.EOF Then
 RST("SelectedDateTime") = Now()
 RST.Update
 TxtSelectedName.Text = RST("Name")
-TxtSelectedChassisNumber.Text = RST("ChassisNumber")
-TxtSelectedProducedNumber.Text = RST("ProducedNumber")
-TxtSelectedEngineNumber.Text = RST("EngineNumber")
+If RST("ChassisNumber") <> "" Then
+    TxtSelectedChassisNumber.Text = RST("ChassisNumber")
+Else
+    TxtSelectedChassisNumber.Text = ""
+End If
+
+ If RST("ProducedNumber") <> "" Then
+    TxtSelectedProducedNumber.Text = RST("ProducedNumber")
+Else
+    TxtSelectedProducedNumber.Text = ""
+End If
+
+  If RST("EngineNumber") <> "" Then
+    TxtSelectedEngineNumber.Text = RST("EngineNumber")
+Else
+    TxtSelectedEngineNumber.Text = ""
+End If
+  
 MsgBox "Ban da chon xe test(" & RST("ProducedNumber") & ")"
 Else
 MsgBox "Record Not Found..."
@@ -4264,10 +4279,12 @@ End Sub
  
 
 Private Sub Form_Load()
-Dim Index As Integer
-For Index = 1 To 12
-    TbrMain.Buttons.Item(Index).Visible = False
-Next Index
+'Dim Index As Integer
+'For Index = 1 To 12
+ '   If Index <> 3 Then
+  '  TbrMain.Buttons.Item(Index).Visible = False
+   ' End If
+'Next Index
     
 txtSqlReport.Text = "SELECT * FROM TblTestingParameter"
 DatTestingParameter.DatabaseName = App.Path & "\OCS10_DataBase_97.mdb"
@@ -4610,9 +4627,23 @@ Private Sub LoadSelectVehicle()
     RST.Open sSQL, connect, adOpenDynamic, adLockOptimistic
     If Not RST.EOF Then
     TxtSelectedName.Text = RST("Name")
-    TxtSelectedChassisNumber.Text = RST("ChassisNumber")
-    TxtSelectedProducedNumber.Text = RST("ProducedNumber")
-    TxtSelectedEngineNumber.Text = RST("EngineNumber")
+    If RST("ChassisNumber") <> "" Then
+        TxtSelectedChassisNumber.Text = RST("ChassisNumber")
+    Else
+        TxtSelectedChassisNumber.Text = ""
+    End If
+    
+     If RST("ProducedNumber") <> "" Then
+        TxtSelectedProducedNumber.Text = RST("ProducedNumber")
+    Else
+        TxtSelectedProducedNumber.Text = ""
+    End If
+    
+      If RST("EngineNumber") <> "" Then
+        TxtSelectedEngineNumber.Text = RST("EngineNumber")
+    Else
+        TxtSelectedEngineNumber.Text = ""
+    End If
     Else
     End If
     RST.Close
@@ -4871,7 +4902,6 @@ Select Case Button.Key
 
 Case "KeyNew"
 'MnuAddNew_Click
-MsgBox TxtName.Text
 Dim curentName As String
 Dim curentTester As String
 curentName = TxtName.Text
