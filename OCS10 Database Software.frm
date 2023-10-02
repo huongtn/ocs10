@@ -1324,6 +1324,7 @@ Begin VB.Form FrmMain
          Width           =   1005
       End
       Begin VB.Label Label43 
+         AutoSize        =   -1  'True
          Caption         =   "Soá khung:"
          BeginProperty Font 
             Name            =   "VNI-Centur"
@@ -1334,13 +1335,14 @@ Begin VB.Form FrmMain
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   375
+         Height          =   270
          Left            =   240
          TabIndex        =   138
          Top             =   960
-         Width           =   1095
+         Width           =   915
       End
       Begin VB.Label Label42 
+         AutoSize        =   -1  'True
          Caption         =   "Loaïi xe:"
          BeginProperty Font 
             Name            =   "VNI-Centur"
@@ -1351,11 +1353,11 @@ Begin VB.Form FrmMain
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   255
+         Height          =   270
          Left            =   240
          TabIndex        =   137
          Top             =   480
-         Width           =   1215
+         Width           =   735
       End
    End
    Begin VB.Frame Frame10 
@@ -3485,12 +3487,6 @@ Begin VB.Form FrmMain
          Caption         =   "Import xe"
          Shortcut        =   ^I
       End
-      Begin VB.Menu b 
-         Caption         =   "-"
-      End
-      Begin VB.Menu MnuSelectVehicle 
-         Caption         =   "Chon xe test"
-      End
       Begin VB.Menu a 
          Caption         =   "-"
       End
@@ -3549,12 +3545,6 @@ Begin VB.Form FrmMain
       End
       Begin VB.Menu MnuHelpAboutOCS10DBS 
          Caption         =   "ThietBiCongNghiep.vn"
-      End
-      Begin VB.Menu L 
-         Caption         =   "-"
-      End
-      Begin VB.Menu MnuHelpAboutSolution 
-         Caption         =   "About SOLUTION"
       End
    End
 End
@@ -4132,7 +4122,28 @@ TxtBrakeStopDif.Text = Str(BD)
 End Sub
 
 Private Sub btnSelectTest_Click()
-MnuSelectVehicle_Click
+Dim connect As New ADODB.Connection
+Dim RST As New ADODB.Recordset
+
+If connect.State = 1 Then connect.Close
+If RST.State = 1 Then RST.Close
+connect.Open "Provider=Microsoft.jet.OLEDB.4.0;Data Source=" & App.Path & "\OCS10_DataBase_97.mdb;Persist Security Info=False"
+
+Dim sSQL As String
+sSQL = "Select * From TblTestingParameter Where STT = " & Val(txtCurrentID.Text) & ""
+RST.Open sSQL, connect, adOpenDynamic, adLockOptimistic
+If Not RST.EOF Then
+RST("SelectedDateTime") = Now()
+RST.Update
+TxtSelectedName.Text = RST("Name")
+TxtSelectedChassisNumber.Text = RST("ChassisNumber")
+TxtSelectedProducedNumber.Text = RST("ProducedNumber")
+TxtSelectedEngineNumber.Text = RST("EngineNumber")
+MsgBox "Ban da chon xe test(" & RST("ProducedNumber") & ")"
+Else
+MsgBox "Record Not Found..."
+End If
+RST.Close
 End Sub
 
 Private Sub cldDate_Click()
@@ -4511,6 +4522,14 @@ Private Sub LstNameSearch_MouseUp(Button As Integer, Shift As Integer, X As Sing
 TxtNameSearch = LstNameSearch
 End Sub
 
+Private Sub MnuHelpAboutOCS10DBS_Click()
+FrmContactUs.Show
+End Sub
+
+Private Sub MnuHelpGuide_Click()
+FrmAbout.Show
+End Sub
+
 Private Sub MnuImportVehicles_Click()
 CommonDialog2.Filter = "Excel (*.xlsx)|*.xlsx|All files (*.*)|*.*"
 CommonDialog2.DefaultExt = "txt"
@@ -4576,31 +4595,7 @@ Private Sub MnuSaveAsDataBase_Click()
 Unload Me
 FrmBackupDB.Show
 End Sub
-
-Private Sub MnuSelectVehicle_Click()
-    Dim connect As New ADODB.Connection
-    Dim RST As New ADODB.Recordset
-    
-    If connect.State = 1 Then connect.Close
-    If RST.State = 1 Then RST.Close
-    connect.Open "Provider=Microsoft.jet.OLEDB.4.0;Data Source=" & App.Path & "\OCS10_DataBase_97.mdb;Persist Security Info=False"
-    
-    Dim sSQL As String
-    sSQL = "Select * From TblTestingParameter Where STT = " & Val(txtCurrentID.Text) & ""
-    RST.Open sSQL, connect, adOpenDynamic, adLockOptimistic
-    If Not RST.EOF Then
-    RST("SelectedDateTime") = Now()
-    RST.Update
-    TxtSelectedName.Text = RST("Name")
-    TxtSelectedChassisNumber.Text = RST("ChassisNumber")
-    TxtSelectedProducedNumber.Text = RST("ProducedNumber")
-    TxtSelectedEngineNumber.Text = RST("EngineNumber")
-    MsgBox "Ban da chon xe test(" & RST("ProducedNumber") & ")"
-    Else
-    MsgBox "Record Not Found..."
-    End If
-    RST.Close
-End Sub
+ 
 
 Private Sub LoadSelectVehicle()
     Dim connect As New ADODB.Connection
