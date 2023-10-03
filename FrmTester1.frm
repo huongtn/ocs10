@@ -1,5 +1,5 @@
 VERSION 5.00
-Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCTL.OCX"
+Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.1#0"; "MSCOMCTL.OCX"
 Object = "{00028C01-0000-0000-0000-000000000046}#1.0#0"; "DBGRID32.OCX"
 Begin VB.Form FrmTester 
    Caption         =   "Form Manage Testers"
@@ -241,7 +241,7 @@ End Sub
 
 Private Sub Form_Load()
 
-DataTester.DatabaseName = App.Path & "\OCS10_DataBase_97.mdb"
+DataTester.DatabaseName = FrmMain.DataBaseFolder & "\OCS10_DataBase_97.mdb"
 DataTester.RecordSource = "select * from TblTesters  order by ID DESC"
 
 DisableAll

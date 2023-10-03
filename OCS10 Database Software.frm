@@ -3554,6 +3554,7 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
+Public DataBaseFolder As String
 Dim ColorGreen As String
 Dim ColorOrange As String
 Private SelectedTab As Integer
@@ -4127,7 +4128,7 @@ Dim RST As New ADODB.Recordset
 
 If connect.State = 1 Then connect.Close
 If RST.State = 1 Then RST.Close
-connect.Open "Provider=Microsoft.jet.OLEDB.4.0;Data Source=" & App.Path & "\OCS10_DataBase_97.mdb;Persist Security Info=False"
+connect.Open "Provider=Microsoft.jet.OLEDB.4.0;Data Source=" & DataBaseFolder & "\OCS10_DataBase_97.mdb;Persist Security Info=False"
 
 Dim sSQL As String
 sSQL = "Select * From TblTestingParameter Where STT = " & Val(txtCurrentID.Text) & ""
@@ -4285,12 +4286,13 @@ Private Sub Form_Load()
   '  TbrMain.Buttons.Item(Index).Visible = False
    ' End If
 'Next Index
-    
+
+DataBaseFolder = App.Path
 txtSqlReport.Text = "SELECT * FROM TblTestingParameter"
-DatTestingParameter.DatabaseName = App.Path & "\OCS10_DataBase_97.mdb"
+DatTestingParameter.DatabaseName = DataBaseFolder & "\OCS10_DataBase_97.mdb"
 DatTestingParameter.RecordSource = "select * from TblTestingParameter order by STT desc"
 
-DatCheckingParameter.DatabaseName = App.Path & "\OCS10_DataBase_97.mdb"
+DatCheckingParameter.DatabaseName = DataBaseFolder & "\OCS10_DataBase_97.mdb"
 DatCheckingParameter.RecordSource = "select * from TblCheckingParameter"
 
 
@@ -4327,7 +4329,7 @@ Dim db_ln As Database
 Dim rs_ln As Recordset
 
     ' Open the database.
-    dbname_ln = App.Path
+    dbname_ln = DataBaseFolder
     If Right$(dbname_ln, 1) <> "\" Then dbname_ln = dbname_ln & "\"
     dbname_ln = dbname_ln & "OCS10_DataBase_97.mdb"
 
@@ -4359,7 +4361,7 @@ Dim db_ln As Database
 Dim rs_ln As Recordset
 
     ' Open the database.
-    dbname_ln = App.Path
+    dbname_ln = DataBaseFolder
     If Right$(dbname_ln, 1) <> "\" Then dbname_ln = dbname_ln & "\"
     dbname_ln = dbname_ln & "OCS10_DataBase_97.mdb"
 
@@ -4397,7 +4399,7 @@ Dim db_ln As Database
 Dim rs_ln As Recordset
 
     ' Open the database.
-    dbname_ln = App.Path
+    dbname_ln = DataBaseFolder
     If Right$(dbname_ln, 1) <> "\" Then dbname_ln = dbname_ln & "\"
     dbname_ln = dbname_ln & "OCS10_DataBase_97.mdb"
 
@@ -4437,7 +4439,7 @@ Dim db_ln As Database
 Dim rs_ln As Recordset
 
     ' Open the database.
-    dbname_ln = App.Path
+    dbname_ln = DataBaseFolder
     If Right$(dbname_ln, 1) <> "\" Then dbname_ln = dbname_ln & "\"
     dbname_ln = dbname_ln & "OCS10_DataBase_97.mdb"
 
@@ -4475,7 +4477,7 @@ Dim db_lt As Database
 Dim rs_lt As Recordset
 
     ' Open the database.
-    dbname_lt = App.Path
+    dbname_lt = DataBaseFolder
     If Right$(dbname_lt, 1) <> "\" Then dbname_lt = dbname_lt & "\"
     dbname_lt = dbname_lt & "OCS10_DataBase_97.mdb"
 
@@ -4629,7 +4631,7 @@ Private Sub LoadSelectVehicle()
     
     If connect.State = 1 Then connect.Close
     If RST.State = 1 Then RST.Close
-    connect.Open "Provider=Microsoft.jet.OLEDB.4.0;Data Source=" & App.Path & "\OCS10_DataBase_97.mdb;Persist Security Info=False"
+    connect.Open "Provider=Microsoft.jet.OLEDB.4.0;Data Source=" & DataBaseFolder & "\OCS10_DataBase_97.mdb;Persist Security Info=False"
     
     Dim sSQL As String
     sSQL = "Select * From TblTestingParameter ORDER BY SelectedDateTime DESC"
@@ -5227,7 +5229,7 @@ Private Sub TxtNameSearch_Change()
     strSearch = Trim(TxtNameSearch.Text)
     strSql = "SELECT DISTINCT Name FROM TblTestingParameter WHERE Name LIKE '*" & strSearch & "*'"
     
-    dbname_ln = App.Path
+    dbname_ln = DataBaseFolder
     If Right$(dbname_ln, 1) <> "\" Then dbname_ln = dbname_ln & "\"
     dbname_ln = dbname_ln & "OCS10_DataBase_97.mdb"
     Set db_ln = OpenDatabase(dbname_ln)
@@ -5272,7 +5274,7 @@ Private Sub TxtChassisSearch_Change()
     strSearch = Trim(TxtChassisSearch.Text)
     strSql = "SELECT DISTINCT ChassisNumber FROM TblTestingParameter WHERE ChassisNumber LIKE '*" & strSearch & "*'"
     
-    dbname_ln = App.Path
+    dbname_ln = DataBaseFolder
     If Right$(dbname_ln, 1) <> "\" Then dbname_ln = dbname_ln & "\"
     dbname_ln = dbname_ln & "OCS10_DataBase_97.mdb"
     Set db_ln = OpenDatabase(dbname_ln)
@@ -5316,7 +5318,7 @@ Private Sub TxtEngineSearch_Change()
     strSearch = Trim(TxtEngineSearch.Text)
     strSql = "SELECT DISTINCT EngineNumber FROM TblTestingParameter WHERE EngineNumber LIKE '*" & strSearch & "*'"
     
-    dbname_ln = App.Path
+    dbname_ln = DataBaseFolder
     If Right$(dbname_ln, 1) <> "\" Then dbname_ln = dbname_ln & "\"
     dbname_ln = dbname_ln & "OCS10_DataBase_97.mdb"
     Set db_ln = OpenDatabase(dbname_ln)

@@ -77,7 +77,7 @@ Private Sub btnOK_Click()
     'Dim rs As New ADODB.Recordset
     'If connect.State = 1 Then connect.Close
     'If rs.State = 1 Then rs.Close
-    'connect.Open "Provider=Microsoft.jet.OLEDB.4.0;Data Source=" & App.Path & "\OCS10_DataBase_97.mdb;Persist Security Info=False"
+    'connect.Open "Provider=Microsoft.jet.OLEDB.4.0;Data Source=" & FrmMain.DataBaseFolder & "\OCS10_DataBase_97.mdb;Persist Security Info=False"
     'rs.Open "Select * from Password", connect, adOpenDynamic, adLockOptimistic
     'Do Until rs.EOF
     'MsgBox rs!Password

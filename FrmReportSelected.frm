@@ -63,11 +63,11 @@ Dim Report As New CRAXDRT.Report
 Private Sub Form_Load()
 Dim sqlToReport As String
 sqlToReport = FrmMain.txtCurrentID.Text
-Set myDB = OpenDatabase(App.Path & "\OCS10_DataBase_97.mdb")
+Set myDB = OpenDatabase(FrmMain.DataBaseFolder & "\OCS10_DataBase_97.mdb")
  
 Set myRS = myDB.OpenRecordset("SELECT   * FROM    TblCheckingParameter TblCheckingParameter INNER JOIN TblTestingParameter TblTestingParameter ON TblCheckingParameter.Name=TblTestingParameter.Name where  STT = " & Val(sqlToReport) & "")
 Set Report = Appl.OpenReport(".\OCS10Rpt.Rpt")
-Report.Database.Tables(1).Location = App.Path & "\OCS10_DataBase_97.mdb"
+Report.Database.Tables(1).Location = FrmMain.DataBaseFolder & "\OCS10_DataBase_97.mdb"
 
 Report.Database.SetDataSource myRS
 
