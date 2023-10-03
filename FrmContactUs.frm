@@ -4,7 +4,7 @@ Begin VB.Form FrmContactUs
    ClientHeight    =   3585
    ClientLeft      =   120
    ClientTop       =   465
-   ClientWidth     =   5505
+   ClientWidth     =   6570
    BeginProperty Font 
       Name            =   "VNI-Centur"
       Size            =   9.75
@@ -16,9 +16,9 @@ Begin VB.Form FrmContactUs
    EndProperty
    LinkTopic       =   "Form1"
    ScaleHeight     =   3585
-   ScaleWidth      =   5505
+   ScaleWidth      =   6570
    StartUpPosition =   3  'Windows Default
-   Begin VB.PictureBox Picture1 
+   Begin VB.PictureBox PictureContactUs 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   8.25
@@ -28,20 +28,20 @@ Begin VB.Form FrmContactUs
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   1215
-      Left            =   120
+      Height          =   1095
+      Left            =   0
       Picture         =   "FrmContactUs.frx":0000
-      ScaleHeight     =   1155
-      ScaleWidth      =   1515
+      ScaleHeight     =   1035
+      ScaleWidth      =   2955
       TabIndex        =   1
       Top             =   120
-      Width           =   1575
+      Width           =   3015
    End
    Begin VB.CommandButton btnSelectTest 
       BackColor       =   &H8000000D&
       Caption         =   "Thoaùt"
       Height          =   420
-      Left            =   3840
+      Left            =   4920
       TabIndex        =   0
       Top             =   3120
       Width           =   1455
@@ -50,7 +50,7 @@ Begin VB.Form FrmContactUs
       AutoSize        =   -1  'True
       Caption         =   "Giaûi Phaùp Laø Tieân Phong"
       Height          =   270
-      Left            =   2040
+      Left            =   3120
       TabIndex        =   8
       Top             =   2640
       Width           =   2340
@@ -59,7 +59,7 @@ Begin VB.Form FrmContactUs
       AutoSize        =   -1  'True
       Caption         =   "Tel: +84 43665 8985"
       Height          =   270
-      Left            =   2040
+      Left            =   3120
       TabIndex        =   7
       Top             =   2130
       Width           =   1815
@@ -68,7 +68,7 @@ Begin VB.Form FrmContactUs
       AutoSize        =   -1  'True
       Caption         =   "Email: info@thietbicongnghiep.vn"
       Height          =   270
-      Left            =   2040
+      Left            =   3120
       TabIndex        =   6
       Top             =   1620
       Width           =   3090
@@ -78,7 +78,7 @@ Begin VB.Form FrmContactUs
       Caption         =   "http://thietbicongnghiep.vn"
       ForeColor       =   &H8000000D&
       Height          =   270
-      Left            =   2880
+      Left            =   3960
       TabIndex        =   5
       Top             =   1110
       Width           =   2505
@@ -87,7 +87,7 @@ Begin VB.Form FrmContactUs
       AutoSize        =   -1  'True
       Caption         =   "Website: "
       Height          =   270
-      Left            =   2040
+      Left            =   3120
       TabIndex        =   4
       Top             =   1110
       Width           =   855
@@ -96,7 +96,7 @@ Begin VB.Form FrmContactUs
       AutoSize        =   -1  'True
       Caption         =   "INDUSTRY SOLUTION .JSC"
       Height          =   270
-      Left            =   2040
+      Left            =   3120
       TabIndex        =   3
       Top             =   600
       Width           =   2715
@@ -114,7 +114,7 @@ Begin VB.Form FrmContactUs
          Strikethrough   =   0   'False
       EndProperty
       Height          =   270
-      Left            =   2040
+      Left            =   3120
       TabIndex        =   2
       Top             =   90
       Width           =   3285
@@ -131,5 +131,5 @@ Private Sub btnSelectTest_Click()
 End Sub
 
 Private Sub Form_Load()
-Move (Screen.Width - Width) * 0.5!, (Screen.Height - Height) * 0.5!
+Move (Screen.Width - Width) * 0.5!, (Screen.Height - Height) * 0.5
 End Sub

@@ -27,15 +27,17 @@ Begin VB.Form FrmAbout
       Top             =   3240
       Width           =   1575
    End
-   Begin VB.PictureBox Picture1 
-      Height          =   1215
+   Begin VB.PictureBox PictureAboutLogo 
+      AutoRedraw      =   -1  'True
+      Height          =   1380
       Left            =   120
       Picture         =   "FrmAbout.frx":0000
-      ScaleHeight     =   1155
-      ScaleWidth      =   1395
+      ScaleHeight     =   88
+      ScaleMode       =   3  'Pixel
+      ScaleWidth      =   96
       TabIndex        =   5
-      Top             =   240
-      Width           =   1455
+      Top             =   120
+      Width           =   1500
    End
    Begin VB.Label Label4 
       AutoSize        =   -1  'True
@@ -96,4 +98,12 @@ End Sub
 
 Private Sub Form_Load()
 Move (Screen.Width - Width) * 0.5!, (Screen.Height - Height) * 0.5!
+ PictureAboutLogo.ScaleMode = 3
+ PictureAboutLogo.AutoRedraw = True
+ PictureAboutLogo.PaintPicture PictureAboutLogo.Picture, _
+ 0, 0, PictureAboutLogo.ScaleWidth, PictureAboutLogo.ScaleHeight, _
+ 0, 0, _
+ PictureAboutLogo.Picture.Width / 26.46, _
+ PictureAboutLogo.Picture.Height / 26.46
+ PictureAboutLogo.Picture = PictureAboutLogo.Image
 End Sub
