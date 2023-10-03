@@ -41,11 +41,11 @@ Begin VB.Form FrmAbout
    End
    Begin VB.Label Label4 
       AutoSize        =   -1  'True
-      Caption         =   "Hoaøn thaønh ngaøy 20-05-2012"
+      Caption         =   "Hoaøn thaønh ngaøy 10-10-2023"
       Height          =   270
       Left            =   1680
       TabIndex        =   4
-      Top             =   2796
+      Top             =   2790
       Width           =   2610
    End
    Begin VB.Label Label3 
@@ -69,7 +69,7 @@ Begin VB.Form FrmAbout
    End
    Begin VB.Label Label1 
       AutoSize        =   -1  'True
-      Caption         =   "Phieân baûn: 1.0"
+      Caption         =   "Phieân baûn: 2.0"
       Height          =   270
       Left            =   1680
       TabIndex        =   1
