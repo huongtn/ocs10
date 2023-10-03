@@ -4369,11 +4369,13 @@ Dim rs_ln As Recordset
         dbOpenSnapshot)
 
     ' Load the ComboBox.
+    If rs_ln.EOF = False Then
     rs_ln.MoveFirst
     Do While Not rs_ln.EOF
         LstNameSearch.AddItem rs_ln!Name
         rs_ln.MoveNext
     Loop
+    End If
 
     rs_ln.Close
     db_ln.Close
@@ -4382,7 +4384,9 @@ Dim rs_ln As Recordset
    DatTestingParameter.DatabaseName = dbname_ln
 
     ' Select the first choice.
-    LstNameSearch.ListIndex = 0
+    If LstNameSearch.ListCount > 0 Then
+        LstNameSearch.ListIndex = 0
+    End If
     
 End Sub
 
@@ -4403,6 +4407,7 @@ Dim rs_ln As Recordset
         dbOpenSnapshot)
 
     ' Load the ComboBox.
+    If rs_ln.EOF = False Then
     rs_ln.MoveFirst
     Do While Not rs_ln.EOF
         If rs_ln!EngineNumber <> "" Then
@@ -4412,7 +4417,7 @@ Dim rs_ln As Recordset
      
         rs_ln.MoveNext
     Loop
-
+    End If
     rs_ln.Close
     db_ln.Close
 
@@ -4420,7 +4425,9 @@ Dim rs_ln As Recordset
    DatTestingParameter.DatabaseName = dbname_ln
 
     ' Select the first choice.
-    LstEngineSearch.ListIndex = 0
+     If LstEngineSearch.ListCount > 0 Then
+        LstEngineSearch.ListIndex = 0
+    End If
         
 End Sub
 Private Sub ListChassisSearch()
@@ -4440,6 +4447,7 @@ Dim rs_ln As Recordset
         dbOpenSnapshot)
 
     ' Load the ComboBox.
+    If rs_ln.EOF = False Then
     rs_ln.MoveFirst
     Do While Not rs_ln.EOF
       If rs_ln!ChassisNumber <> "" Then
@@ -4447,16 +4455,17 @@ Dim rs_ln As Recordset
         End If
       rs_ln.MoveNext
     Loop
-
+    End If
     rs_ln.Close
     db_ln.Close
 
     ' Connect the Data control to the database.
    DatTestingParameter.DatabaseName = dbname_ln
-
+ 
     ' Select the first choice.
-    LstChassisSearch.ListIndex = 0
-        
+    If LstChassisSearch.ListCount > 0 Then
+        LstChassisSearch.ListIndex = 0
+    End If
 End Sub
 
 Private Sub ListTesterUpdate()
