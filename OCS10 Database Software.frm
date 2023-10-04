@@ -4288,7 +4288,8 @@ Private Sub Form_Load()
    ' End If
 'Next Index
 
-DataBaseFolder = "\\Master\OCS10"
+'DataBaseFolder = "\\Master\OCS10"
+DataBaseFolder = App.Path
 txtSqlReport.Text = "SELECT * FROM TblTestingParameter"
 DatTestingParameter.DatabaseName = DataBaseFolder & "\OCS10_DataBase_97.mdb"
 DatTestingParameter.RecordSource = "select * from TblTestingParameter order by STT desc"
@@ -4537,6 +4538,25 @@ For Index = 1 To 13
     TbrMain.Buttons.Item(Index).Visible = True
 Next Index
 End Sub
+
+Function GetPassword() As String
+    Dim connect As New ADODB.Connection
+    Dim RST As New ADODB.Recordset
+    Dim password As String
+    If connect.State = 1 Then connect.Close
+    If RST.State = 1 Then RST.Close
+    connect.Open "Provider=Microsoft.jet.OLEDB.4.0;Data Source=" & DataBaseFolder & "\OCS10_DataBase_97.mdb;Persist Security Info=False"
+    
+    Dim sSQL As String
+    sSQL = "Select * From TblPassword"
+    RST.Open sSQL, connect, adOpenDynamic, adLockOptimistic
+    If Not RST.EOF Then
+    password = RST("Password")
+    RST.Close
+    GetPassword = password
+    End If
+End Function
+
 
 Private Sub LstChassisSearch_MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)
 TxtChassisSearch = LstChassisSearch

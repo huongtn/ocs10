@@ -67,33 +67,17 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-
 Private Sub btnCancel_Click()
   Unload Me
 End Sub
 
 Private Sub btnOK_Click()
-    'Dim connect As New ADODB.Connection
-    'Dim rs As New ADODB.Recordset
-    'If connect.State = 1 Then connect.Close
-    'If rs.State = 1 Then rs.Close
-    'connect.Open "Provider=Microsoft.jet.OLEDB.4.0;Data Source=" & FrmMain.DataBaseFolder & "\OCS10_DataBase_97.mdb;Persist Security Info=False"
-    'rs.Open "Select * from Password", connect, adOpenDynamic, adLockOptimistic
-    'Do Until rs.EOF
-    'MsgBox rs!Password
-    'rs.MoveNext
-    'Loop
-    If txtPassword.Text = "123456" Then
+    If txtPassword.Text = FrmMain.GetPassword Then
        FrmMain.BeginUpdate
        Unload Me
        Else
-       
        MsgBox "Sai mat khau"
-       
     End If
-    
-    
-    
 End Sub
 
 Private Sub Form_Load()
