@@ -4163,6 +4163,10 @@ End If
 RST.Close
 End Sub
 
+Private Sub ChangePass_Click()
+FrmPassword.Show
+End Sub
+
 Private Sub cldDate_Click()
 TxtDate.Text = cldDate.Value
 cldDate.Visible = False
@@ -4556,6 +4560,23 @@ Function GetPassword() As String
     GetPassword = password
     End If
 End Function
+
+Sub SetPassword(newPassword As String)
+    Dim connect As New ADODB.Connection
+    Dim RST As New ADODB.Recordset
+    Dim password As String
+    If connect.State = 1 Then connect.Close
+    If RST.State = 1 Then RST.Close
+    connect.Open "Provider=Microsoft.jet.OLEDB.4.0;Data Source=" & DataBaseFolder & "\OCS10_DataBase_97.mdb;Persist Security Info=False"
+    
+    Dim sSQL As String
+    sSQL = "Select * From TblPassword"
+    RST.Open sSQL, connect, adOpenDynamic, adLockOptimistic
+    If Not RST.EOF Then
+    RST("Password") = newPassword
+    RST.Update
+    End If
+End Sub
 
 
 Private Sub LstChassisSearch_MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)
