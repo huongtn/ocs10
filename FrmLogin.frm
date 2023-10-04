@@ -5,15 +5,15 @@ Begin VB.Form FrmLogin
    ClientHeight    =   1755
    ClientLeft      =   120
    ClientTop       =   465
-   ClientWidth     =   4500
+   ClientWidth     =   4755
    LinkTopic       =   "Form1"
    ScaleHeight     =   1755
-   ScaleWidth      =   4500
+   ScaleWidth      =   4755
    StartUpPosition =   3  'Windows Default
    Begin VB.TextBox txtPassword 
       Height          =   350
       IMEMode         =   3  'DISABLE
-      Left            =   1080
+      Left            =   1320
       PasswordChar    =   "*"
       TabIndex        =   0
       Top             =   507
@@ -21,7 +21,7 @@ Begin VB.Form FrmLogin
    End
    Begin MSForms.CommandButton btnOK 
       Height          =   495
-      Left            =   1080
+      Left            =   1320
       TabIndex        =   3
       Top             =   1080
       Width           =   975
@@ -35,7 +35,7 @@ Begin VB.Form FrmLogin
    End
    Begin MSForms.CommandButton btnCancel 
       Height          =   495
-      Left            =   2640
+      Left            =   2880
       TabIndex        =   2
       Top             =   1080
       Width           =   975
@@ -52,10 +52,10 @@ Begin VB.Form FrmLogin
       Left            =   120
       TabIndex        =   1
       Top             =   555
-      Width           =   885
+      Width           =   1005
       VariousPropertyBits=   276824091
       Caption         =   "Maät khaåu"
-      Size            =   "1561;476"
+      Size            =   "1773;476"
       FontName        =   "VNI-Centur"
       FontHeight      =   195
       FontCharSet     =   0
