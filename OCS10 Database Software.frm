@@ -7,14 +7,14 @@ Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "comdlg32.ocx"
 Begin VB.Form FrmMain 
    BorderStyle     =   0  'None
    Caption         =   "DBS10 - Database Software  -  Designed by INDUSTRY SOLUTION Co.  -   www.thietbicongnghiep.vn"
-   ClientHeight    =   11760
+   ClientHeight    =   12195
    ClientLeft      =   45
    ClientTop       =   615
    ClientWidth     =   18615
    FillColor       =   &H00808080&
    Icon            =   "OCS10 Database Software.frx":0000
    LinkTopic       =   "Form1"
-   ScaleHeight     =   11287.48
+   ScaleHeight     =   11705
    ScaleMode       =   0  'User
    ScaleWidth      =   21312.9
    StartUpPosition =   2  'CenterScreen
@@ -126,6 +126,7 @@ Begin VB.Form FrmMain
       ScaleWidth      =   1140
       TabIndex        =   168
       Top             =   11760
+      Visible         =   0   'False
       Width           =   1200
    End
    Begin MSACAL.Calendar cldToDate 
@@ -4287,7 +4288,7 @@ Private Sub Form_Load()
    ' End If
 'Next Index
 
-DataBaseFolder = App.Path
+DataBaseFolder = "\\Master\OCS10"
 txtSqlReport.Text = "SELECT * FROM TblTestingParameter"
 DatTestingParameter.DatabaseName = DataBaseFolder & "\OCS10_DataBase_97.mdb"
 DatTestingParameter.RecordSource = "select * from TblTestingParameter order by STT desc"
