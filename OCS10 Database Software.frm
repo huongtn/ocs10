@@ -4287,9 +4287,9 @@ End Sub
 Private Sub Form_Load()
 'Dim Index As Integer
 'For Index = 1 To 12
- '   If Index <> 3 Then
-  '  TbrMain.Buttons.Item(Index).Visible = False
-   ' End If
+'   If Index <> 3 Then
+'    TbrMain.Buttons.Item(Index).Visible = False
+'    End If
 'Next Index
 
 'DataBaseFolder = "\\Master\OCS10"
