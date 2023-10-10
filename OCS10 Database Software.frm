@@ -4586,6 +4586,29 @@ Sub SetPassword(newPassword As String)
     End If
 End Sub
 
+Sub AddCar()
+    Dim Name As String
+    Dim Tester As String
+    Dim ChassisNumber As String
+    Dim ProducedNumber As String
+    Dim EngineNumber As String
+    Name = FrmAddCar.CboName.Text
+    Tester = FrmAddCar.CboTester.Text
+    ChassisNumber = FrmAddCar.TxtChassisNumber.Text
+    ProducedNumber = FrmAddCar.TxtProducedNumber.Text
+    EngineNumber = FrmAddCar.TxtEngineNumber.Text
+    With DatTestingParameter.Recordset
+        .AddNew
+        !Name = Name
+        !Tester = Tester
+        !ChassisNumber = ChassisNumber
+        !ProducedNumber = ProducedNumber
+        !EngineNumber = EngineNumber
+        !Date = Date
+        .Update
+    End With
+    DatTestingParameter.Refresh
+End Sub
 
 Private Sub LstChassisSearch_MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)
 TxtChassisSearch = LstChassisSearch
@@ -4962,22 +4985,23 @@ Private Sub TbrMain_ButtonClick(ByVal Button As MSComctlLib.Button)
 Select Case Button.Key
 
 Case "KeyNew"
+FrmAddCar.Show
 'MnuAddNew_Click
-Dim curentName As String
-Dim curentTester As String
-curentName = TxtName.Text
-curentTester = TxtTester.Text
-With DatTestingParameter.Recordset
-        .AddNew
-        !Name = curentName
-        !Tester = curentTester
-        !Date = Date
-        .Update
-    End With
-    DatTestingParameter.Refresh
+'Dim curentName As String
+'Dim curentTester As String
+'curentName = TxtName.Text
+'curentTester = TxtTester.Text
+'With DatTestingParameter.Recordset
+ '       .AddNew
+  '      !Name = curentName
+   '     !Tester = curentTester
+    '    !Date = Date
+     '   .Update
+    'End With
+    'DatTestingParameter.Refresh
     
-MnuEditResult_Click
-TbrMain.Buttons(7).Enabled = False
+'MnuEditResult_Click
+'TbrMain.Buttons(7).Enabled = False
 Case "KeyEdit"
 MnuEditResult_Click
 
