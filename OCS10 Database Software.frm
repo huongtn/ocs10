@@ -4293,8 +4293,8 @@ Private Sub Form_Load()
 '    End If
 'Next Index
 
-DataBaseFolder = "\\Master\OCS10"
-'DataBaseFolder = App.Path
+'DataBaseFolder = "\\Master\OCS10"
+DataBaseFolder = App.Path
 txtSqlReport.Text = "SELECT * FROM TblTestingParameter"
 DatTestingParameter.DatabaseName = DataBaseFolder & "\OCS10_DataBase_97.mdb"
 DatTestingParameter.RecordSource = "select * from TblTestingParameter order by STT desc"
