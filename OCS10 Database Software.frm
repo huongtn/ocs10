@@ -886,9 +886,9 @@ Begin VB.Form FrmMain
       BorderStyle     =   0  'None
       Height          =   2500
       Index           =   4
-      Left            =   11880
+      Left            =   10200
       TabIndex        =   65
-      Top             =   9600
+      Top             =   10080
       Width           =   4359
       Begin VB.ListBox LstAll 
          BeginProperty Font 
@@ -4312,6 +4312,11 @@ ListChassisSearch
 ListEngineSearch
 ListTesterUpdate
 LoadSelectVehicle
+
+TxtDateFrom.Text = Date
+TxtDateTo.Text = Date
+cldFromDate.Value = Date
+cldToDate.Value = Date
 'TabSearchEnable
 'DBGridOptionShow_Sub
 End Sub
