@@ -67,14 +67,6 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-Private Sub btnCancel_Click()
-  Unload Me
-End Sub
-
-Private Sub btnOK_Click()
- 
-End Sub
-
 Private Sub Form_Load()
 Move (Screen.Width - Width) * 0.5!, (Screen.Height - Height) * 0.5!
 End Sub

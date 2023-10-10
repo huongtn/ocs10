@@ -719,8 +719,8 @@ End Sub
  
 
 Private Sub Form_Load()
-DataBaseFolder = "\\Master\OCS10"
-'DataBaseFolder = App.Path
+'DataBaseFolder = "\\Master\OCS10"
+DataBaseFolder = App.Path
 txtSqlReport.Text = "SELECT * FROM TblTestingParameter"
 DatTestingParameter.DatabaseName = DataBaseFolder & "\OCS10_DataBase_97.mdb"
 DatTestingParameter.RecordSource = "select * from TblTestingParameter order by STT desc"
@@ -874,3 +874,8 @@ Private Sub LoadSelectVehicle()
     RST.Close
 End Sub
  
+Private Sub TxtChassisNumber_Change()
+If Len(TxtChassisNumber.Text) = 17 Then
+TxtEngineNumber.SetFocus
+End If
+End Sub
