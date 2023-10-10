@@ -19,6 +19,231 @@ Begin VB.Form FrmMain
    ScaleWidth      =   23030.3
    StartUpPosition =   2  'CenterScreen
    WindowState     =   2  'Maximized
+   Begin VB.Frame Frame8 
+      Caption         =   "Khí xaû - Ñoäng cô Diesel"
+      BeginProperty Font 
+         Name            =   "VNI-Centur"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00FF0000&
+      Height          =   2535
+      Left            =   10560
+      TabIndex        =   31
+      Top             =   9600
+      Width           =   9255
+      Begin VB.TextBox TxtHSUDiesel3 
+         DataField       =   "HSUDiesel3"
+         DataSource      =   "DatTestingParameter"
+         Enabled         =   0   'False
+         Height          =   375
+         Left            =   6840
+         TabIndex        =   110
+         Top             =   1680
+         Width           =   1935
+      End
+      Begin VB.TextBox TxtRPMDieselMax3 
+         DataField       =   "RPMDieselMax3"
+         DataSource      =   "DatTestingParameter"
+         Enabled         =   0   'False
+         Height          =   405
+         Left            =   4200
+         TabIndex        =   109
+         Top             =   1680
+         Width           =   1935
+      End
+      Begin VB.TextBox TxtRPMDieselMin3 
+         DataField       =   "RPMDieselMin3"
+         DataSource      =   "DatTestingParameter"
+         Enabled         =   0   'False
+         Height          =   405
+         Left            =   1800
+         TabIndex        =   108
+         Top             =   1680
+         Width           =   1935
+      End
+      Begin VB.TextBox TxtHSUDiesel2 
+         DataField       =   "HSUDiesel2"
+         DataSource      =   "DatTestingParameter"
+         Enabled         =   0   'False
+         Height          =   375
+         Left            =   6840
+         TabIndex        =   107
+         Top             =   1200
+         Width           =   1935
+      End
+      Begin VB.TextBox TxtRPMDieselMax2 
+         DataField       =   "RPMDieselMax2"
+         DataSource      =   "DatTestingParameter"
+         Enabled         =   0   'False
+         Height          =   405
+         Left            =   4200
+         TabIndex        =   106
+         Top             =   1200
+         Width           =   1935
+      End
+      Begin VB.TextBox TxtRPMDieselMin2 
+         DataField       =   "RPMDieselMin2"
+         DataSource      =   "DatTestingParameter"
+         Enabled         =   0   'False
+         Height          =   375
+         Left            =   1800
+         TabIndex        =   105
+         Top             =   1200
+         Width           =   1935
+      End
+      Begin VB.TextBox TxtRPMDieselMax1 
+         DataField       =   "RPMDieselMax1"
+         DataSource      =   "DatTestingParameter"
+         Enabled         =   0   'False
+         Height          =   375
+         Left            =   4200
+         TabIndex        =   104
+         Top             =   720
+         Width           =   1935
+      End
+      Begin VB.TextBox TxtRPMDieselMin1 
+         DataField       =   "RPMDieselMin1"
+         DataSource      =   "DatTestingParameter"
+         Enabled         =   0   'False
+         Height          =   375
+         Left            =   1800
+         TabIndex        =   103
+         Top             =   720
+         Width           =   1935
+      End
+      Begin VB.TextBox TxtHSUDiesel1 
+         DataField       =   "HSUDiesel1"
+         DataSource      =   "DatTestingParameter"
+         Enabled         =   0   'False
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   375
+         Left            =   6840
+         TabIndex        =   17
+         Top             =   720
+         Width           =   1935
+      End
+      Begin VB.Label Label13 
+         AutoSize        =   -1  'True
+         Caption         =   "HSU"
+         BeginProperty Font 
+            Name            =   "VNI-Centur"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Left            =   6840
+         TabIndex        =   158
+         Top             =   375
+         Width           =   450
+      End
+      Begin VB.Label Label12 
+         AutoSize        =   -1  'True
+         Caption         =   "Toác ñoä Max"
+         BeginProperty Font 
+            Name            =   "VNI-Centur"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Left            =   4200
+         TabIndex        =   150
+         Top             =   375
+         Width           =   1065
+      End
+      Begin VB.Label Label10 
+         AutoSize        =   -1  'True
+         Caption         =   "Toác ñoä Min"
+         BeginProperty Font 
+            Name            =   "VNI-Centur"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Left            =   1800
+         TabIndex        =   149
+         Top             =   375
+         Width           =   1035
+      End
+      Begin VB.Label Label22 
+         AutoSize        =   -1  'True
+         Caption         =   "Laàn 3:"
+         BeginProperty Font 
+            Name            =   "VNI-Centur"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Left            =   480
+         TabIndex        =   148
+         Top             =   1680
+         Width           =   585
+      End
+      Begin VB.Label Label21 
+         AutoSize        =   -1  'True
+         Caption         =   "Laàn 2:"
+         BeginProperty Font 
+            Name            =   "VNI-Centur"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Left            =   480
+         TabIndex        =   147
+         Top             =   1200
+         Width           =   585
+      End
+      Begin VB.Label Label20 
+         AutoSize        =   -1  'True
+         Caption         =   "Laàn 1:"
+         BeginProperty Font 
+            Name            =   "VNI-Centur"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Left            =   480
+         TabIndex        =   146
+         Top             =   720
+         Width           =   585
+      End
+   End
    Begin MSACAL.Calendar cldDate 
       Height          =   3735
       Left            =   7200
@@ -99,7 +324,7 @@ Begin VB.Form FrmMain
          Enabled         =   0   'False
          Height          =   375
          Left            =   1680
-         TabIndex        =   117
+         TabIndex        =   111
          Top             =   1320
          Width           =   2175
       End
@@ -193,7 +418,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   147
+         TabIndex        =   141
          Top             =   2332
          Width           =   420
       End
@@ -211,7 +436,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   146
+         TabIndex        =   140
          Top             =   1852
          Width           =   660
       End
@@ -229,7 +454,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   145
+         TabIndex        =   139
          Top             =   1372
          Width           =   1365
       End
@@ -247,7 +472,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   144
+         TabIndex        =   138
          Top             =   892
          Width           =   1380
       End
@@ -265,14 +490,14 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   143
+         TabIndex        =   137
          Top             =   412
          Width           =   735
       End
       Begin MSForms.Label Label37 
          Height          =   270
          Left            =   3960
-         TabIndex        =   118
+         TabIndex        =   112
          Top             =   1365
          Width           =   585
          VariousPropertyBits=   276824091
@@ -377,8 +602,8 @@ Begin VB.Form FrmMain
       EndProperty
       ForeColor       =   &H000000FF&
       Height          =   420
-      Left            =   16200
-      TabIndex        =   173
+      Left            =   16440
+      TabIndex        =   167
       Top             =   960
       Width           =   3015
    End
@@ -397,7 +622,7 @@ Begin VB.Form FrmMain
       ForeColor       =   &H000000FF&
       Height          =   420
       Left            =   12030
-      TabIndex        =   172
+      TabIndex        =   166
       Top             =   930
       Width           =   3015
    End
@@ -416,7 +641,7 @@ Begin VB.Form FrmMain
       ForeColor       =   &H000000FF&
       Height          =   420
       Left            =   7860
-      TabIndex        =   171
+      TabIndex        =   165
       Top             =   930
       Width           =   3015
    End
@@ -435,7 +660,7 @@ Begin VB.Form FrmMain
       ForeColor       =   &H000000FF&
       Height          =   420
       Left            =   3690
-      TabIndex        =   170
+      TabIndex        =   164
       Top             =   930
       Width           =   3015
    End
@@ -453,7 +678,7 @@ Begin VB.Form FrmMain
       EndProperty
       Height          =   420
       Left            =   480
-      TabIndex        =   169
+      TabIndex        =   163
       Top             =   930
       Width           =   2055
    End
@@ -462,7 +687,7 @@ Begin VB.Form FrmMain
       Left            =   13920
       ScaleHeight     =   420
       ScaleWidth      =   1140
-      TabIndex        =   168
+      TabIndex        =   162
       Top             =   12360
       Visible         =   0   'False
       Width           =   1200
@@ -674,7 +899,7 @@ Begin VB.Form FrmMain
          Left            =   6840
          TabIndex        =   98
          Top             =   720
-         Width           =   1695
+         Width           =   1935
       End
       Begin VB.TextBox TxtHLLowLeftUD 
          DataField       =   "HLLowLeftUD"
@@ -693,7 +918,7 @@ Begin VB.Form FrmMain
          Left            =   4200
          TabIndex        =   97
          Top             =   720
-         Width           =   2055
+         Width           =   1935
       End
       Begin VB.TextBox TxtHLLowLeftInt 
          DataField       =   "HLLowLeftInt"
@@ -750,7 +975,7 @@ Begin VB.Form FrmMain
          Left            =   4200
          TabIndex        =   94
          Top             =   1200
-         Width           =   2055
+         Width           =   1935
       End
       Begin VB.TextBox TxtHLLowRightLR 
          DataField       =   "HLLowRightLR"
@@ -769,7 +994,7 @@ Begin VB.Form FrmMain
          Left            =   6840
          TabIndex        =   93
          Top             =   1200
-         Width           =   1695
+         Width           =   1935
       End
       Begin VB.Label Label2 
          AutoSize        =   -1  'True
@@ -784,8 +1009,8 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   270
-         Left            =   600
-         TabIndex        =   136
+         Left            =   480
+         TabIndex        =   130
          Top             =   720
          Width           =   810
       End
@@ -802,8 +1027,8 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   270
-         Left            =   600
-         TabIndex        =   135
+         Left            =   480
+         TabIndex        =   129
          Top             =   1200
          Width           =   885
       End
@@ -821,7 +1046,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   6840
-         TabIndex        =   132
+         TabIndex        =   126
          Top             =   360
          Width           =   1920
       End
@@ -839,7 +1064,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   4200
-         TabIndex        =   131
+         TabIndex        =   125
          Top             =   360
          Width           =   1980
       End
@@ -857,7 +1082,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   1800
-         TabIndex        =   130
+         TabIndex        =   124
          Top             =   360
          Width           =   1650
       End
@@ -1604,7 +1829,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   255
          Left            =   240
-         TabIndex        =   142
+         TabIndex        =   136
          Top             =   2880
          Width           =   1215
       End
@@ -1622,7 +1847,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   141
+         TabIndex        =   135
          Top             =   2400
          Width           =   735
       End
@@ -1640,7 +1865,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   140
+         TabIndex        =   134
          Top             =   1920
          Width           =   1110
       End
@@ -1658,7 +1883,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   139
+         TabIndex        =   133
          Top             =   1440
          Width           =   1005
       End
@@ -1676,7 +1901,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   138
+         TabIndex        =   132
          Top             =   960
          Width           =   915
       End
@@ -1694,7 +1919,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   137
+         TabIndex        =   131
          Top             =   480
          Width           =   735
       End
@@ -1757,7 +1982,7 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   375
-         Left            =   7440
+         Left            =   7680
          TabIndex        =   85
          Top             =   1560
          Width           =   1215
@@ -1776,7 +2001,7 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   375
-         Left            =   5520
+         Left            =   5640
          TabIndex        =   84
          Top             =   1560
          Width           =   1335
@@ -1814,7 +2039,7 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   375
-         Left            =   1920
+         Left            =   1800
          TabIndex        =   82
          Top             =   1560
          Width           =   1335
@@ -1833,7 +2058,7 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   375
-         Left            =   7440
+         Left            =   7680
          TabIndex        =   81
          Top             =   1080
          Width           =   1215
@@ -1852,7 +2077,7 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   375
-         Left            =   5520
+         Left            =   5640
          TabIndex        =   80
          Top             =   1080
          Width           =   1335
@@ -1881,7 +2106,7 @@ Begin VB.Form FrmMain
          DataSource      =   "DatTestingParameter"
          Enabled         =   0   'False
          Height          =   375
-         Left            =   1920
+         Left            =   1800
          TabIndex        =   78
          Top             =   1080
          Width           =   1335
@@ -1900,7 +2125,7 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   375
-         Left            =   7440
+         Left            =   7680
          TabIndex        =   3
          Top             =   600
          Width           =   1215
@@ -1919,7 +2144,7 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   375
-         Left            =   5520
+         Left            =   5640
          TabIndex        =   2
          Top             =   600
          Width           =   1335
@@ -1957,7 +2182,7 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   375
-         Left            =   1920
+         Left            =   1800
          TabIndex        =   0
          Top             =   600
          Width           =   1335
@@ -1975,8 +2200,8 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   270
-         Left            =   7440
-         TabIndex        =   123
+         Left            =   7680
+         TabIndex        =   117
          Top             =   240
          Width           =   1005
       End
@@ -1993,8 +2218,8 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   270
-         Left            =   5520
-         TabIndex        =   122
+         Left            =   5640
+         TabIndex        =   116
          Top             =   240
          Width           =   750
       End
@@ -2012,7 +2237,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   3840
-         TabIndex        =   121
+         TabIndex        =   115
          Top             =   240
          Width           =   1110
       End
@@ -2029,8 +2254,8 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   270
-         Left            =   1920
-         TabIndex        =   120
+         Left            =   1800
+         TabIndex        =   114
          Top             =   240
          Width           =   1035
       End
@@ -2048,7 +2273,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   480
-         TabIndex        =   119
+         TabIndex        =   113
          Top             =   645
          Width           =   1065
       End
@@ -2123,7 +2348,7 @@ Begin VB.Form FrmMain
          Left            =   6960
          TabIndex        =   88
          Top             =   1080
-         Width           =   1695
+         Width           =   1935
       End
       Begin VB.TextBox TxtWeightRearRight 
          DataField       =   "WeightRearRight"
@@ -2142,7 +2367,7 @@ Begin VB.Form FrmMain
          Left            =   4320
          TabIndex        =   87
          Top             =   1080
-         Width           =   2055
+         Width           =   1935
       End
       Begin VB.TextBox TxtWeightRearLeft 
          DataField       =   "WeightRearLeft"
@@ -2158,7 +2383,7 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   375
-         Left            =   1920
+         Left            =   1800
          TabIndex        =   86
          Top             =   1080
          Width           =   1935
@@ -2180,7 +2405,7 @@ Begin VB.Form FrmMain
          Left            =   6960
          TabIndex        =   6
          Top             =   600
-         Width           =   1695
+         Width           =   1935
       End
       Begin VB.TextBox TxtWeightFrontRight 
          DataField       =   "WeightFrontRight"
@@ -2199,7 +2424,7 @@ Begin VB.Form FrmMain
          Left            =   4320
          TabIndex        =   5
          Top             =   600
-         Width           =   2055
+         Width           =   1935
       End
       Begin VB.TextBox TxtWeightFrontLeft 
          DataField       =   "WeightFrontLeft"
@@ -2215,7 +2440,7 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   375
-         Left            =   1920
+         Left            =   1800
          TabIndex        =   4
          Top             =   600
          Width           =   1935
@@ -2233,8 +2458,8 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   270
-         Left            =   600
-         TabIndex        =   151
+         Left            =   480
+         TabIndex        =   145
          Top             =   1125
          Width           =   900
       End
@@ -2251,8 +2476,8 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   270
-         Left            =   600
-         TabIndex        =   150
+         Left            =   480
+         TabIndex        =   144
          Top             =   645
          Width           =   1065
       End
@@ -2270,7 +2495,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   6960
-         TabIndex        =   126
+         TabIndex        =   120
          Top             =   240
          Width           =   810
       End
@@ -2288,7 +2513,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   4320
-         TabIndex        =   125
+         TabIndex        =   119
          Top             =   240
          Width           =   1170
       End
@@ -2305,8 +2530,8 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   270
-         Left            =   1920
-         TabIndex        =   124
+         Left            =   1800
+         TabIndex        =   118
          Top             =   240
          Width           =   1095
       End
@@ -2345,7 +2570,7 @@ Begin VB.Form FrmMain
          Left            =   6840
          TabIndex        =   91
          Top             =   1080
-         Width           =   1695
+         Width           =   1935
       End
       Begin VB.TextBox TxtHLHighRightUD 
          DataField       =   "HLHighRightUD"
@@ -2364,7 +2589,7 @@ Begin VB.Form FrmMain
          Left            =   4200
          TabIndex        =   90
          Top             =   1080
-         Width           =   2055
+         Width           =   1935
       End
       Begin VB.TextBox TxtHLHighRightInt 
          DataField       =   "HLHighRightInt"
@@ -2421,7 +2646,7 @@ Begin VB.Form FrmMain
          Left            =   4200
          TabIndex        =   15
          Top             =   600
-         Width           =   2055
+         Width           =   1935
       End
       Begin VB.TextBox TxtHLHighLeftLR 
          DataField       =   "HLHighLeftLR"
@@ -2440,7 +2665,7 @@ Begin VB.Form FrmMain
          Left            =   6840
          TabIndex        =   16
          Top             =   600
-         Width           =   1695
+         Width           =   1935
       End
       Begin VB.Label Label57 
          AutoSize        =   -1  'True
@@ -2456,7 +2681,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   4200
-         TabIndex        =   167
+         TabIndex        =   161
          Top             =   240
          Width           =   1980
       End
@@ -2473,8 +2698,8 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   270
-         Left            =   600
-         TabIndex        =   134
+         Left            =   480
+         TabIndex        =   128
          Top             =   1080
          Width           =   885
       End
@@ -2491,8 +2716,8 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   270
-         Left            =   600
-         TabIndex        =   133
+         Left            =   480
+         TabIndex        =   127
          Top             =   600
          Width           =   810
       End
@@ -2510,7 +2735,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   6840
-         TabIndex        =   129
+         TabIndex        =   123
          Top             =   240
          Width           =   1920
       End
@@ -2527,7 +2752,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   0
-         TabIndex        =   128
+         TabIndex        =   122
          Top             =   1560
          Width           =   2055
       End
@@ -2545,300 +2770,9 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   1800
-         TabIndex        =   127
+         TabIndex        =   121
          Top             =   240
          Width           =   1650
-      End
-   End
-   Begin VB.Frame Frame8 
-      Caption         =   "Khí xaû - Ñoäng cô Diesel"
-      BeginProperty Font 
-         Name            =   "VNI-Centur"
-         Size            =   9.75
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      ForeColor       =   &H00FF0000&
-      Height          =   2535
-      Left            =   10560
-      TabIndex        =   31
-      Top             =   9600
-      Width           =   9255
-      Begin VB.TextBox TxtTBHeSoDiesel 
-         Enabled         =   0   'False
-         Height          =   405
-         Left            =   5520
-         TabIndex        =   116
-         Top             =   2040
-         Width           =   1335
-      End
-      Begin VB.TextBox TxtHSUDiesel3 
-         DataField       =   "HSUDiesel3"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         Height          =   375
-         Left            =   7320
-         TabIndex        =   114
-         Top             =   1560
-         Width           =   1215
-      End
-      Begin VB.TextBox TxtHeSoDiesel3 
-         DataField       =   "HeSoDiesel3"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         Height          =   405
-         Left            =   5520
-         TabIndex        =   113
-         Top             =   1560
-         Width           =   1335
-      End
-      Begin VB.TextBox TxtRPMDieselMax3 
-         DataField       =   "RPMDieselMax3"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         Height          =   405
-         Left            =   3720
-         TabIndex        =   112
-         Top             =   1560
-         Width           =   1215
-      End
-      Begin VB.TextBox TxtRPMDieselMin3 
-         DataField       =   "RPMDieselMin3"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         Height          =   405
-         Left            =   1800
-         TabIndex        =   111
-         Top             =   1560
-         Width           =   1215
-      End
-      Begin VB.TextBox TxtHSUDiesel2 
-         DataField       =   "HSUDiesel2"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         Height          =   375
-         Left            =   7320
-         TabIndex        =   110
-         Top             =   1080
-         Width           =   1215
-      End
-      Begin VB.TextBox TxtHeSoDiesel2 
-         DataField       =   "HeSoDiesel2"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         Height          =   375
-         Left            =   5520
-         TabIndex        =   109
-         Top             =   1080
-         Width           =   1335
-      End
-      Begin VB.TextBox TxtRPMDieselMax2 
-         DataField       =   "RPMDieselMax2"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         Height          =   405
-         Left            =   3720
-         TabIndex        =   108
-         Top             =   1080
-         Width           =   1215
-      End
-      Begin VB.TextBox TxtRPMDieselMin2 
-         DataField       =   "RPMDieselMin2"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         Height          =   375
-         Left            =   1800
-         TabIndex        =   107
-         Top             =   1080
-         Width           =   1215
-      End
-      Begin VB.TextBox TxtHeSoDiesel1 
-         DataField       =   "HeSoDiesel1"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         Height          =   375
-         Left            =   5520
-         TabIndex        =   106
-         Top             =   600
-         Width           =   1335
-      End
-      Begin VB.TextBox TxtRPMDieselMax1 
-         DataField       =   "RPMDieselMax1"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         Height          =   375
-         Left            =   3720
-         TabIndex        =   105
-         Top             =   600
-         Width           =   1215
-      End
-      Begin VB.TextBox TxtRPMDieselMin1 
-         DataField       =   "RPMDieselMin1"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         Height          =   375
-         Left            =   1800
-         TabIndex        =   104
-         Top             =   600
-         Width           =   1215
-      End
-      Begin VB.TextBox TxtHSUDiesel1 
-         DataField       =   "HSUDiesel1"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   7320
-         TabIndex        =   17
-         Top             =   600
-         Width           =   1215
-      End
-      Begin VB.Label Label13 
-         AutoSize        =   -1  'True
-         Caption         =   "HSU"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   7320
-         TabIndex        =   164
-         Top             =   255
-         Width           =   450
-      End
-      Begin VB.Label Label12 
-         AutoSize        =   -1  'True
-         Caption         =   "Toác ñoä Max"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   3720
-         TabIndex        =   156
-         Top             =   255
-         Width           =   1065
-      End
-      Begin VB.Label Label10 
-         AutoSize        =   -1  'True
-         Caption         =   "Toác ñoä Min"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   1800
-         TabIndex        =   155
-         Top             =   255
-         Width           =   1035
-      End
-      Begin VB.Label Label22 
-         AutoSize        =   -1  'True
-         Caption         =   "Laàn 3:"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   600
-         TabIndex        =   154
-         Top             =   1560
-         Width           =   585
-      End
-      Begin VB.Label Label21 
-         AutoSize        =   -1  'True
-         Caption         =   "Laàn 2:"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   600
-         TabIndex        =   153
-         Top             =   1080
-         Width           =   585
-      End
-      Begin VB.Label Label20 
-         AutoSize        =   -1  'True
-         Caption         =   "Laàn 1:"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   600
-         TabIndex        =   152
-         Top             =   600
-         Width           =   585
-      End
-      Begin MSForms.Label Label23 
-         Height          =   270
-         Left            =   3840
-         TabIndex        =   115
-         Top             =   2160
-         Width           =   1095
-         VariousPropertyBits=   276824091
-         Caption         =   "Trung bình:"
-         Size            =   "1931;476"
-         FontName        =   "VNI-Centur"
-         FontHeight      =   195
-         FontCharSet     =   0
-         FontPitchAndFamily=   2
-      End
-      Begin MSForms.Label Label19 
-         Height          =   270
-         Left            =   5520
-         TabIndex        =   103
-         Top             =   255
-         Width           =   750
-         VariousPropertyBits=   276824091
-         Caption         =   "Heä soá K"
-         Size            =   "1323;476"
-         FontName        =   "VNI-Centur"
-         FontHeight      =   195
-         FontCharSet     =   0
-         FontPitchAndFamily=   2
       End
    End
    Begin VB.Frame Frame9 
@@ -2920,7 +2854,7 @@ Begin VB.Form FrmMain
       ForeColor       =   &H000000FF&
       Height          =   1455
       Left            =   240
-      TabIndex        =   174
+      TabIndex        =   168
       Top             =   360
       Width           =   19591
       Begin VB.Label Label64 
@@ -2935,8 +2869,8 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   270
-         Left            =   15960
-         TabIndex        =   181
+         Left            =   16200
+         TabIndex        =   175
          Top             =   225
          Width           =   675
       End
@@ -2953,7 +2887,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   11760
-         TabIndex        =   180
+         TabIndex        =   174
          Top             =   225
          Width           =   1050
       End
@@ -2971,7 +2905,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   7680
-         TabIndex        =   179
+         TabIndex        =   173
          Top             =   240
          Width           =   855
       End
@@ -2989,7 +2923,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   3480
-         TabIndex        =   177
+         TabIndex        =   171
          Top             =   240
          Width           =   675
       End
@@ -3158,7 +3092,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   163
+         TabIndex        =   157
          Top             =   3292
          Width           =   450
       End
@@ -3175,7 +3109,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   240
-         TabIndex        =   162
+         TabIndex        =   156
          Top             =   2760
          Width           =   975
       End
@@ -3193,7 +3127,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   161
+         TabIndex        =   155
          Top             =   2332
          Width           =   375
       End
@@ -3211,7 +3145,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   160
+         TabIndex        =   154
          Top             =   1852
          Width           =   315
       End
@@ -3229,7 +3163,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   159
+         TabIndex        =   153
          Top             =   1372
          Width           =   450
       End
@@ -3247,7 +3181,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   158
+         TabIndex        =   152
          Top             =   892
          Width           =   345
       End
@@ -3265,7 +3199,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   157
+         TabIndex        =   151
          Top             =   412
          Width           =   360
       End
@@ -3283,7 +3217,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   225
          Left            =   3960
-         TabIndex        =   149
+         TabIndex        =   143
          Top             =   3315
          Width           =   570
       End
@@ -3301,7 +3235,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   225
          Left            =   3960
-         TabIndex        =   148
+         TabIndex        =   142
          Top             =   2835
          Width           =   360
       End
@@ -3409,7 +3343,7 @@ Begin VB.Form FrmMain
       EndProperty
       Height          =   375
       Left            =   0
-      TabIndex        =   178
+      TabIndex        =   172
       Top             =   0
       Width           =   1095
    End
@@ -3426,7 +3360,7 @@ Begin VB.Form FrmMain
       EndProperty
       Height          =   255
       Left            =   0
-      TabIndex        =   176
+      TabIndex        =   170
       Top             =   0
       Width           =   1215
    End
@@ -3443,7 +3377,7 @@ Begin VB.Form FrmMain
       EndProperty
       Height          =   255
       Left            =   0
-      TabIndex        =   175
+      TabIndex        =   169
       Top             =   0
       Width           =   1215
    End
@@ -3461,7 +3395,7 @@ Begin VB.Form FrmMain
       EndProperty
       Height          =   240
       Left            =   0
-      TabIndex        =   166
+      TabIndex        =   160
       Top             =   0
       Width           =   1605
    End
@@ -3479,7 +3413,7 @@ Begin VB.Form FrmMain
       EndProperty
       Height          =   240
       Left            =   0
-      TabIndex        =   165
+      TabIndex        =   159
       Top             =   0
       Width           =   1605
    End
@@ -3902,30 +3836,7 @@ Else: TxtHLLowLeftInt.BackColor = ColorOrange
 End If
 End Sub
 
-Private Sub CheckHesoDieselMax1()
-If Val(TxtHeSoDiesel1) <= HeSoDieselMax Then
-TxtHeSoDiesel1.BackColor = ColorGreen
-Else: TxtHeSoDiesel1.BackColor = ColorOrange
-End If
-End Sub
-Private Sub CheckHesoDieselMax2()
-If Val(TxtHeSoDiesel2) <= HeSoDieselMax Then
-TxtHeSoDiesel2.BackColor = ColorGreen
-Else: TxtHeSoDiesel2.BackColor = ColorOrange
-End If
-End Sub
-Private Sub CheckHesoDieselMax3()
-If Val(TxtHeSoDiesel3) <= HeSoDieselMax Then
-TxtHeSoDiesel3.BackColor = ColorGreen
-Else: TxtHeSoDiesel3.BackColor = ColorOrange
-End If
-End Sub
-Private Sub CheckHesoTBDieselMax()
-If Val(TxtTBHeSoDiesel) <= HeSoDieselMax Then
-TxtTBHeSoDiesel.BackColor = ColorGreen
-Else: TxtTBHeSoDiesel.BackColor = ColorOrange
-End If
-End Sub
+ 
 
 
 
@@ -5072,10 +4983,7 @@ CheckHLLowLeftUD
 CheckHLLowRightInt
 CheckHLLowRightLR
 CheckHLLowRightUD
-CheckHesoDieselMax1
-CheckHesoDieselMax2
-CheckHesoDieselMax3
-CheckHesoTBDieselMax
+
 
 'CheckHSUDiesel
 CheckNO
@@ -5153,32 +5061,11 @@ Private Sub TxtCO2_Change()
 CheckCO2
 End Sub
 
-Private Sub txtCurrentID_Change()
-TinhTBHeSoDiesel
-End Sub
-
 Private Sub TxtHC_Change()
 CheckHC
 End Sub
 
-
-Private Sub TxtHeSoDiesel1_Change()
-CheckHesoDieselMax1
-TinhTBHeSoDiesel
-CheckHesoTBDieselMax
-End Sub
-
-Private Sub TxtHeSoDiesel2_Change()
-CheckHesoDieselMax2
-TinhTBHeSoDiesel
-CheckHesoTBDieselMax
-End Sub
-
-Private Sub TxtHeSoDiesel3_Change()
-CheckHesoDieselMax3
-TinhTBHeSoDiesel
-CheckHesoTBDieselMax
-End Sub
+ 
 
 
 
@@ -5451,28 +5338,7 @@ Private Sub TxtEngineSearch_KeyPress(KeyAscii As Integer)
     End If
 End Sub
 
-Private Sub TinhTBHeSoDiesel()
-On Error GoTo ErrHandling
-'On Error Resume Next
-Dim tb As Double
-Dim a As Long
-Dim b As Long
-Dim c As Long
-
-a = Val(TxtHeSoDiesel1)
-b = Val(TxtHeSoDiesel2)
-c = Val(TxtHeSoDiesel3)
-
-tb = (a + b + c) / 3
-tb = FormatNumber(tb, 2, True, True, True)
-TxtTBHeSoDiesel.Text = Str(tb)
-
-EndIt:
-    Exit Sub ' or Exit Function
-ErrHandling:
  
-Resume EndIt
-End Sub
 
 
  
