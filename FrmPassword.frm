@@ -95,15 +95,7 @@ Private Sub btnCancel_Click()
 End Sub
 
 Private Sub btnOK_Click()
-  If txtPassword.Text = FrmMain.GetPassword Then
-  Dim newPassword As String
-  newPassword = txtNewPassword.Text
   
-       FrmMain.SetPassword (newPassword)
-       Unload Me
-       Else
-       MsgBox "Sai mat khau hien taïi"
-    End If
 End Sub
 
 Private Sub Form_Load()

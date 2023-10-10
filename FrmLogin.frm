@@ -72,12 +72,7 @@ Private Sub btnCancel_Click()
 End Sub
 
 Private Sub btnOK_Click()
-    If txtPassword.Text = FrmMain.GetPassword Then
-       FrmMain.BeginUpdate
-       Unload Me
-       Else
-       MsgBox "Sai mat khau"
-    End If
+ 
 End Sub
 
 Private Sub Form_Load()
