@@ -1363,421 +1363,14 @@ Private Sub SubEnableAll()
 Dim EnableBit As Boolean
 EnableBit = True
 
-CmdName.Enabled = EnableBit
-CmdTester.Enabled = EnableBit
-CmdCalendarCall.Enabled = EnableBit
-TxtAlign.Enabled = EnableBit
-TxtAlignRear.Enabled = EnableBit
-TxtBrakeFrontDif.Enabled = EnableBit
-TxtBrakeFrontLeft.Enabled = EnableBit
-TxtBrakeFrontLeft.Enabled = EnableBit
-TxtBrakeFrontRight.Enabled = EnableBit
-TxtBrakeFrontSum.Enabled = EnableBit
-TxtBrakeRearDif.Enabled = EnableBit
-TxtBrakeRearLeft.Enabled = EnableBit
-TxtBrakeRearRight.Enabled = EnableBit
-TxtBrakeRearSum.Enabled = EnableBit
-TxtBrakeStopDif.Enabled = EnableBit
-TxtBrakeStopLeft.Enabled = EnableBit
-TxtBrakeStopRight.Enabled = EnableBit
-TxtBrakeStopSum.Enabled = EnableBit
-TxtBuzzer.Enabled = EnableBit
-TxtChassisNumber.Enabled = EnableBit
-TxtCO.Enabled = EnableBit
-TxtCO2.Enabled = EnableBit
-TxtDate.Enabled = EnableBit
-TxtEngineNumber.Enabled = EnableBit
-TxtHC.Enabled = EnableBit
-TxtHLHighLeftInt.Enabled = EnableBit
-TxtHLHighLeftLR.Enabled = EnableBit
-TxtHLHighLeftUD.Enabled = EnableBit
-TxtHLHighRightInt.Enabled = EnableBit
-TxtHLHighRightLR.Enabled = EnableBit
-TxtHLHighRightUD.Enabled = EnableBit
-
-TxtHLLowLeftInt.Enabled = EnableBit
-TxtHLLowLeftLR.Enabled = EnableBit
-TxtHLLowLeftUD.Enabled = EnableBit
-TxtHLLowRightInt.Enabled = EnableBit
-TxtHLLowRightLR.Enabled = EnableBit
-TxtHLLowRightUD.Enabled = EnableBit
-
-TxtHSUDiesel1.Enabled = EnableBit
-TxtName.Enabled = EnableBit
-TxtNO.Enabled = EnableBit
-TxtNoise.Enabled = EnableBit
-TxtO2.Enabled = EnableBit
-TxtProducedNumber.Enabled = EnableBit
-TxtRPMGasOnline.Enabled = EnableBit
-TxtSpeed.Enabled = EnableBit
-TxtTempGasOnline.Enabled = EnableBit
-TxtTester.Enabled = EnableBit
-TxtWeightFrontLeft.Enabled = EnableBit
-TxtWeightFrontRight.Enabled = EnableBit
-TxtWeightFrontSum.Enabled = EnableBit
-TxtWeightRearLeft.Enabled = EnableBit
-TxtWeightRearRight.Enabled = EnableBit
-TxtWeightRearSum.Enabled = EnableBit
-
-TxtRPMDieselMin1.Enabled = EnableBit
-TxtRPMDieselMin2.Enabled = EnableBit
-TxtRPMDieselMin3.Enabled = EnableBit
-TxtRPMDieselMax1.Enabled = EnableBit
-TxtRPMDieselMax2.Enabled = EnableBit
-TxtRPMDieselMax3.Enabled = EnableBit
-TxtHSUDiesel1.Enabled = EnableBit
-TxtHSUDiesel2.Enabled = EnableBit
-TxtHSUDiesel3.Enabled = EnableBit
-
 
 End Sub
 Private Sub SubDisableAll()
 Dim EnableBit As Boolean
 EnableBit = False
-CmdName.Enabled = EnableBit
-CmdTester.Enabled = EnableBit
-CmdCalendarCall.Enabled = EnableBit
-
-TxtAlign.Enabled = EnableBit
-TxtAlignRear.Enabled = EnableBit
-TxtBrakeFrontDif.Enabled = EnableBit
-TxtBrakeFrontLeft.Enabled = EnableBit
-TxtBrakeFrontLeft.Enabled = EnableBit
-TxtBrakeFrontRight.Enabled = EnableBit
-TxtBrakeFrontSum.Enabled = EnableBit
-TxtBrakeRearDif.Enabled = EnableBit
-TxtBrakeRearLeft.Enabled = EnableBit
-TxtBrakeRearRight.Enabled = EnableBit
-TxtBrakeRearSum.Enabled = EnableBit
-TxtBrakeStopDif.Enabled = EnableBit
-TxtBrakeStopLeft.Enabled = EnableBit
-TxtBrakeStopRight.Enabled = EnableBit
-TxtBrakeStopSum.Enabled = EnableBit
-TxtBuzzer.Enabled = EnableBit
-TxtChassisNumber.Enabled = EnableBit
-TxtCO.Enabled = EnableBit
-TxtCO2.Enabled = EnableBit
-TxtDate.Enabled = EnableBit
-TxtEngineNumber.Enabled = EnableBit
-TxtHC.Enabled = EnableBit
-
-TxtHLHighLeftInt.Enabled = EnableBit
-TxtHLHighLeftLR.Enabled = EnableBit
-TxtHLHighLeftUD.Enabled = EnableBit
-TxtHLHighRightInt.Enabled = EnableBit
-TxtHLHighRightLR.Enabled = EnableBit
-TxtHLHighRightUD.Enabled = EnableBit
-
-TxtHLLowLeftInt.Enabled = EnableBit
-TxtHLLowLeftLR.Enabled = EnableBit
-TxtHLLowLeftUD.Enabled = EnableBit
-TxtHLLowRightInt.Enabled = EnableBit
-TxtHLLowRightLR.Enabled = EnableBit
-TxtHLLowRightUD.Enabled = EnableBit
-
-
-TxtHSUDiesel1.Enabled = EnableBit
-TxtName.Enabled = EnableBit
-TxtNO.Enabled = EnableBit
-TxtNoise.Enabled = EnableBit
-TxtO2.Enabled = EnableBit
-TxtProducedNumber.Enabled = EnableBit
-TxtRPMGasOnline.Enabled = EnableBit
-TxtSpeed.Enabled = EnableBit
-TxtTempGasOnline.Enabled = EnableBit
-TxtTester.Enabled = EnableBit
-TxtWeightFrontLeft.Enabled = EnableBit
-TxtWeightFrontRight.Enabled = EnableBit
-TxtWeightFrontSum.Enabled = EnableBit
-TxtWeightRearLeft.Enabled = EnableBit
-TxtWeightRearRight.Enabled = EnableBit
-TxtWeightRearSum.Enabled = EnableBit
-
-TxtRPMDieselMin1.Enabled = EnableBit
-TxtRPMDieselMin2.Enabled = EnableBit
-TxtRPMDieselMin3.Enabled = EnableBit
-TxtRPMDieselMax1.Enabled = EnableBit
-TxtRPMDieselMax2.Enabled = EnableBit
-TxtRPMDieselMax3.Enabled = EnableBit
-TxtHSUDiesel1.Enabled = EnableBit
-TxtHSUDiesel2.Enabled = EnableBit
-TxtHSUDiesel3.Enabled = EnableBit
-
 End Sub
 
-Private Sub CheckHC()
-If Val(TxtHC) <= HCMax Then
-TxtHC.BackColor = ColorGreen
-Else: TxtHC.BackColor = ColorOrange
-End If
-End Sub
-Private Sub CheckCO()
-If Val(TxtCO) <= COMax Then
-TxtCO.BackColor = ColorGreen
-Else: TxtCO.BackColor = ColorOrange
-End If
-End Sub
-Private Sub CheckCO2()
-If Val(TxtCO2) <= CO2Max Then
-TxtCO2.BackColor = ColorGreen
-Else: TxtCO2.BackColor = ColorOrange
-End If
-End Sub
-Private Sub CheckO2()
-If Val(TxtO2) <= O2Max Then
-TxtO2.BackColor = ColorGreen
-Else: TxtO2.BackColor = ColorOrange
-End If
-End Sub
-Private Sub CheckNO()
-If Val(TxtNO) <= NOMax Then
-TxtNO.BackColor = ColorGreen
-Else: TxtNO.BackColor = ColorOrange
-End If
-End Sub
-Private Sub CheckHLHighLeftInt()
-If Val(TxtHLHighLeftInt) >= HLHighIntMin Then
-TxtHLHighLeftInt.BackColor = ColorGreen
-Else: TxtHLHighLeftInt.BackColor = ColorOrange
-End If
-End Sub
-Private Sub CheckHLHighLeftLR()
-If (Val(TxtHLHighLeftLR) >= HLHighLRMin) And (Val(TxtHLHighLeftLR) <= HLHighLRMax) Then
-TxtHLHighLeftLR.BackColor = ColorGreen
-Else: TxtHLHighLeftLR.BackColor = ColorOrange
-End If
-End Sub
-Private Sub CheckHLHighLeftUD()
-If (Val(TxtHLHighLeftUD) >= HLHighLRMin) And (Val(TxtHLHighLeftUD) <= HLHighLRMax) Then
-TxtHLHighLeftUD.BackColor = ColorGreen
-Else: TxtHLHighLeftUD.BackColor = ColorOrange
-End If
-End Sub
-Private Sub CheckHLHighRightInt()
-If Val(TxtHLHighRightInt) >= HLHighIntMin Then
-TxtHLHighRightInt.BackColor = ColorGreen
-Else: TxtHLHighRightInt.BackColor = ColorOrange
-End If
-End Sub
-Private Sub CheckHLHighRightLR()
-If (Val(TxtHLHighRightLR) >= HLHighLRMin) And (Val(TxtHLHighRightLR) <= HLHighLRMax) Then
-TxtHLHighRightLR.BackColor = ColorGreen
-Else: TxtHLHighRightLR.BackColor = ColorOrange
-End If
-End Sub
-Private Sub CheckHLHighRightUD()
-If (Val(TxtHLHighRightUD) >= HLHighLRMin) And (Val(TxtHLHighRightUD) <= HLHighLRMax) Then
-TxtHLHighRightUD.BackColor = ColorGreen
-Else: TxtHLHighRightUD.BackColor = ColorOrange
-End If
-End Sub
-
-
-Private Sub CheckHLLowLeftInt()
-If Val(TxtHLLowLeftInt) >= HLLowIntMin Then
-TxtHLLowLeftInt.BackColor = ColorGreen
-Else: TxtHLLowLeftInt.BackColor = ColorOrange
-End If
-End Sub
-
- 
-
-
-
-Private Sub CheckHLLowLeftLR()
-If (Val(TxtHLLowLeftLR) >= HLLowLRMin) And (Val(TxtHLLowLeftLR) <= HLLowLRMax) Then
-TxtHLLowLeftLR.BackColor = ColorGreen
-Else: TxtHLLowLeftLR.BackColor = ColorOrange
-End If
-End Sub
-Private Sub CheckHLLowLeftUD()
-If (Val(TxtHLLowLeftUD) >= HLLowLRMin) And (Val(TxtHLLowLeftUD) <= HLLowLRMax) Then
-TxtHLLowLeftUD.BackColor = ColorGreen
-Else: TxtHLLowLeftUD.BackColor = ColorOrange
-End If
-End Sub
-Private Sub CheckHLLowRightInt()
-If Val(TxtHLLowRightInt) >= HLLowIntMin Then
-TxtHLLowRightInt.BackColor = ColorGreen
-Else: TxtHLLowRightInt.BackColor = ColorOrange
-End If
-End Sub
-Private Sub CheckHLLowRightLR()
-If (Val(TxtHLLowRightLR) >= HLLowLRMin) And (Val(TxtHLLowRightLR) <= HLLowLRMax) Then
-TxtHLLowRightLR.BackColor = ColorGreen
-Else: TxtHLLowRightLR.BackColor = ColorOrange
-End If
-End Sub
-Private Sub CheckHLLowRightUD()
-If (Val(TxtHLLowRightUD) >= HLLowLRMin) And (Val(TxtHLLowRightUD) <= HLLowLRMax) Then
-TxtHLLowRightUD.BackColor = ColorGreen
-Else: TxtHLLowRightUD.BackColor = ColorOrange
-End If
-End Sub
-
-
-Private Sub CheckHSUDiesel()
-If Val(TxtHSUDiesel1) < HSUMax Then
-TxtHSUDiesel1.BackColor = ColorGreen
-Else: TxtHSUDiesel1.BackColor = ColorOrange
-End If
-End Sub
-Private Sub CheckSpeed()
-If (Val(TxtSpeed) >= SpeedMin) And (Val(TxtSpeed) <= SpeedMax) Then
-TxtSpeed.BackColor = ColorGreen
-Else: TxtSpeed.BackColor = ColorOrange
-End If
-End Sub
-Private Sub CheckAlign()
-If (Val(TxtAlign) > AlignMin) And (Val(TxtAlign) < AlignMax) Then
-TxtAlign.BackColor = ColorGreen
-Else: TxtAlign.BackColor = ColorOrange
-End If
-End Sub
-Private Sub CheckNoise()
-If Val(TxtNoise) < NoiseMax Then
-TxtNoise.BackColor = ColorGreen
-Else: TxtNoise.BackColor = ColorOrange
-End If
-End Sub
-Private Sub CheckBuzzer()
-If (Val(TxtBuzzer) > BuzzerMin) And (Val(TxtBuzzer) < BuzzerMax) Then
-TxtBuzzer.BackColor = ColorGreen
-Else: TxtBuzzer.BackColor = ColorOrange
-End If
-End Sub
-Private Sub CheckBrakeFrontSum()
-If Val(TxtBrakeFrontSum) < BrakeFrontSumMin Then
-TxtBrakeFrontSum.BackColor = ColorOrange
-Else: TxtBrakeFrontSum.BackColor = ColorGreen
-End If
-End Sub
-Private Sub CheckBrakeRearSum()
-If Val(TxtBrakeRearSum) < BrakeRearSumMin Then
-TxtBrakeRearSum.BackColor = ColorOrange
-Else: TxtBrakeRearSum.BackColor = ColorGreen
-End If
-End Sub
-Private Sub CheckBrakeStopSum()
-If Val(TxtBrakeStopSum) < BrakeStopSumMin Then
-TxtBrakeStopSum.BackColor = ColorOrange
-Else: TxtBrakeStopSum.BackColor = ColorGreen
-End If
-End Sub
-Private Sub CheckBrakeFrontDif()
-If Val(TxtBrakeFrontDif) < BrakeFrontDifMax Then
-TxtBrakeFrontDif.BackColor = ColorGreen
-Else: TxtBrakeFrontDif.BackColor = ColorOrange
-End If
-End Sub
-Private Sub CheckBrakeRearDif()
-If Val(TxtBrakeRearDif) < BrakeRearDifMax Then
-TxtBrakeRearDif.BackColor = ColorGreen
-Else: TxtBrakeRearDif.BackColor = ColorOrange
-End If
-End Sub
-Private Sub CheckBrakeStopDif()
-If Val(TxtBrakeStopDif) < BrakeStopDifMax Then
-TxtBrakeStopDif.BackColor = ColorGreen
-Else: TxtBrakeStopDif.BackColor = ColorOrange
-End If
-End Sub
-
-Private Sub CalBrakeFrontSum()
-Dim BS As Long
-Dim a As Long
-Dim b As Long
-a = Val(TxtBrakeFrontLeft)
-b = Val(TxtBrakeFrontRight)
-BS = a + b
-TxtBrakeFrontSum.Text = Str(BS)
-
-End Sub
-Private Sub CalBrakeRearSum()
-Dim BS As Long
-Dim a As Long
-Dim b As Long
-a = Val(TxtBrakeRearLeft)
-b = Val(TxtBrakeRearRight)
-BS = a + b
-TxtBrakeRearSum.Text = Str(BS)
-
-End Sub
-Private Sub CalBrakeStopSum()
-Dim BS As Long
-Dim a As Long
-Dim b As Long
-a = Val(TxtBrakeStopLeft)
-b = Val(TxtBrakeStopRight)
-BS = a + b
-TxtBrakeStopSum.Text = Str(BS)
-
-End Sub
-
-Private Sub CalWeightFrontSum()
-Dim WS As Long
-Dim a As Long
-Dim b As Long
-a = Val(TxtWeightFrontLeft)
-b = Val(TxtWeightFrontRight)
-WS = a + b
-TxtWeightFrontSum.Text = Str(WS)
-End Sub
-
-Private Sub CalWeightRearSum()
-Dim WS As Long
-Dim a As Long
-Dim b As Long
-a = Val(TxtWeightRearLeft)
-b = Val(TxtWeightRearRight)
-WS = a + b
-TxtWeightRearSum.Text = Str(WS)
-End Sub
-
-Private Sub CalBrakeFrontDif()
-Dim BD As Double
-Dim a As Long
-Dim b As Long
-a = Val(TxtBrakeFrontLeft)
-b = Val(TxtBrakeFrontRight)
-If (a >= b) And (a <> 0) Then
-BD = (a - b) / a * 100
-ElseIf ((b >= a) And (b <> 0)) Then BD = (b - a) / b * 100
-Else: BD = BD
-End If
-BD = FormatNumber(BD, 2, True, True, True)
-TxtBrakeFrontDif.Text = Str(BD)
-End Sub
-
-Private Sub CalBrakeRearDif()
-Dim BD As Double
-Dim a As Long
-Dim b As Long
-a = Val(TxtBrakeRearLeft)
-b = Val(TxtBrakeRearRight)
-If (a >= b) And (a <> 0) Then
-BD = (a - b) / a * 100
-ElseIf ((b >= a) And (b <> 0)) Then BD = (b - a) / b * 100
-Else: BD = BD
-End If
-BD = FormatNumber(BD, 2, True, True, True)
-TxtBrakeRearDif.Text = Str(BD)
-End Sub
-
-Private Sub CalBrakeStopDif()
-Dim BD As Double
-Dim a As Long
-Dim b As Long
-a = Val(TxtBrakeStopLeft)
-b = Val(TxtBrakeStopRight)
-If (a >= b) And (a <> 0) Then
-BD = (a - b) / a * 100
-ElseIf ((b >= a) And (b <> 0)) Then BD = (b - a) / b * 100
-Else: BD = BD
-End If
-BD = FormatNumber(BD, 2, True, True, True)
-TxtBrakeStopDif.Text = Str(BD)
-End Sub
+  
 
 Private Sub btnAdd_Click()
  Dim Name As String
@@ -1884,10 +1477,7 @@ Private Sub ChangePass_Click()
 FrmPassword.Show
 End Sub
 
-Private Sub cldDate_Click()
-TxtDate.Text = cldDate.Value
-cldDate.Visible = False
-End Sub
+ 
 
 Private Sub cldFromDate_Click()
 TxtDateFrom.Text = cldFromDate.Value
@@ -1901,12 +1491,7 @@ cldToDate.Visible = False
 SearchFollowDate
 End Sub
 
-Private Sub CmdCalendarCall_Click()
-If cldDate.Visible = False Then
-cldDate.Visible = True
-Else: cldDate.Visible = False
-End If
-End Sub
+ 
 
 Private Sub CmdChassisSearch_Click()
 Dim ChassisSearch As String
@@ -1943,15 +1528,7 @@ DatTestingParameter.RecordSource = "SELECT * From TblTestingParameter WHERE Engi
 txtSqlReport.Text = "SELECT * From TblTestingParameter WHERE EngineNumber = " & Chr$(34) & EngineSearch & Chr$(34)
 DatTestingParameter.Refresh
 End Sub
-
-Private Sub CmdName_Click()
-'ListNameUpdate
-If LstName.Visible = False And LstName.Enabled = True Then
-LstName.Visible = True
-Else
-LstName.Visible = False
-End If
-End Sub
+ 
 
 Private Sub CmdNameSearch_Click()
 Dim NameSearch As String
@@ -1968,14 +1545,6 @@ DatTestingParameter.Refresh
 txtSqlReport.Text = "SELECT * From TblTestingParameter  order by STT desc"
 End Sub
 
-Private Sub CmdTester_Click()
-'ListTesterUpdate
-If LstTester.Visible = False And LstTester.Enabled = True Then
-LstTester.Visible = True
-Else
-LstTester.Visible = False
-End If
-End Sub
 
 Private Sub DBGridOptionShow_Sub()
 DatTestingParameter.RecordSource = "SELECT OrderMeasuringResult, Name, ChassisNumber, EngineNumber, Tester,  Date, ProducedNumber  FROM TblTestingParameter"
@@ -2002,8 +1571,8 @@ End Sub
  
 
 Private Sub Form_Load()
-'DataBaseFolder = "\\Master\OCS10"
-DataBaseFolder = App.Path
+DataBaseFolder = "\\Master\OCS10"
+'DataBaseFolder = App.Path
 txtSqlReport.Text = "SELECT * FROM TblTestingParameter"
 DatTestingParameter.DatabaseName = DataBaseFolder & "\OCS10_DataBase_97.mdb"
 DatTestingParameter.RecordSource = "select * from TblTestingParameter order by STT desc"
@@ -2335,7 +1904,7 @@ If CommonDialog2.FileName <> "" Then
     Dim curentChassisNumber As String
     Dim curentProducedNumber As String
     Dim curentEngineNumber As String
-    curentTester = TxtTester.Text
+    curentTester = CboTester.Text
     With ExcelSheet
     i = 3
     Do Until .cells(i, 2) & "" = ""
@@ -2440,15 +2009,7 @@ Private Sub TabSearch_Click()
     DatTestingParameter.RecordSource = "SELECT * FROM TblTestingParameter order by STT desc"
     End Select
 End Sub
-Private Sub LstName_Click()
-TxtName = LstName
-LstName.Visible = False
-End Sub
-
-Private Sub LstTester_Click()
-TxtTester = LstTester
-LstTester.Visible = False
-End Sub
+  
 
 Private Sub MnuAbort_Click()
 DBGTestingUpdate.Enabled = True
@@ -2460,8 +2021,6 @@ freSearch(3).Enabled = True
 
 TbrMain.Buttons(3).Enabled = True
 TbrMain.Buttons(5).Enabled = True
-LstName.Visible = False
-LstTester.Visible = False
 SubDisableAll
 On Error GoTo ErrHandling
 DatTestingParameter.Recordset.CancelUpdate
@@ -2610,16 +2169,7 @@ freSearch(3).Enabled = True
 
 TbrMain.Buttons(3).Enabled = True
 TbrMain.Buttons(5).Enabled = True
-LstName.Visible = False
-LstTester.Visible = False
-CalBrakeFrontDif
-CalBrakeFrontSum
-CalBrakeRearDif
-CalBrakeRearSum
-CalBrakeStopDif
-CalBrakeStopSum
-CalWeightFrontSum
-CalWeightRearSum
+ 
 
 SubDisableAll
 On Error GoTo ErrHandling
@@ -2656,7 +2206,6 @@ Private Sub TbrMain_ButtonClick(ByVal Button As MSComctlLib.Button)
 Select Case Button.Key
 
 Case "KeyNew"
-FrmAddCar.Show
 Case "KeyEdit"
 MnuEditResult_Click
 
@@ -2698,218 +2247,7 @@ Private Sub TbrMain_ButtonMenuClick(ByVal ButtonMenu As MSComctlLib.ButtonMenu)
         MnuReportSeperate_Click
    End Select
 End Sub
-
-Private Sub CheckAll()
-CheckAlign
-CheckBrakeFrontDif
-CheckBrakeFrontSum
-CheckBrakeRearDif
-CheckBrakeRearSum
-CheckBrakeStopDif
-CheckBrakeStopSum
-CheckHLHighRightUD
-CheckHLHighRightLR
-CheckBuzzer
-CheckCO
-CheckCO2
-CheckHC
-
-CheckHLHighLeftInt
-CheckHLHighLeftLR
-CheckHLHighLeftUD
-CheckHLHighRightInt
-CheckHLHighRightLR
-CheckHLHighRightUD
-
-CheckHLLowLeftInt
-CheckHLLowLeftLR
-CheckHLLowLeftUD
-CheckHLLowRightInt
-CheckHLLowRightLR
-CheckHLLowRightUD
-
-
-'CheckHSUDiesel
-CheckNO
-CheckNoise
-CheckO2
-CheckSpeed
-End Sub
-
-Private Sub TxtAlign_Change()
-CheckAlign
-End Sub
-
-Private Sub TxtBrakeFrontDif_Change()
-CheckBrakeFrontDif
-End Sub
-
-Private Sub TxtBrakeFrontLeft_KeyUp(KeyCode As Integer, Shift As Integer)
-CalBrakeFrontSum
-CalBrakeFrontDif
-End Sub
-Private Sub TxtBrakeFrontRight_KeyUp(KeyCode As Integer, Shift As Integer)
-CalBrakeFrontSum
-CalBrakeFrontDif
-End Sub
-
-
-Private Sub TxtBrakeFrontSum_Change()
-CheckBrakeFrontSum
-End Sub
-
-Private Sub TxtBrakeRearDif_Change()
-CheckBrakeRearDif
-End Sub
-
-Private Sub TxtBrakeRearLeft_KeyUp(KeyCode As Integer, Shift As Integer)
-CalBrakeRearSum
-CalBrakeRearDif
-End Sub
-Private Sub TxtBrakeRearRight_KeyUp(KeyCode As Integer, Shift As Integer)
-CalBrakeRearSum
-CalBrakeRearDif
-End Sub
-
-Private Sub TxtBrakeRearSum_Change()
-CheckBrakeRearSum
-End Sub
-
-Private Sub TxtBrakeStopDif_Change()
-CheckBrakeStopDif
-End Sub
-
-Private Sub TxtBrakeStopLeft_KeyUp(KeyCode As Integer, Shift As Integer)
-CalBrakeStopSum
-CalBrakeStopDif
-End Sub
-
-Private Sub TxtBrakeStopRight_KeyUp(KeyCode As Integer, Shift As Integer)
-CalBrakeStopSum
-CalBrakeStopDif
-End Sub
-
-Private Sub TxtBrakeStopSum_Change()
-CheckBrakeStopSum
-End Sub
-
-Private Sub TxtBuzzer_Change()
-CheckBuzzer
-End Sub
-
-Private Sub TxtCO_Change()
-CheckCO
-End Sub
-
-Private Sub TxtCO2_Change()
-CheckCO2
-End Sub
-
-Private Sub TxtHC_Change()
-CheckHC
-End Sub
-
- 
-
-
-
-Private Sub TxtHLHighLeftInt_Change()
-CheckHLHighLeftInt
-End Sub
-
-Private Sub TxtHLHighLeftLR_Change()
-CheckHLHighLeftLR
-End Sub
-
-Private Sub TxtHLHighLeftUD_Change()
-CheckHLHighLeftUD
-End Sub
-
-Private Sub TxtHLHighRightInt_Change()
-CheckHLHighRightInt
-End Sub
-
-Private Sub TxtHLHighRightLR_Change()
-CheckHLHighRightLR
-End Sub
-
-Private Sub TxtHLHighRightUD_Change()
-CheckHLHighRightUD
-End Sub
-
-Private Sub TxtHLLowLeftInt_Change()
-CheckHLLowLeftInt
-End Sub
-
-Private Sub TxtHLLowLeftLR_Change()
-CheckHLLowLeftLR
-End Sub
-
-Private Sub TxtHLLowLeftUD_Change()
-CheckHLLowLeftUD
-End Sub
-
-Private Sub TxtHLLowRightInt_Change()
-CheckHLLowRightInt
-End Sub
-
-Private Sub TxtHLLowRightLR_Change()
-CheckHLLowRightLR
-End Sub
-
-Private Sub TxtHLLowRightUD_Change()
-CheckHLLowRightUD
-End Sub
-
-Private Sub TxtHSUDiesel_Change()
-CheckHSUDiesel
-End Sub
-
-
-Private Sub TxtNO_Change()
-CheckNO
-End Sub
-
-Private Sub TxtNoise_Change()
-CheckNoise
-End Sub
-
-Private Sub TxtO2_Change()
-CheckO2
-End Sub
-
-
-
-
-
- 
-
-Private Sub TxtSpeed_Change()
-CheckSpeed
-End Sub
-
-
-
-
-Private Sub TxtWeightFrontLeft_KeyUp(KeyCode As Integer, Shift As Integer)
-CalWeightFrontSum
-End Sub
-
-Private Sub TxtWeightFrontRight_KeyUp(KeyCode As Integer, Shift As Integer)
-CalWeightFrontSum
-End Sub
-
-Private Sub TxtWeightRearLeft_KeyUp(KeyCode As Integer, Shift As Integer)
-CalWeightRearSum
-End Sub
-
-Private Sub TxtWeightRearRight_KeyUp(KeyCode As Integer, Shift As Integer)
-CalWeightRearSum
-End Sub
-
-
-
-
+  
 'Author: Thinh Ga COn
 'Date : 15/03/2012
 'thuc hien tim kiem khi thay doi text search textbox

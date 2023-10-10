@@ -258,3 +258,4 @@ Move (Screen.Width - Width) * 0.5!, (Screen.Height - Height) * 0.5!
 addTester
 addName
 End Sub
+
