@@ -192,7 +192,7 @@ Begin VB.Form FrmMain
          Height          =   495
          Left            =   240
          TabIndex        =   19
-         Top             =   3480
+         Top             =   3360
          Width           =   1680
       End
       Begin VB.Label Label42 
@@ -210,7 +210,7 @@ Begin VB.Form FrmMain
          Height          =   495
          Left            =   240
          TabIndex        =   18
-         Top             =   720
+         Top             =   600
          Width           =   1335
       End
       Begin MSForms.CommandButton btnAdd 
@@ -667,14 +667,6 @@ rs.MoveNext
 CboName.Text = First
 Loop
 End Sub
- 
-
-Private Sub DBGridOptionShow_Sub()
-DatTestingParameter.RecordSource = "SELECT OrderMeasuringResult, Name, ChassisNumber, EngineNumber, Tester,  Date, ProducedNumber  FROM TblTestingParameter"
-DatTestingParameter.Refresh
-End Sub
-
- 
 
 
 Private Sub CommandButton1_Click()
@@ -703,7 +695,7 @@ Else
     TxtSelectedEngineNumber.Text = ""
 End If
   
-MsgBox "Ban da chon xe test(" & RST("ProducedNumber") & ")"
+MsgBox "Ban da chon xe test(" & RST("ChassisNumber") & ")"
 Else
 MsgBox "Record Not Found..."
 End If
@@ -711,7 +703,6 @@ RST.Close
 End Sub
 
 Private Sub DatTestingParameter_Reposition()
-'Command1_Click
 InitializeCheckingParameter
 End Sub
 
@@ -723,7 +714,7 @@ DataBaseFolder = "\\Master\OCS10"
 'DataBaseFolder = App.Path
 txtSqlReport.Text = "SELECT * FROM TblTestingParameter"
 DatTestingParameter.DatabaseName = DataBaseFolder & "\OCS10_DataBase_97.mdb"
-DatTestingParameter.RecordSource = "select * from TblTestingParameter order by STT desc"
+DatTestingParameter.RecordSource = "select STT, Date, ChassisNumber,EngineNumber, Name,SelectedDateTime,Tester, ProducedNumber from TblTestingParameter order by STT desc"
 
 DatCheckingParameter.DatabaseName = DataBaseFolder & "\OCS10_DataBase_97.mdb"
 DatCheckingParameter.RecordSource = "select * from TblCheckingParameter"
@@ -735,37 +726,7 @@ End Sub
 
  
 
-
-Private Sub ListNameUpdate()
- '------------------------Cap nhan danh sach cho List Box  - Name of Car
-Dim dbname_ln As String
-Dim db_ln As Database
-Dim rs_ln As Recordset
-
-    ' Open the database.
-    dbname_ln = DataBaseFolder
-    If Right$(dbname_ln, 1) <> "\" Then dbname_ln = dbname_ln & "\"
-    dbname_ln = dbname_ln & "OCS10_DataBase_97.mdb"
-
-    Set db_ln = OpenDatabase(dbname_ln)
-    Set rs_ln = db_ln.OpenRecordset( _
-        "SELECT Name FROM TblCheckingParameter ORDER BY Name", _
-        dbOpenSnapshot)
-
-    ' Load the ComboBox.
-    rs_ln.MoveFirst
-    Do While Not rs_ln.EOF
-        rs_ln.MoveNext
-    Loop
-
-    rs_ln.Close
-    db_ln.Close
-
-    ' Connect the Data control to the database.
-   DatTestingParameter.DatabaseName = dbname_ln
  
-End Sub
-    
 
    
 Private Sub MnuHelpAboutOCS10DBS_Click()
