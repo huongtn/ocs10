@@ -4,7 +4,7 @@ Object = "{00028C01-0000-0000-0000-000000000046}#1.0#0"; "DBGRID32.OCX"
 Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "comdlg32.ocx"
 Begin VB.Form FrmMain 
    Caption         =   "DBS10 - Database Software  -  Designed by INDUSTRY SOLUTION Co.  -   www.thietbicongnghiep.vn"
-   ClientHeight    =   11280
+   ClientHeight    =   10680
    ClientLeft      =   225
    ClientTop       =   570
    ClientWidth     =   19875
@@ -20,7 +20,7 @@ Begin VB.Form FrmMain
    EndProperty
    Icon            =   "OCS10 Database Software.frx":0000
    LinkTopic       =   "Form1"
-   ScaleHeight     =   10826.76
+   ScaleHeight     =   10250.87
    ScaleMode       =   0  'User
    ScaleWidth      =   22755.52
    StartUpPosition =   2  'CenterScreen
@@ -39,7 +39,7 @@ Begin VB.Form FrmMain
       Height          =   8295
       Left            =   120
       TabIndex        =   15
-      Top             =   2760
+      Top             =   2280
       Width           =   8535
       Begin VB.ComboBox CboTester 
          BeginProperty Font 
@@ -56,7 +56,7 @@ Begin VB.Form FrmMain
          TabIndex        =   23
          Text            =   "Combo1"
          Top             =   2535
-         Width           =   7695
+         Width           =   8055
       End
       Begin VB.TextBox TxtProducedNumber 
          BeginProperty Font 
@@ -72,7 +72,7 @@ Begin VB.Form FrmMain
          Left            =   240
          TabIndex        =   3
          Top             =   6720
-         Width           =   7695
+         Width           =   8055
       End
       Begin VB.TextBox TxtEngineNumber 
          BeginProperty Font 
@@ -88,7 +88,7 @@ Begin VB.Form FrmMain
          Left            =   240
          TabIndex        =   2
          Top             =   5325
-         Width           =   7695
+         Width           =   8055
       End
       Begin VB.TextBox TxtChassisNumber 
          BeginProperty Font 
@@ -104,7 +104,7 @@ Begin VB.Form FrmMain
          Left            =   240
          TabIndex        =   1
          Top             =   3930
-         Width           =   7695
+         Width           =   8055
       End
       Begin VB.ComboBox CboName 
          BeginProperty Font 
@@ -121,7 +121,7 @@ Begin VB.Form FrmMain
          TabIndex        =   16
          Text            =   "Combo1"
          Top             =   1140
-         Width           =   7695
+         Width           =   8055
       End
       Begin VB.Label Label46 
          AutoSize        =   -1  'True
@@ -215,7 +215,7 @@ Begin VB.Form FrmMain
       End
       Begin MSForms.CommandButton btnAdd 
          Height          =   735
-         Left            =   5640
+         Left            =   6000
          TabIndex        =   17
          Top             =   7440
          Width           =   2295
@@ -253,7 +253,7 @@ Begin VB.Form FrmMain
       Height          =   675
       Left            =   13200
       TabIndex        =   10
-      Top             =   1560
+      Top             =   1320
       Width           =   6375
    End
    Begin VB.TextBox TxtSelectedChassisNumber 
@@ -272,7 +272,7 @@ Begin VB.Form FrmMain
       Height          =   675
       Left            =   6720
       TabIndex        =   9
-      Top             =   1560
+      Top             =   1320
       Width           =   6375
    End
    Begin VB.TextBox TxtSelectedName 
@@ -291,7 +291,7 @@ Begin VB.Form FrmMain
       Height          =   675
       Left            =   240
       TabIndex        =   8
-      Top             =   1560
+      Top             =   1320
       Width           =   6375
    End
    Begin VB.PictureBox CommonDialog1 
@@ -422,7 +422,7 @@ Begin VB.Form FrmMain
       Height          =   8295
       Left            =   8880
       TabIndex        =   0
-      Top             =   2760
+      Top             =   2280
       Width           =   10860
       Begin MSDBGrid.DBGrid DBGTestingUpdate 
          Bindings        =   "OCS10 Database Software.frx":0442
@@ -462,7 +462,7 @@ Begin VB.Form FrmMain
          Strikethrough   =   0   'False
       EndProperty
       ForeColor       =   &H000000FF&
-      Height          =   2655
+      Height          =   2295
       Left            =   120
       TabIndex        =   11
       Top             =   0
@@ -482,7 +482,7 @@ Begin VB.Form FrmMain
          Height          =   645
          Left            =   13080
          TabIndex        =   14
-         Top             =   840
+         Top             =   600
          Width           =   1650
       End
       Begin VB.Label Label60 
@@ -498,7 +498,7 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   645
-         Left            =   6960
+         Left            =   6600
          TabIndex        =   13
          Top             =   600
          Width           =   2100
@@ -518,7 +518,7 @@ Begin VB.Form FrmMain
          Height          =   645
          Left            =   120
          TabIndex        =   12
-         Top             =   720
+         Top             =   600
          Width           =   1650
       End
    End
