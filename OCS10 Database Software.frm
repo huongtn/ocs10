@@ -4,10 +4,10 @@ Object = "{00028C01-0000-0000-0000-000000000046}#1.0#0"; "DBGRID32.OCX"
 Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "comdlg32.ocx"
 Begin VB.Form FrmMain 
    Caption         =   "DBS10 - Database Software  -  Designed by INDUSTRY SOLUTION Co.  -   www.thietbicongnghiep.vn"
-   ClientHeight    =   10680
+   ClientHeight    =   12060
    ClientLeft      =   225
    ClientTop       =   570
-   ClientWidth     =   15120
+   ClientWidth     =   21870
    FillColor       =   &H00808080&
    BeginProperty Font 
       Name            =   "MS Sans Serif"
@@ -20,10 +20,11 @@ Begin VB.Form FrmMain
    EndProperty
    Icon            =   "OCS10 Database Software.frx":0000
    LinkTopic       =   "Form1"
-   ScaleHeight     =   10250.87
+   ScaleHeight     =   11575.42
    ScaleMode       =   0  'User
-   ScaleWidth      =   22755.52
+   ScaleWidth      =   32914.23
    StartUpPosition =   2  'CenterScreen
+   WindowState     =   2  'Maximized
    Begin VB.Frame Frame11 
       Caption         =   "Thoâng tin xe môùi"
       BeginProperty Font 
@@ -36,10 +37,10 @@ Begin VB.Form FrmMain
          Strikethrough   =   0   'False
       EndProperty
       ForeColor       =   &H00FF0000&
-      Height          =   8295
+      Height          =   8775
       Left            =   120
       TabIndex        =   15
-      Top             =   2280
+      Top             =   3120
       Width           =   8535
       Begin VB.ComboBox CboTester 
          BeginProperty Font 
@@ -127,7 +128,7 @@ Begin VB.Form FrmMain
          Height          =   735
          Left            =   240
          TabIndex        =   26
-         Top             =   7440
+         Top             =   7800
          Width           =   2775
          ForeColor       =   -2147483634
          BackColor       =   8421376
@@ -233,7 +234,7 @@ Begin VB.Form FrmMain
          Height          =   735
          Left            =   6000
          TabIndex        =   17
-         Top             =   7440
+         Top             =   7800
          Width           =   2295
          ForeColor       =   -2147483634
          BackColor       =   -2147483635
@@ -269,10 +270,10 @@ Begin VB.Form FrmMain
       EndProperty
       ForeColor       =   &H000000FF&
       Height          =   675
-      Left            =   13200
+      Left            =   15000
       TabIndex        =   10
-      Top             =   1320
-      Width           =   6375
+      Top             =   1560
+      Width           =   6255
    End
    Begin VB.TextBox TxtSelectedChassisNumber 
       BackColor       =   &H00FFFFFF&
@@ -288,10 +289,10 @@ Begin VB.Form FrmMain
       EndProperty
       ForeColor       =   &H000000FF&
       Height          =   675
-      Left            =   6720
+      Left            =   7800
       TabIndex        =   9
-      Top             =   1320
-      Width           =   6375
+      Top             =   1560
+      Width           =   6975
    End
    Begin VB.TextBox TxtSelectedName 
       BackColor       =   &H00FFFFFF&
@@ -309,8 +310,8 @@ Begin VB.Form FrmMain
       Height          =   675
       Left            =   240
       TabIndex        =   8
-      Top             =   1320
-      Width           =   6375
+      Top             =   1560
+      Width           =   6975
    End
    Begin VB.PictureBox CommonDialog1 
       BeginProperty Font 
@@ -437,19 +438,19 @@ Begin VB.Form FrmMain
          Strikethrough   =   0   'False
       EndProperty
       ForeColor       =   &H00FF0000&
-      Height          =   8295
+      Height          =   8775
       Left            =   8880
       TabIndex        =   0
-      Top             =   2280
-      Width           =   10860
+      Top             =   3120
+      Width           =   12900
       Begin MSDBGrid.DBGrid DBGTestingUpdate 
          Bindings        =   "OCS10 Database Software.frx":0442
-         Height          =   6480
+         Height          =   6960
          Left            =   240
          OleObjectBlob   =   "OCS10 Database Software.frx":0464
          TabIndex        =   4
          Top             =   1560
-         Width           =   10260
+         Width           =   12060
       End
       Begin MSForms.CommandButton CommandButton1 
          Height          =   735
@@ -480,11 +481,11 @@ Begin VB.Form FrmMain
          Strikethrough   =   0   'False
       EndProperty
       ForeColor       =   &H000000FF&
-      Height          =   2295
+      Height          =   2895
       Left            =   120
       TabIndex        =   11
-      Top             =   0
-      Width           =   19575
+      Top             =   240
+      Width           =   21615
       Begin VB.Label Label64 
          AutoSize        =   -1  'True
          Caption         =   "Soá maùy"
@@ -498,7 +499,7 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   645
-         Left            =   13080
+         Left            =   14880
          TabIndex        =   14
          Top             =   600
          Width           =   1650
@@ -516,7 +517,7 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   645
-         Left            =   6600
+         Left            =   7680
          TabIndex        =   13
          Top             =   600
          Width           =   2100
