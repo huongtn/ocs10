@@ -7,7 +7,7 @@ Begin VB.Form FrmMain
    ClientHeight    =   10680
    ClientLeft      =   225
    ClientTop       =   570
-   ClientWidth     =   19875
+   ClientWidth     =   15120
    FillColor       =   &H00808080&
    BeginProperty Font 
       Name            =   "MS Sans Serif"
@@ -532,76 +532,6 @@ Option Explicit
 Public DataBaseFolder As String
 Dim connect As New ADODB.Connection
 Dim rs As New ADODB.Recordset
-
-Dim ColorGreen As String
-Dim ColorOrange As String
-Private SelectedTab As Integer
-Public Sql As String
-Public ArrayString As Integer
-Dim RowCount As Integer
-
-'-----------------------------------------------------------------------------------------
-' initialize Checking Valve
-Dim SpeedMin As Integer
-Dim SpeedMax As Integer
-Dim BrakeFrontSumMin As Integer
-Dim BrakeRearSumMin As Integer
-Dim BrakeStopSumMin As Integer
-Dim BrakeFrontDifMax As Integer
-Dim BrakeRearDifMax As Integer
-Dim BrakeStopDifMax As Integer
-Dim NoiseMax As Integer
-Dim BuzzerMin As Integer
-Dim BuzzerMax As Integer
-Dim AlignMin As Integer
-Dim AlignMax As Integer
-Dim HCMax As Integer
-Dim COMax As Integer
-Dim CO2Max As Integer
-Dim O2Max As Integer
-Dim NOMax As Integer
-Dim HSUMax As Integer
-Dim HeSoDieselMax As Integer
-
-Dim HLHighIntMin As Integer
-Dim HLHighLRMin As Integer
-Dim HLHighLRMax As Integer
-Dim HLHighUDMin As Integer
-Dim HLHighUDMax As Integer
-
-Dim HLLowIntMin As Integer
-Dim HLLowLRMin As Integer
-Dim HLLowLRMax As Integer
-Dim HLLowUDMin As Integer
-Dim HLLowUDMax As Integer
-
-
-'----------------------Khoi tao gia tri checking Parameter -----------
-
-Private Sub InitializeCheckingParameter()
- End Sub
-
-Private Sub SubErrHandling()
-Select Case Err.Number
-Case 3020
-MsgBox " Need Edit or Add New Task Before "
-Case 3021
-MsgBox "No current Record"
-Case Else
-MsgBox Err.Description
-End Select
-End Sub
-Private Sub SubEnableAll()
-Dim EnableBit As Boolean
-EnableBit = True
-
-
-End Sub
-Private Sub SubDisableAll()
-Dim EnableBit As Boolean
-EnableBit = False
-End Sub
-
   
 
 Private Sub btnAdd_Click()
@@ -702,13 +632,6 @@ End If
 RST.Close
 End Sub
 
-Private Sub DatTestingParameter_Reposition()
-InitializeCheckingParameter
-End Sub
-
-
- 
-
 Private Sub Form_Load()
 DataBaseFolder = "\\Master\OCS10"
 'DataBaseFolder = App.Path
@@ -724,18 +647,7 @@ addTester
 addName
 End Sub
 
- 
-
- 
-
-   
-Private Sub MnuHelpAboutOCS10DBS_Click()
-FrmContactUs.Show
-End Sub
-
-Private Sub MnuHelpGuide_Click()
-FrmAbout.Show
-End Sub
+  
 
 Private Sub MnuImportVehicles_Click()
 CommonDialog2.Filter = "Excel (*.xlsx)|*.xlsx|All files (*.*)|*.*"
@@ -794,14 +706,6 @@ If CommonDialog2.FileName <> "" Then
 End If
 End Sub
  
-Private Sub MnuReportTotal_Click()
-FrmReportSeperate.Show
-End Sub
-
-Private Sub MnuSaveAsDataBase_Click()
-Unload Me
-FrmBackupDB.Show
-End Sub
  
 
 Private Sub LoadSelectVehicle()
