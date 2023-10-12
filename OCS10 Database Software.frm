@@ -123,6 +123,22 @@ Begin VB.Form FrmMain
          Top             =   1140
          Width           =   8055
       End
+      Begin MSForms.CommandButton btnImport 
+         Height          =   735
+         Left            =   240
+         TabIndex        =   26
+         Top             =   7440
+         Width           =   2775
+         ForeColor       =   -2147483634
+         BackColor       =   8421376
+         Caption         =   "Import töø file"
+         Size            =   "4895;1296"
+         FontName        =   "VNI-Centur"
+         FontHeight      =   360
+         FontCharSet     =   0
+         FontPitchAndFamily=   2
+         ParagraphAlign  =   3
+      End
       Begin VB.Label Label46 
          AutoSize        =   -1  'True
          Caption         =   "Soá maùy:"
@@ -221,9 +237,11 @@ Begin VB.Form FrmMain
          Width           =   2295
          ForeColor       =   -2147483634
          BackColor       =   -2147483635
+         VariousPropertyBits=   25
          Caption         =   "Theâm môùi"
          Size            =   "4048;1296"
          FontName        =   "VNI-Centur"
+         FontEffects     =   1073750016
          FontHeight      =   360
          FontCharSet     =   0
          FontPitchAndFamily=   2
@@ -522,6 +540,22 @@ Begin VB.Form FrmMain
          Width           =   1650
       End
    End
+   Begin MSForms.CommandButton CommandButton2 
+      Height          =   735
+      Left            =   10320
+      TabIndex        =   25
+      Top             =   6240
+      Width           =   2295
+      ForeColor       =   -2147483634
+      BackColor       =   -2147483635
+      Caption         =   "Theâm môùi"
+      Size            =   "4048;1296"
+      FontName        =   "VNI-Centur"
+      FontHeight      =   360
+      FontCharSet     =   0
+      FontPitchAndFamily=   2
+      ParagraphAlign  =   3
+   End
 End
 Attribute VB_Name = "FrmMain"
 Attribute VB_GlobalNameSpace = False
@@ -599,57 +633,7 @@ Loop
 End Sub
 
 
-Private Sub CommandButton1_Click()
-Dim connect As New ADODB.Connection
-Dim RST As New ADODB.Recordset
-
-If connect.State = 1 Then connect.Close
-If RST.State = 1 Then RST.Close
-connect.Open "Provider=Microsoft.jet.OLEDB.4.0;Data Source=" & DataBaseFolder & "\OCS10_DataBase_97.mdb;Persist Security Info=False"
-
-Dim sSQL As String
-sSQL = "Select * From TblTestingParameter Where STT = " & Val(txtCurrentID.Text) & ""
-RST.Open sSQL, connect, adOpenDynamic, adLockOptimistic
-If Not RST.EOF Then
-RST("SelectedDateTime") = Now()
-RST.Update
-TxtSelectedName.Text = RST("Name")
-If RST("ChassisNumber") <> "" Then
-    TxtSelectedChassisNumber.Text = RST("ChassisNumber")
-Else
-    TxtSelectedChassisNumber.Text = ""
-End If
-  If RST("EngineNumber") <> "" Then
-    TxtSelectedEngineNumber.Text = RST("EngineNumber")
-Else
-    TxtSelectedEngineNumber.Text = ""
-End If
-  
-MsgBox "Ban da chon xe test(" & RST("ChassisNumber") & ")"
-Else
-MsgBox "Record Not Found..."
-End If
-RST.Close
-End Sub
-
-Private Sub Form_Load()
-DataBaseFolder = "\\Master\OCS10"
-'DataBaseFolder = App.Path
-txtSqlReport.Text = "SELECT * FROM TblTestingParameter"
-DatTestingParameter.DatabaseName = DataBaseFolder & "\OCS10_DataBase_97.mdb"
-DatTestingParameter.RecordSource = "select STT, Date, ChassisNumber,EngineNumber, Name,SelectedDateTime,Tester, ProducedNumber from TblTestingParameter order by STT desc"
-
-DatCheckingParameter.DatabaseName = DataBaseFolder & "\OCS10_DataBase_97.mdb"
-DatCheckingParameter.RecordSource = "select * from TblCheckingParameter"
-LoadSelectVehicle
-  
-addTester
-addName
-End Sub
-
-  
-
-Private Sub MnuImportVehicles_Click()
+Private Sub btnImport_Click()
 CommonDialog2.Filter = "Excel (*.xlsx)|*.xlsx|All files (*.*)|*.*"
 CommonDialog2.DefaultExt = "txt"
 CommonDialog2.DialogTitle = "Select File"
@@ -705,7 +689,60 @@ If CommonDialog2.FileName <> "" Then
     MsgBox "Thêm thành công " & CStr(i - 3) & " xe"
 End If
 End Sub
+
+Private Sub CommandButton1_Click()
+Dim connect As New ADODB.Connection
+Dim RST As New ADODB.Recordset
+
+If connect.State = 1 Then connect.Close
+If RST.State = 1 Then RST.Close
+connect.Open "Provider=Microsoft.jet.OLEDB.4.0;Data Source=" & DataBaseFolder & "\OCS10_DataBase_97.mdb;Persist Security Info=False"
+
+Dim sSQL As String
+sSQL = "Select * From TblTestingParameter Where STT = " & Val(txtCurrentID.Text) & ""
+RST.Open sSQL, connect, adOpenDynamic, adLockOptimistic
+If Not RST.EOF Then
+RST("SelectedDateTime") = Now()
+RST.Update
+TxtSelectedName.Text = RST("Name")
+If RST("ChassisNumber") <> "" Then
+    TxtSelectedChassisNumber.Text = RST("ChassisNumber")
+Else
+    TxtSelectedChassisNumber.Text = ""
+End If
+  If RST("EngineNumber") <> "" Then
+    TxtSelectedEngineNumber.Text = RST("EngineNumber")
+Else
+    TxtSelectedEngineNumber.Text = ""
+End If
+  
+MsgBox "Ban da chon xe test(" & RST("ChassisNumber") & ")"
+Else
+MsgBox "Record Not Found..."
+End If
+RST.Close
+End Sub
+
  
+
+Private Sub CommandButton3_Click()
+
+End Sub
+
+Private Sub Form_Load()
+DataBaseFolder = "\\Master\OCS10"
+'DataBaseFolder = App.Path
+txtSqlReport.Text = "SELECT * FROM TblTestingParameter"
+DatTestingParameter.DatabaseName = DataBaseFolder & "\OCS10_DataBase_97.mdb"
+DatTestingParameter.RecordSource = "select STT, Date, ChassisNumber,EngineNumber, Name,SelectedDateTime,Tester, ProducedNumber from TblTestingParameter order by STT desc"
+
+DatCheckingParameter.DatabaseName = DataBaseFolder & "\OCS10_DataBase_97.mdb"
+DatCheckingParameter.RecordSource = "select * from TblCheckingParameter"
+LoadSelectVehicle
+  
+addTester
+addName
+End Sub
  
 
 Private Sub LoadSelectVehicle()
@@ -743,11 +780,22 @@ Private Sub TxtChassisNumber_Change()
 If Len(TxtChassisNumber.Text) >= 17 Then
 TxtEngineNumber.SetFocus
 End If
+If Len(TxtChassisNumber.Text) = 0 Or Len(TxtEngineNumber.Text) = 0 Then
+btnAdd.Enabled = False
+Else
+btnAdd.Enabled = True
+End If
+
 End Sub
 
 Private Sub TxtEngineNumber_Change()
 If Len(TxtEngineNumber.Text) >= 12 Then
 TxtProducedNumber.SetFocus
+End If
+If Len(TxtChassisNumber.Text) = 0 Or Len(TxtEngineNumber.Text) = 0 Then
+btnAdd.Enabled = False
+Else
+btnAdd.Enabled = True
 End If
 End Sub
 
