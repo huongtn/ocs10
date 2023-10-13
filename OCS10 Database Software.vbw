@@ -1,4 +1,4 @@
-FrmMain = 207, -25, 1011, 714, , 84, -29, 1666, 906, C
+FrmMain = 207, -25, 1011, 714, C, 84, -29, 1666, 906, C
 FrmCheckingParameter = 50, 50, 626, 516, C, 25, 25, 995, 476, C
 FrmReportSeperate = 33, 113, 852, 564, C, 212, 62, 1012, 513, C
 FrmReportSelected = 25, 25, 889, 595, C, 0, 0, 668, 466, C
