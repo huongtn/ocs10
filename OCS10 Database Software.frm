@@ -693,15 +693,15 @@ Begin VB.Form FrmMain
       Width           =   1200
    End
    Begin MSACAL.Calendar cldToDate 
-      Height          =   2415
-      Left            =   3480
+      Height          =   2655
+      Left            =   3840
       TabIndex        =   72
-      Top             =   9960
+      Top             =   10080
       Visible         =   0   'False
-      Width           =   3255
+      Width           =   3615
       _Version        =   524288
-      _ExtentX        =   5741
-      _ExtentY        =   4260
+      _ExtentX        =   6376
+      _ExtentY        =   4683
       _StockProps     =   1
       BackColor       =   -2147483633
       Year            =   2012
@@ -750,15 +750,15 @@ Begin VB.Form FrmMain
       EndProperty
    End
    Begin MSACAL.Calendar cldFromDate 
-      Height          =   2415
-      Left            =   480
+      Height          =   2655
+      Left            =   240
       TabIndex        =   71
-      Top             =   9960
+      Top             =   10080
       Visible         =   0   'False
-      Width           =   3255
+      Width           =   3615
       _Version        =   524288
-      _ExtentX        =   5741
-      _ExtentY        =   4260
+      _ExtentX        =   6376
+      _ExtentY        =   4683
       _StockProps     =   1
       BackColor       =   -2147483633
       Year            =   2012
