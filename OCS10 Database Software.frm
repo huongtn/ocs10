@@ -790,9 +790,9 @@ End If
 End Sub
 
 Private Sub TxtEngineNumber_Change()
-If Len(TxtEngineNumber.Text) >= 12 Then
-TxtProducedNumber.SetFocus
-End If
+'If Len(TxtEngineNumber.Text) >= 12 Then
+'TxtProducedNumber.SetFocus
+'End If
 If Len(TxtChassisNumber.Text) = 0 Or Len(TxtEngineNumber.Text) = 0 Then
 btnAdd.Enabled = False
 Else
