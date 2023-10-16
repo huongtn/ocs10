@@ -4928,7 +4928,7 @@ MnuImportVehicles_Click
  
 
 Case "KeyReport"
-MnuReportSeperate_Click
+MnuReportSelected_Click
 
 Case "KeyParameter"
 MnuRegisteredParameter_Click
