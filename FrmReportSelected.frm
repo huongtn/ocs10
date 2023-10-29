@@ -65,7 +65,9 @@ Dim sqlToReport As String
 sqlToReport = FrmMain.txtCurrentID.Text
 Set myDB = OpenDatabase(FrmMain.DataBaseFolder & "\OCS10_DataBase_97.mdb")
  
-Set myRS = myDB.OpenRecordset("SELECT   * FROM    TblCheckingParameter TblCheckingParameter INNER JOIN TblTestingParameter TblTestingParameter ON TblCheckingParameter.Name=TblTestingParameter.Name where  STT = " & Val(sqlToReport) & "")
+'Set myRS = myDB.OpenRecordset("SELECT   * FROM    TblCheckingParameter TblCheckingParameter INNER JOIN TblTestingParameter TblTestingParameter ON TblCheckingParameter.Name=TblTestingParameter.Name where  STT = " & Val(sqlToReport) & "")
+Set myRS = myDB.OpenRecordset("SELECT   * FROM   TblTestingParameter TblTestingParameter  where  STT = " & Val(sqlToReport) & "")
+
 Set Report = Appl.OpenReport(".\OCS10Rpt.Rpt")
 Report.Database.Tables(1).Location = FrmMain.DataBaseFolder & "\OCS10_DataBase_97.mdb"
 

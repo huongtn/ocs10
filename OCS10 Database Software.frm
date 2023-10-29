@@ -19,6 +19,120 @@ Begin VB.Form FrmMain
    ScaleWidth      =   23030.3
    StartUpPosition =   2  'CenterScreen
    WindowState     =   2  'Maximized
+   Begin MSACAL.Calendar cldFromDate 
+      Height          =   3375
+      Left            =   360
+      TabIndex        =   71
+      Top             =   8640
+      Visible         =   0   'False
+      Width           =   3615
+      _Version        =   524288
+      _ExtentX        =   6376
+      _ExtentY        =   5953
+      _StockProps     =   1
+      BackColor       =   -2147483633
+      Year            =   2012
+      Month           =   3
+      Day             =   20
+      DayLength       =   1
+      MonthLength     =   1
+      DayFontColor    =   0
+      FirstDay        =   7
+      GridCellEffect  =   1
+      GridFontColor   =   10485760
+      GridLinesColor  =   -2147483632
+      ShowDateSelectors=   -1  'True
+      ShowDays        =   -1  'True
+      ShowHorizontalGrid=   -1  'True
+      ShowTitle       =   -1  'True
+      ShowVerticalGrid=   -1  'True
+      TitleFontColor  =   10485760
+      ValueIsNull     =   0   'False
+      BeginProperty DayFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Arial"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      BeginProperty GridFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Arial"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      BeginProperty TitleFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Arial"
+         Size            =   12
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+   End
+   Begin MSACAL.Calendar cldToDate 
+      Height          =   3495
+      Left            =   4080
+      TabIndex        =   72
+      Top             =   8520
+      Visible         =   0   'False
+      Width           =   3615
+      _Version        =   524288
+      _ExtentX        =   6376
+      _ExtentY        =   6165
+      _StockProps     =   1
+      BackColor       =   -2147483633
+      Year            =   2012
+      Month           =   3
+      Day             =   20
+      DayLength       =   1
+      MonthLength     =   1
+      DayFontColor    =   0
+      FirstDay        =   7
+      GridCellEffect  =   1
+      GridFontColor   =   10485760
+      GridLinesColor  =   -2147483632
+      ShowDateSelectors=   -1  'True
+      ShowDays        =   -1  'True
+      ShowHorizontalGrid=   -1  'True
+      ShowTitle       =   -1  'True
+      ShowVerticalGrid=   -1  'True
+      TitleFontColor  =   10485760
+      ValueIsNull     =   0   'False
+      BeginProperty DayFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Arial"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      BeginProperty GridFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Arial"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      BeginProperty TitleFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Arial"
+         Size            =   12
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+   End
    Begin VB.Frame Frame8 
       Caption         =   "Khí xaû - Ñoäng cô Diesel"
       BeginProperty Font 
@@ -691,120 +805,6 @@ Begin VB.Form FrmMain
       Top             =   12360
       Visible         =   0   'False
       Width           =   1200
-   End
-   Begin MSACAL.Calendar cldToDate 
-      Height          =   2655
-      Left            =   3840
-      TabIndex        =   72
-      Top             =   10080
-      Visible         =   0   'False
-      Width           =   3615
-      _Version        =   524288
-      _ExtentX        =   6376
-      _ExtentY        =   4683
-      _StockProps     =   1
-      BackColor       =   -2147483633
-      Year            =   2012
-      Month           =   3
-      Day             =   20
-      DayLength       =   1
-      MonthLength     =   1
-      DayFontColor    =   0
-      FirstDay        =   7
-      GridCellEffect  =   1
-      GridFontColor   =   10485760
-      GridLinesColor  =   -2147483632
-      ShowDateSelectors=   -1  'True
-      ShowDays        =   -1  'True
-      ShowHorizontalGrid=   -1  'True
-      ShowTitle       =   -1  'True
-      ShowVerticalGrid=   -1  'True
-      TitleFontColor  =   10485760
-      ValueIsNull     =   0   'False
-      BeginProperty DayFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "Arial"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      BeginProperty GridFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "Arial"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      BeginProperty TitleFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "Arial"
-         Size            =   12
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-   End
-   Begin MSACAL.Calendar cldFromDate 
-      Height          =   2655
-      Left            =   240
-      TabIndex        =   71
-      Top             =   10080
-      Visible         =   0   'False
-      Width           =   3615
-      _Version        =   524288
-      _ExtentX        =   6376
-      _ExtentY        =   4683
-      _StockProps     =   1
-      BackColor       =   -2147483633
-      Year            =   2012
-      Month           =   3
-      Day             =   20
-      DayLength       =   1
-      MonthLength     =   1
-      DayFontColor    =   0
-      FirstDay        =   7
-      GridCellEffect  =   1
-      GridFontColor   =   10485760
-      GridLinesColor  =   -2147483632
-      ShowDateSelectors=   -1  'True
-      ShowDays        =   -1  'True
-      ShowHorizontalGrid=   -1  'True
-      ShowTitle       =   -1  'True
-      ShowVerticalGrid=   -1  'True
-      TitleFontColor  =   10485760
-      ValueIsNull     =   0   'False
-      BeginProperty DayFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "Arial"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      BeginProperty GridFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "Arial"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      BeginProperty TitleFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "Arial"
-         Size            =   12
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
    End
    Begin VB.Frame freSearch 
       BorderStyle     =   0  'None
