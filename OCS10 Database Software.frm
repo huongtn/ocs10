@@ -7,18 +7,29 @@ Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "comdlg32.ocx"
 Begin VB.Form FrmMain 
    BorderStyle     =   0  'None
    Caption         =   "DBS10 - Database Software  -  Designed by INDUSTRY SOLUTION Co.  -   www.thietbicongnghiep.vn"
-   ClientHeight    =   12360
+   ClientHeight    =   13380
    ClientLeft      =   45
    ClientTop       =   615
    ClientWidth     =   20115
    FillColor       =   &H00808080&
    Icon            =   "OCS10 Database Software.frx":0000
    LinkTopic       =   "Form1"
-   ScaleHeight     =   11863.37
+   ScaleHeight     =   12842.39
    ScaleMode       =   0  'User
    ScaleWidth      =   23030.3
    StartUpPosition =   2  'CenterScreen
    WindowState     =   2  'Maximized
+   Begin VB.TextBox TxtType 
+      DataField       =   "Type"
+      DataSource      =   "DatTestingParameter"
+      Height          =   375
+      Left            =   16440
+      TabIndex        =   176
+      Text            =   "Type"
+      Top             =   12720
+      Visible         =   0   'False
+      Width           =   1095
+   End
    Begin MSACAL.Calendar cldFromDate 
       Height          =   3375
       Left            =   360
@@ -5049,6 +5060,7 @@ End Sub
 
 Private Sub TxtCO_Change()
 CheckCO
+TxtType.Text = "1"
 End Sub
 
 Private Sub TxtCO2_Change()
@@ -5057,6 +5069,7 @@ End Sub
 
 Private Sub TxtHC_Change()
 CheckHC
+TxtType.Text = "0"
 End Sub
 
  
@@ -5116,6 +5129,18 @@ CheckHSUDiesel
 End Sub
 
 
+Private Sub TxtHSUDiesel1_Change()
+TxtType.Text = "1"
+End Sub
+
+Private Sub TxtHSUDiesel2_Change()
+TxtType.Text = "1"
+End Sub
+
+Private Sub TxtHSUDiesel3_Change()
+TxtType.Text = "1"
+End Sub
+
 Private Sub TxtNO_Change()
 CheckNO
 End Sub
@@ -5133,6 +5158,32 @@ End Sub
 
 
  
+
+ 
+
+Private Sub TxtRPMDieselMax1_Change()
+TxtType.Text = "1"
+End Sub
+
+Private Sub TxtRPMDieselMax2_Change()
+TxtType.Text = "1"
+End Sub
+
+Private Sub TxtRPMDieselMax3_Change()
+TxtType.Text = "1"
+End Sub
+
+Private Sub TxtRPMDieselMin1_Change()
+TxtType.Text = "1"
+End Sub
+
+Private Sub TxtRPMDieselMin2_Change()
+TxtType.Text = "1"
+End Sub
+
+Private Sub TxtRPMDieselMin3_Change()
+TxtType.Text = "1"
+End Sub
 
 Private Sub TxtSpeed_Change()
 CheckSpeed
