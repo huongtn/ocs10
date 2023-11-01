@@ -3533,8 +3533,11 @@ Dim HSUMax As Integer
 Dim HeSoDieselMax As Integer
 
 Dim HLHighIntMin As Integer
-Dim HLHighLRMin As Integer
-Dim HLHighLRMax As Integer
+Dim HLHighLeftLRMin As Integer
+Dim HLHighLeftLRMax As Integer
+
+Dim HLHighRightLRMin As Integer
+Dim HLHighRightLRMax As Integer
 Dim HLHighUDMin As Integer
 Dim HLHighUDMax As Integer
 
@@ -3595,16 +3598,18 @@ HSUMax = DatCheckingParameter.Recordset.Fields(19).Value
 
 HeSoDieselMax = DatCheckingParameter.Recordset.Fields(20).Value
 HLHighIntMin = DatCheckingParameter.Recordset.Fields(21).Value
-HLHighLRMin = DatCheckingParameter.Recordset.Fields(22).Value
-HLHighLRMax = DatCheckingParameter.Recordset.Fields(23).Value
-HLHighUDMin = DatCheckingParameter.Recordset.Fields(24).Value
-HLHighUDMax = DatCheckingParameter.Recordset.Fields(25).Value
+HLHighLeftLRMin = DatCheckingParameter.Recordset.Fields(22).Value
+HLHighLeftLRMax = DatCheckingParameter.Recordset.Fields(23).Value
+HLHighRightLRMin = DatCheckingParameter.Recordset.Fields(24).Value
+HLHighRightLRMax = DatCheckingParameter.Recordset.Fields(25).Value
+HLHighUDMin = DatCheckingParameter.Recordset.Fields(26).Value
+HLHighUDMax = DatCheckingParameter.Recordset.Fields(27).Value
 
-HLLowIntMin = DatCheckingParameter.Recordset.Fields(26).Value
-HLLowLRMin = DatCheckingParameter.Recordset.Fields(27).Value
-HLLowLRMax = DatCheckingParameter.Recordset.Fields(28).Value
-HLLowUDMin = DatCheckingParameter.Recordset.Fields(29).Value
-HLLowUDMax = DatCheckingParameter.Recordset.Fields(30).Value
+HLLowIntMin = DatCheckingParameter.Recordset.Fields(28).Value
+HLLowLRMin = DatCheckingParameter.Recordset.Fields(29).Value
+HLLowLRMax = DatCheckingParameter.Recordset.Fields(30).Value
+HLLowUDMin = DatCheckingParameter.Recordset.Fields(31).Value
+HLLowUDMax = DatCheckingParameter.Recordset.Fields(32).Value
 
 CheckAll
 NoName:
@@ -3803,13 +3808,13 @@ Else: TxtHLHighLeftInt.BackColor = ColorOrange
 End If
 End Sub
 Private Sub CheckHLHighLeftLR()
-If (Val(TxtHLHighLeftLR) >= HLHighLRMin) And (Val(TxtHLHighLeftLR) <= HLHighLRMax) Then
+If (Val(TxtHLHighLeftLR) >= HLHighLeftLRMin) And (Val(TxtHLHighLeftLR) <= HLHighLeftLRMax) Then
 TxtHLHighLeftLR.BackColor = ColorGreen
 Else: TxtHLHighLeftLR.BackColor = ColorOrange
 End If
 End Sub
 Private Sub CheckHLHighLeftUD()
-If (Val(TxtHLHighLeftUD) >= HLHighLRMin) And (Val(TxtHLHighLeftUD) <= HLHighLRMax) Then
+If (Val(TxtHLHighLeftUD) >= HLHighUDMin) And (Val(TxtHLHighLeftUD) <= HLHighUDMax) Then
 TxtHLHighLeftUD.BackColor = ColorGreen
 Else: TxtHLHighLeftUD.BackColor = ColorOrange
 End If
@@ -3821,13 +3826,13 @@ Else: TxtHLHighRightInt.BackColor = ColorOrange
 End If
 End Sub
 Private Sub CheckHLHighRightLR()
-If (Val(TxtHLHighRightLR) >= HLHighLRMin) And (Val(TxtHLHighRightLR) <= HLHighLRMax) Then
+If (Val(TxtHLHighRightLR) >= HLHighRightLRMin) And (Val(TxtHLHighRightLR) <= HLHighRightLRMax) Then
 TxtHLHighRightLR.BackColor = ColorGreen
 Else: TxtHLHighRightLR.BackColor = ColorOrange
 End If
 End Sub
 Private Sub CheckHLHighRightUD()
-If (Val(TxtHLHighRightUD) >= HLHighLRMin) And (Val(TxtHLHighRightUD) <= HLHighLRMax) Then
+If (Val(TxtHLHighRightUD) >= HLHighUDMin) And (Val(TxtHLHighRightUD) <= HLHighUDMax) Then
 TxtHLHighRightUD.BackColor = ColorGreen
 Else: TxtHLHighRightUD.BackColor = ColorOrange
 End If
@@ -3852,7 +3857,7 @@ Else: TxtHLLowLeftLR.BackColor = ColorOrange
 End If
 End Sub
 Private Sub CheckHLLowLeftUD()
-If (Val(TxtHLLowLeftUD) >= HLLowLRMin) And (Val(TxtHLLowLeftUD) <= HLLowLRMax) Then
+If (Val(TxtHLLowLeftUD) >= HLLowUDMin) And (Val(TxtHLLowLeftUD) <= HLLowUDMax) Then
 TxtHLLowLeftUD.BackColor = ColorGreen
 Else: TxtHLLowLeftUD.BackColor = ColorOrange
 End If
@@ -3870,7 +3875,7 @@ Else: TxtHLLowRightLR.BackColor = ColorOrange
 End If
 End Sub
 Private Sub CheckHLLowRightUD()
-If (Val(TxtHLLowRightUD) >= HLLowLRMin) And (Val(TxtHLLowRightUD) <= HLLowLRMax) Then
+If (Val(TxtHLLowRightUD) >= HLLowUDMin) And (Val(TxtHLLowRightUD) <= HLLowUDMax) Then
 TxtHLLowRightUD.BackColor = ColorGreen
 Else: TxtHLLowRightUD.BackColor = ColorOrange
 End If
