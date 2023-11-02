@@ -33,7 +33,7 @@ Begin VB.Form FrmMain
       ForeColor       =   &H00FF0000&
       Height          =   1455
       Left            =   10560
-      TabIndex        =   16
+      TabIndex        =   15
       Top             =   6000
       Width           =   9255
       Begin VB.TextBox TxtCO 
@@ -50,8 +50,8 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   375
-         Left            =   5160
-         TabIndex        =   7
+         Left            =   4200
+         TabIndex        =   6
          Top             =   720
          Width           =   2175
       End
@@ -70,13 +70,13 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   1800
-         TabIndex        =   6
+         TabIndex        =   5
          Top             =   720
-         Width           =   2175
+         Width           =   2055
       End
       Begin VB.Label Label15 
          AutoSize        =   -1  'True
-         Caption         =   "CO:"
+         Caption         =   "CO(%)"
          BeginProperty Font 
             Name            =   "VNI-Centur"
             Size            =   9.75
@@ -87,14 +87,14 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   270
-         Left            =   5160
-         TabIndex        =   90
+         Left            =   4200
+         TabIndex        =   86
          Top             =   405
-         Width           =   345
+         Width           =   570
       End
       Begin VB.Label Label14 
          AutoSize        =   -1  'True
-         Caption         =   "HC:"
+         Caption         =   "HC(ppm)"
          BeginProperty Font 
             Name            =   "VNI-Centur"
             Size            =   9.75
@@ -106,45 +106,9 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   1800
-         TabIndex        =   89
+         TabIndex        =   85
          Top             =   405
-         Width           =   360
-      End
-      Begin VB.Label Label25 
-         AutoSize        =   -1  'True
-         Caption         =   "%"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   7440
-         TabIndex        =   18
-         Top             =   765
-         Width           =   165
-      End
-      Begin VB.Label Label24 
-         AutoSize        =   -1  'True
-         Caption         =   "ppm"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   4080
-         TabIndex        =   17
-         Top             =   765
-         Width           =   420
+         Width           =   840
       End
    End
    Begin VB.Frame Frame12 
@@ -161,7 +125,7 @@ Begin VB.Form FrmMain
       ForeColor       =   &H00FF0000&
       Height          =   2655
       Left            =   5520
-      TabIndex        =   28
+      TabIndex        =   25
       Top             =   5460
       Width           =   4695
       Begin VB.TextBox TxtBuzzer 
@@ -179,7 +143,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   1680
-         TabIndex        =   14
+         TabIndex        =   13
          Top             =   1920
          Width           =   2175
       End
@@ -198,7 +162,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   1680
-         TabIndex        =   13
+         TabIndex        =   12
          Top             =   1400
          Width           =   2175
       End
@@ -217,7 +181,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   1680
-         TabIndex        =   12
+         TabIndex        =   11
          Top             =   880
          Width           =   2175
       End
@@ -236,7 +200,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   1680
-         TabIndex        =   11
+         TabIndex        =   10
          Top             =   360
          Width           =   2175
       End
@@ -254,7 +218,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   88
+         TabIndex        =   84
          Top             =   1965
          Width           =   420
       End
@@ -272,13 +236,13 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   87
+         TabIndex        =   83
          Top             =   1446
          Width           =   660
       End
       Begin VB.Label Label49 
          AutoSize        =   -1  'True
-         Caption         =   "Tröôït ngang T:"
+         Caption         =   "Tröôït ngang:"
          BeginProperty Font 
             Name            =   "VNI-Centur"
             Size            =   9.75
@@ -290,9 +254,9 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   86
-         Top             =   929
-         Width           =   1380
+         TabIndex        =   82
+         Top             =   930
+         Width           =   1185
       End
       Begin VB.Label Label48 
          AutoSize        =   -1  'True
@@ -308,7 +272,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   85
+         TabIndex        =   81
          Top             =   412
          Width           =   735
       End
@@ -326,7 +290,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   3960
-         TabIndex        =   32
+         TabIndex        =   29
          Top             =   1965
          Width           =   255
       End
@@ -344,7 +308,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   3960
-         TabIndex        =   31
+         TabIndex        =   28
          Top             =   1445
          Width           =   255
       End
@@ -362,7 +326,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   3960
-         TabIndex        =   30
+         TabIndex        =   27
          Top             =   925
          Width           =   570
       End
@@ -380,7 +344,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   3960
-         TabIndex        =   29
+         TabIndex        =   26
          Top             =   405
          Width           =   510
       End
@@ -388,7 +352,7 @@ Begin VB.Form FrmMain
    Begin MSACAL.Calendar cldFromDate 
       Height          =   3375
       Left            =   360
-      TabIndex        =   60
+      TabIndex        =   57
       Top             =   8640
       Visible         =   0   'False
       Width           =   3615
@@ -445,7 +409,7 @@ Begin VB.Form FrmMain
    Begin MSACAL.Calendar cldToDate 
       Height          =   3495
       Left            =   4080
-      TabIndex        =   61
+      TabIndex        =   58
       Top             =   8520
       Visible         =   0   'False
       Width           =   3615
@@ -502,7 +466,7 @@ Begin VB.Form FrmMain
    Begin MSACAL.Calendar cldDate 
       Height          =   3735
       Left            =   7200
-      TabIndex        =   38
+      TabIndex        =   35
       Top             =   5160
       Visible         =   0   'False
       Width           =   3495
@@ -578,7 +542,7 @@ Begin VB.Form FrmMain
       ForeColor       =   &H000000FF&
       Height          =   420
       Left            =   16440
-      TabIndex        =   99
+      TabIndex        =   95
       Top             =   960
       Width           =   3015
    End
@@ -597,7 +561,7 @@ Begin VB.Form FrmMain
       ForeColor       =   &H000000FF&
       Height          =   420
       Left            =   12030
-      TabIndex        =   98
+      TabIndex        =   94
       Top             =   930
       Width           =   3015
    End
@@ -616,7 +580,7 @@ Begin VB.Form FrmMain
       ForeColor       =   &H000000FF&
       Height          =   420
       Left            =   7860
-      TabIndex        =   97
+      TabIndex        =   93
       Top             =   930
       Width           =   3015
    End
@@ -635,7 +599,7 @@ Begin VB.Form FrmMain
       ForeColor       =   &H000000FF&
       Height          =   420
       Left            =   3690
-      TabIndex        =   96
+      TabIndex        =   92
       Top             =   930
       Width           =   3015
    End
@@ -653,7 +617,7 @@ Begin VB.Form FrmMain
       EndProperty
       Height          =   420
       Left            =   480
-      TabIndex        =   95
+      TabIndex        =   91
       Top             =   930
       Width           =   2055
    End
@@ -662,7 +626,7 @@ Begin VB.Form FrmMain
       Left            =   13920
       ScaleHeight     =   420
       ScaleWidth      =   1140
-      TabIndex        =   94
+      TabIndex        =   90
       Top             =   12360
       Visible         =   0   'False
       Width           =   1200
@@ -672,7 +636,7 @@ Begin VB.Form FrmMain
       Height          =   2145
       Index           =   0
       Left            =   480
-      TabIndex        =   46
+      TabIndex        =   43
       Top             =   9720
       Width           =   4260
       Begin VB.TextBox TxtNameSearch 
@@ -687,7 +651,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   120
-         TabIndex        =   50
+         TabIndex        =   47
          Top             =   120
          Width           =   3375
       End
@@ -705,14 +669,14 @@ Begin VB.Form FrmMain
          ItemData        =   "OCS10 Database Software.frx":0442
          Left            =   120
          List            =   "OCS10 Database Software.frx":0444
-         TabIndex        =   47
+         TabIndex        =   44
          Top             =   600
          Width           =   4095
       End
       Begin MSForms.CommandButton CmdNameSearch 
          Height          =   375
          Left            =   3600
-         TabIndex        =   62
+         TabIndex        =   59
          Top             =   120
          Width           =   615
          VariousPropertyBits=   25
@@ -731,7 +695,7 @@ Begin VB.Form FrmMain
       DataSource      =   "DatTestingParameter"
       Height          =   375
       Left            =   12120
-      TabIndex        =   59
+      TabIndex        =   56
       Text            =   "CurrentID"
       Top             =   12480
       Visible         =   0   'False
@@ -740,7 +704,7 @@ Begin VB.Form FrmMain
    Begin VB.TextBox txtSqlReport 
       Height          =   405
       Left            =   10680
-      TabIndex        =   58
+      TabIndex        =   55
       Text            =   "SqlToReport"
       Top             =   12600
       Visible         =   0   'False
@@ -751,7 +715,7 @@ Begin VB.Form FrmMain
       Height          =   2500
       Index           =   4
       Left            =   10200
-      TabIndex        =   54
+      TabIndex        =   51
       Top             =   10080
       Width           =   4359
       Begin VB.ListBox LstAll 
@@ -768,7 +732,7 @@ Begin VB.Form FrmMain
          ItemData        =   "OCS10 Database Software.frx":0446
          Left            =   120
          List            =   "OCS10 Database Software.frx":0448
-         TabIndex        =   56
+         TabIndex        =   53
          Top             =   600
          Width           =   4095
       End
@@ -785,7 +749,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   120
-         TabIndex        =   55
+         TabIndex        =   52
          Top             =   120
          Width           =   4095
       End
@@ -795,7 +759,7 @@ Begin VB.Form FrmMain
       Height          =   2500
       Index           =   3
       Left            =   13200
-      TabIndex        =   41
+      TabIndex        =   38
       Top             =   9960
       Width           =   4359
       Begin VB.ListBox LstDate 
@@ -812,7 +776,7 @@ Begin VB.Form FrmMain
          ItemData        =   "OCS10 Database Software.frx":044A
          Left            =   120
          List            =   "OCS10 Database Software.frx":044C
-         TabIndex        =   57
+         TabIndex        =   54
          Top             =   600
          Width           =   4095
       End
@@ -829,7 +793,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   720
-         TabIndex        =   53
+         TabIndex        =   50
          Text            =   "1/1/2012"
          Top             =   120
          Width           =   1455
@@ -847,7 +811,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   2280
-         TabIndex        =   44
+         TabIndex        =   41
          Top             =   120
          Width           =   495
       End
@@ -864,7 +828,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   120
-         TabIndex        =   43
+         TabIndex        =   40
          Top             =   120
          Width           =   495
       End
@@ -881,7 +845,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   2880
-         TabIndex        =   42
+         TabIndex        =   39
          Text            =   "12/30/2012"
          Top             =   120
          Width           =   1335
@@ -892,7 +856,7 @@ Begin VB.Form FrmMain
       Height          =   2500
       Index           =   1
       Left            =   11640
-      TabIndex        =   40
+      TabIndex        =   37
       Top             =   10560
       Width           =   4359
       Begin VB.TextBox TxtChassisSearch 
@@ -907,7 +871,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   120
-         TabIndex        =   52
+         TabIndex        =   49
          Top             =   120
          Width           =   3375
       End
@@ -925,14 +889,14 @@ Begin VB.Form FrmMain
          ItemData        =   "OCS10 Database Software.frx":044E
          Left            =   120
          List            =   "OCS10 Database Software.frx":0450
-         TabIndex        =   49
+         TabIndex        =   46
          Top             =   600
          Width           =   4095
       End
       Begin MSForms.CommandButton CmdChassisSearch 
          Height          =   375
          Left            =   3600
-         TabIndex        =   64
+         TabIndex        =   61
          Top             =   120
          Width           =   615
          VariousPropertyBits=   25
@@ -951,7 +915,7 @@ Begin VB.Form FrmMain
       Height          =   2500
       Index           =   2
       Left            =   480
-      TabIndex        =   45
+      TabIndex        =   42
       Top             =   3120
       Width           =   4380
       Begin VB.TextBox TxtEngineSearch 
@@ -966,7 +930,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   120
-         TabIndex        =   51
+         TabIndex        =   48
          Top             =   120
          Width           =   3375
       End
@@ -984,14 +948,14 @@ Begin VB.Form FrmMain
          ItemData        =   "OCS10 Database Software.frx":0452
          Left            =   120
          List            =   "OCS10 Database Software.frx":0454
-         TabIndex        =   48
+         TabIndex        =   45
          Top             =   600
          Width           =   4095
       End
       Begin MSForms.CommandButton CmdEngineSearch 
          Height          =   375
          Left            =   3600
-         TabIndex        =   63
+         TabIndex        =   60
          Top             =   120
          Width           =   615
          VariousPropertyBits=   25
@@ -1019,7 +983,7 @@ Begin VB.Form FrmMain
       ItemData        =   "OCS10 Database Software.frx":0456
       Left            =   7200
       List            =   "OCS10 Database Software.frx":0458
-      TabIndex        =   39
+      TabIndex        =   36
       Top             =   2640
       Width           =   2535
    End
@@ -1041,7 +1005,7 @@ Begin VB.Form FrmMain
       ItemData        =   "OCS10 Database Software.frx":045A
       Left            =   7200
       List            =   "OCS10 Database Software.frx":045C
-      TabIndex        =   36
+      TabIndex        =   33
       Top             =   3720
       Width           =   2535
    End
@@ -1124,7 +1088,7 @@ Begin VB.Form FrmMain
       Align           =   1  'Align Top
       Height          =   360
       Left            =   0
-      TabIndex        =   33
+      TabIndex        =   30
       Top             =   0
       Width           =   20115
       _ExtentX        =   35481
@@ -1280,7 +1244,7 @@ Begin VB.Form FrmMain
       ForeColor       =   &H00FF0000&
       Height          =   3375
       Left            =   5520
-      TabIndex        =   23
+      TabIndex        =   20
       Top             =   1920
       Width           =   4695
       Begin VB.CommandButton CmdTester 
@@ -1298,7 +1262,7 @@ Begin VB.Form FrmMain
          Height          =   354
          Left            =   3840
          MaskColor       =   &H00FF0000&
-         TabIndex        =   68
+         TabIndex        =   65
          Top             =   1440
          Width           =   375
       End
@@ -1317,7 +1281,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   354
          Left            =   1680
-         TabIndex        =   67
+         TabIndex        =   64
          Top             =   1440
          Width           =   2175
       End
@@ -1336,7 +1300,7 @@ Begin VB.Form FrmMain
          Height          =   375
          Left            =   3840
          MaskColor       =   &H00FF0000&
-         TabIndex        =   66
+         TabIndex        =   63
          Top             =   360
          Width           =   375
       End
@@ -1355,7 +1319,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   1680
-         TabIndex        =   65
+         TabIndex        =   62
          Top             =   360
          Width           =   2175
       End
@@ -1375,7 +1339,7 @@ Begin VB.Form FrmMain
          Height          =   375
          Left            =   3840
          MouseIcon       =   "OCS10 Database Software.frx":1F36
-         TabIndex        =   37
+         TabIndex        =   34
          Top             =   2880
          Width           =   375
       End
@@ -1394,7 +1358,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   1680
-         TabIndex        =   27
+         TabIndex        =   24
          Top             =   2880
          Width           =   2175
       End
@@ -1413,7 +1377,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   1680
-         TabIndex        =   25
+         TabIndex        =   22
          Top             =   1920
          Width           =   2535
       End
@@ -1432,7 +1396,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   1680
-         TabIndex        =   26
+         TabIndex        =   23
          Top             =   2400
          Width           =   2535
       End
@@ -1451,7 +1415,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   1680
-         TabIndex        =   24
+         TabIndex        =   21
          Top             =   960
          Width           =   2535
       End
@@ -1468,7 +1432,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   255
          Left            =   240
-         TabIndex        =   84
+         TabIndex        =   80
          Top             =   2880
          Width           =   1215
       End
@@ -1486,7 +1450,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   83
+         TabIndex        =   79
          Top             =   2400
          Width           =   735
       End
@@ -1504,7 +1468,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   82
+         TabIndex        =   78
          Top             =   1920
          Width           =   1110
       End
@@ -1522,7 +1486,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   81
+         TabIndex        =   77
          Top             =   1440
          Width           =   1005
       End
@@ -1540,7 +1504,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   80
+         TabIndex        =   76
          Top             =   960
          Width           =   915
       End
@@ -1558,7 +1522,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   79
+         TabIndex        =   75
          Top             =   480
          Width           =   735
       End
@@ -1577,7 +1541,7 @@ Begin VB.Form FrmMain
       ForeColor       =   &H00FF0000&
       Height          =   6975
       Left            =   240
-      TabIndex        =   22
+      TabIndex        =   19
       Top             =   1920
       Width           =   4935
       Begin MSDBGrid.DBGrid DBGTestingUpdate 
@@ -1585,7 +1549,7 @@ Begin VB.Form FrmMain
          Height          =   6255
          Left            =   240
          OleObjectBlob   =   "OCS10 Database Software.frx":239A
-         TabIndex        =   35
+         TabIndex        =   32
          Top             =   480
          Width           =   4575
       End
@@ -1604,28 +1568,9 @@ Begin VB.Form FrmMain
       ForeColor       =   &H00FF0000&
       Height          =   1215
       Left            =   10560
-      TabIndex        =   20
+      TabIndex        =   17
       Top             =   3150
       Width           =   9255
-      Begin VB.TextBox TxtBrakeFrontSum 
-         DataField       =   "BrakeFrontSum"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   6960
-         TabIndex        =   2
-         Top             =   600
-         Width           =   1935
-      End
       Begin VB.TextBox TxtBrakeRear 
          DataField       =   "BrakeRear"
          DataSource      =   "DatTestingParameter"
@@ -1664,24 +1609,6 @@ Begin VB.Form FrmMain
          Top             =   600
          Width           =   1935
       End
-      Begin VB.Label Label40 
-         AutoSize        =   -1  'True
-         Caption         =   "Toång(N)"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   6960
-         TabIndex        =   72
-         Top             =   240
-         Width           =   750
-      End
       Begin VB.Label Label39 
          AutoSize        =   -1  'True
          Caption         =   "Baùnh sau(N)"
@@ -1696,7 +1623,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   4320
-         TabIndex        =   71
+         TabIndex        =   68
          Top             =   240
          Width           =   1125
       End
@@ -1714,7 +1641,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   1800
-         TabIndex        =   70
+         TabIndex        =   67
          Top             =   240
          Width           =   1290
       End
@@ -1731,7 +1658,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   480
-         TabIndex        =   69
+         TabIndex        =   66
          Top             =   645
          Width           =   60
       End
@@ -1750,7 +1677,7 @@ Begin VB.Form FrmMain
       ForeColor       =   &H00FF0000&
       Height          =   1215
       Left            =   10560
-      TabIndex        =   19
+      TabIndex        =   16
       Top             =   1920
       Width           =   9255
       Begin VB.TextBox TxtWeightSum 
@@ -1768,7 +1695,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   6960
-         TabIndex        =   5
+         TabIndex        =   4
          Top             =   600
          Width           =   1935
       End
@@ -1787,7 +1714,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   4320
-         TabIndex        =   4
+         TabIndex        =   3
          Top             =   600
          Width           =   1935
       End
@@ -1806,7 +1733,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   1800
-         TabIndex        =   3
+         TabIndex        =   2
          Top             =   600
          Width           =   1935
       End
@@ -1824,7 +1751,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   6960
-         TabIndex        =   75
+         TabIndex        =   71
          Top             =   240
          Width           =   810
       End
@@ -1842,7 +1769,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   4320
-         TabIndex        =   74
+         TabIndex        =   70
          Top             =   240
          Width           =   1245
       End
@@ -1860,7 +1787,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   1800
-         TabIndex        =   73
+         TabIndex        =   69
          Top             =   240
          Width           =   1410
       End
@@ -1879,7 +1806,7 @@ Begin VB.Form FrmMain
       ForeColor       =   &H00FF0000&
       Height          =   1215
       Left            =   10560
-      TabIndex        =   15
+      TabIndex        =   14
       Top             =   4500
       Width           =   9255
       Begin VB.TextBox TxtHLHighInt 
@@ -1897,7 +1824,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   1800
-         TabIndex        =   8
+         TabIndex        =   7
          Top             =   600
          Width           =   1935
       End
@@ -1916,7 +1843,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   4200
-         TabIndex        =   9
+         TabIndex        =   8
          Top             =   600
          Width           =   1935
       End
@@ -1935,7 +1862,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   6840
-         TabIndex        =   10
+         TabIndex        =   9
          Top             =   600
          Width           =   1935
       End
@@ -1953,7 +1880,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   4200
-         TabIndex        =   93
+         TabIndex        =   89
          Top             =   240
          Width           =   1980
       End
@@ -1971,7 +1898,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   6840
-         TabIndex        =   78
+         TabIndex        =   74
          Top             =   240
          Width           =   1920
       End
@@ -1988,7 +1915,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   0
-         TabIndex        =   77
+         TabIndex        =   73
          Top             =   1560
          Width           =   2055
       End
@@ -2006,7 +1933,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   1800
-         TabIndex        =   76
+         TabIndex        =   72
          Top             =   240
          Width           =   1650
       End
@@ -2025,13 +1952,13 @@ Begin VB.Form FrmMain
       ForeColor       =   &H00FF0000&
       Height          =   3255
       Left            =   240
-      TabIndex        =   21
+      TabIndex        =   18
       Top             =   8880
       Width           =   4935
       Begin MSComctlLib.TabStrip TabSearch 
          Height          =   2775
          Left            =   120
-         TabIndex        =   34
+         TabIndex        =   31
          Top             =   360
          Width           =   4575
          _ExtentX        =   8070
@@ -2090,7 +2017,7 @@ Begin VB.Form FrmMain
       ForeColor       =   &H000000FF&
       Height          =   1455
       Left            =   240
-      TabIndex        =   100
+      TabIndex        =   96
       Top             =   360
       Width           =   19591
       Begin VB.Label Label64 
@@ -2106,7 +2033,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   16200
-         TabIndex        =   107
+         TabIndex        =   103
          Top             =   225
          Width           =   675
       End
@@ -2123,7 +2050,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   11760
-         TabIndex        =   106
+         TabIndex        =   102
          Top             =   225
          Width           =   1050
       End
@@ -2141,7 +2068,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   7680
-         TabIndex        =   105
+         TabIndex        =   101
          Top             =   240
          Width           =   855
       End
@@ -2159,7 +2086,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   3480
-         TabIndex        =   103
+         TabIndex        =   99
          Top             =   240
          Width           =   675
       End
@@ -2177,7 +2104,7 @@ Begin VB.Form FrmMain
       EndProperty
       Height          =   375
       Left            =   0
-      TabIndex        =   104
+      TabIndex        =   100
       Top             =   0
       Width           =   1095
    End
@@ -2194,7 +2121,7 @@ Begin VB.Form FrmMain
       EndProperty
       Height          =   255
       Left            =   0
-      TabIndex        =   102
+      TabIndex        =   98
       Top             =   0
       Width           =   1215
    End
@@ -2211,7 +2138,7 @@ Begin VB.Form FrmMain
       EndProperty
       Height          =   255
       Left            =   0
-      TabIndex        =   101
+      TabIndex        =   97
       Top             =   0
       Width           =   1215
    End
@@ -2229,7 +2156,7 @@ Begin VB.Form FrmMain
       EndProperty
       Height          =   240
       Left            =   0
-      TabIndex        =   92
+      TabIndex        =   88
       Top             =   0
       Width           =   1605
    End
@@ -2247,7 +2174,7 @@ Begin VB.Form FrmMain
       EndProperty
       Height          =   240
       Left            =   0
-      TabIndex        =   91
+      TabIndex        =   87
       Top             =   0
       Width           =   1605
    End
@@ -2338,8 +2265,8 @@ Dim SpeedMin As Integer
 Dim SpeedMax As Integer
 Dim BrakeFrontMin As Integer
 Dim BrakeRearMin As Integer
-Dim BrakeRearMax As Integer
 Dim BrakeFrontMax As Integer
+Dim BrakeRearMax As Integer
 Dim NoiseMax As Integer
 Dim BuzzerMin As Integer
 Dim BuzzerMax As Integer
@@ -2386,13 +2313,22 @@ Updateparameter:
 'DatCheckingParameter.Recordset.MovePrevious
 SpeedMin = DatCheckingParameter.Recordset.Fields(1).Value
 SpeedMax = DatCheckingParameter.Recordset.Fields(2).Value
-NoiseMax = DatCheckingParameter.Recordset.Fields(9).Value
-BuzzerMin = DatCheckingParameter.Recordset.Fields(10).Value
-BuzzerMax = DatCheckingParameter.Recordset.Fields(11).Value
-AlignMin = DatCheckingParameter.Recordset.Fields(12).Value
-AlignMax = DatCheckingParameter.Recordset.Fields(13).Value
-HCMax = DatCheckingParameter.Recordset.Fields(14).Value
-COMax = DatCheckingParameter.Recordset.Fields(15).Value
+BrakeFrontMin = DatCheckingParameter.Recordset.Fields(3).Value
+BrakeRearMin = DatCheckingParameter.Recordset.Fields(4).Value
+BrakeFrontMax = DatCheckingParameter.Recordset.Fields(5).Value
+BrakeRearMax = DatCheckingParameter.Recordset.Fields(6).Value
+NoiseMax = DatCheckingParameter.Recordset.Fields(7).Value
+BuzzerMin = DatCheckingParameter.Recordset.Fields(8).Value
+BuzzerMax = DatCheckingParameter.Recordset.Fields(9).Value
+AlignMin = DatCheckingParameter.Recordset.Fields(10).Value
+HCMax = DatCheckingParameter.Recordset.Fields(11).Value
+COMax = DatCheckingParameter.Recordset.Fields(12).Value
+HLHighIntMin = DatCheckingParameter.Recordset.Fields(13).Value
+HLHighLRMin = DatCheckingParameter.Recordset.Fields(14).Value
+HLHighLRMax = DatCheckingParameter.Recordset.Fields(15).Value
+HLHighUDMin = DatCheckingParameter.Recordset.Fields(16).Value
+HLHighUDMax = DatCheckingParameter.Recordset.Fields(17).Value
+
 
 CheckAll
 NoName:
@@ -2416,141 +2352,64 @@ CmdName.Enabled = EnableBit
 CmdTester.Enabled = EnableBit
 CmdCalendarCall.Enabled = EnableBit
 TxtAlign.Enabled = EnableBit
-TxtAlignRear.Enabled = EnableBit
-TxtBrakeFrontDif.Enabled = EnableBit
-TxtBrakeFrontLeft.Enabled = EnableBit
-TxtBrakeFrontLeft.Enabled = EnableBit
-TxtBrakeFrontRight.Enabled = EnableBit
-TxtBrakeFrontSum.Enabled = EnableBit
-TxtBrakeRearDif.Enabled = EnableBit
-TxtBrakeRearLeft.Enabled = EnableBit
-TxtBrakeRearRight.Enabled = EnableBit
-TxtBrakeRearSum.Enabled = EnableBit
-TxtBrakeStopDif.Enabled = EnableBit
-TxtBrakeStopLeft.Enabled = EnableBit
-TxtBrakeStopRight.Enabled = EnableBit
-TxtBrakeStopSum.Enabled = EnableBit
+TxtBrakeFront.Enabled = EnableBit
+TxtBrakeRear.Enabled = EnableBit
 TxtBuzzer.Enabled = EnableBit
 TxtChassisNumber.Enabled = EnableBit
 TxtCO.Enabled = EnableBit
-TxtCO2.Enabled = EnableBit
 TxtDate.Enabled = EnableBit
 TxtEngineNumber.Enabled = EnableBit
 TxtHC.Enabled = EnableBit
-TxtHLHighLeftInt.Enabled = EnableBit
-TxtHLHighLeftLR.Enabled = EnableBit
-TxtHLHighLeftUD.Enabled = EnableBit
-TxtHLHighRightInt.Enabled = EnableBit
-TxtHLHighRightLR.Enabled = EnableBit
-TxtHLHighRightUD.Enabled = EnableBit
+TxtHLHighInt.Enabled = EnableBit
+TxtHLHighLR.Enabled = EnableBit
+TxtHLHighUD.Enabled = EnableBit
 
-TxtHLLowLeftInt.Enabled = EnableBit
-TxtHLLowLeftLR.Enabled = EnableBit
-TxtHLLowLeftUD.Enabled = EnableBit
-TxtHLLowRightInt.Enabled = EnableBit
-TxtHLLowRightLR.Enabled = EnableBit
-TxtHLLowRightUD.Enabled = EnableBit
 
-TxtHSUDiesel1.Enabled = EnableBit
+
 TxtName.Enabled = EnableBit
-TxtNO.Enabled = EnableBit
 TxtNoise.Enabled = EnableBit
-TxtO2.Enabled = EnableBit
 TxtProducedNumber.Enabled = EnableBit
-TxtRPMGasOnline.Enabled = EnableBit
 TxtSpeed.Enabled = EnableBit
-TxtTempGasOnline.Enabled = EnableBit
 TxtTester.Enabled = EnableBit
-TxtWeightFrontLeft.Enabled = EnableBit
-TxtWeightFrontRight.Enabled = EnableBit
-TxtWeightFrontSum.Enabled = EnableBit
-TxtWeightRearLeft.Enabled = EnableBit
-TxtWeightRearRight.Enabled = EnableBit
-TxtWeightRearSum.Enabled = EnableBit
-
-TxtRPMDieselMin1.Enabled = EnableBit
-TxtRPMDieselMin2.Enabled = EnableBit
-TxtRPMDieselMin3.Enabled = EnableBit
-TxtRPMDieselMax1.Enabled = EnableBit
-TxtRPMDieselMax2.Enabled = EnableBit
-TxtRPMDieselMax3.Enabled = EnableBit
-TxtHSUDiesel1.Enabled = EnableBit
-TxtHSUDiesel2.Enabled = EnableBit
-TxtHSUDiesel3.Enabled = EnableBit
+TxtWeightFront.Enabled = EnableBit
+TxtWeightRear.Enabled = EnableBit
+TxtWeightSum.Enabled = EnableBit
 
 
 End Sub
 Private Sub SubDisableAll()
 Dim EnableBit As Boolean
 EnableBit = False
+
 CmdName.Enabled = EnableBit
 CmdTester.Enabled = EnableBit
 CmdCalendarCall.Enabled = EnableBit
-
 TxtAlign.Enabled = EnableBit
-TxtAlignRear.Enabled = EnableBit
-TxtBrakeFrontDif.Enabled = EnableBit
-TxtBrakeFrontLeft.Enabled = EnableBit
-TxtBrakeFrontLeft.Enabled = EnableBit
-TxtBrakeFrontRight.Enabled = EnableBit
-TxtBrakeFrontSum.Enabled = EnableBit
-TxtBrakeRearDif.Enabled = EnableBit
-TxtBrakeRearLeft.Enabled = EnableBit
-TxtBrakeRearRight.Enabled = EnableBit
-TxtBrakeRearSum.Enabled = EnableBit
-TxtBrakeStopDif.Enabled = EnableBit
-TxtBrakeStopLeft.Enabled = EnableBit
-TxtBrakeStopRight.Enabled = EnableBit
-TxtBrakeStopSum.Enabled = EnableBit
+TxtBrakeFront.Enabled = EnableBit
+TxtBrakeRear.Enabled = EnableBit
 TxtBuzzer.Enabled = EnableBit
 TxtChassisNumber.Enabled = EnableBit
 TxtCO.Enabled = EnableBit
-TxtCO2.Enabled = EnableBit
 TxtDate.Enabled = EnableBit
 TxtEngineNumber.Enabled = EnableBit
 TxtHC.Enabled = EnableBit
-
-TxtHLHighLeftInt.Enabled = EnableBit
-TxtHLHighLeftLR.Enabled = EnableBit
-TxtHLHighLeftUD.Enabled = EnableBit
-TxtHLHighRightInt.Enabled = EnableBit
-TxtHLHighRightLR.Enabled = EnableBit
-TxtHLHighRightUD.Enabled = EnableBit
-
-TxtHLLowLeftInt.Enabled = EnableBit
-TxtHLLowLeftLR.Enabled = EnableBit
-TxtHLLowLeftUD.Enabled = EnableBit
-TxtHLLowRightInt.Enabled = EnableBit
-TxtHLLowRightLR.Enabled = EnableBit
-TxtHLLowRightUD.Enabled = EnableBit
+TxtHLHighInt.Enabled = EnableBit
+TxtHLHighLR.Enabled = EnableBit
+TxtHLHighUD.Enabled = EnableBit
 
 
-TxtHSUDiesel1.Enabled = EnableBit
+
 TxtName.Enabled = EnableBit
-TxtNO.Enabled = EnableBit
 TxtNoise.Enabled = EnableBit
-TxtO2.Enabled = EnableBit
 TxtProducedNumber.Enabled = EnableBit
 TxtRPMGasOnline.Enabled = EnableBit
 TxtSpeed.Enabled = EnableBit
 TxtTempGasOnline.Enabled = EnableBit
 TxtTester.Enabled = EnableBit
-TxtWeightFrontLeft.Enabled = EnableBit
-TxtWeightFrontRight.Enabled = EnableBit
-TxtWeightFrontSum.Enabled = EnableBit
-TxtWeightRearLeft.Enabled = EnableBit
-TxtWeightRearRight.Enabled = EnableBit
-TxtWeightRearSum.Enabled = EnableBit
+TxtWeightFront.Enabled = EnableBit
+TxtWeightRear.Enabled = EnableBit
+TxtWeightSum.Enabled = EnableBit
 
-TxtRPMDieselMin1.Enabled = EnableBit
-TxtRPMDieselMin2.Enabled = EnableBit
-TxtRPMDieselMin3.Enabled = EnableBit
-TxtRPMDieselMax1.Enabled = EnableBit
-TxtRPMDieselMax2.Enabled = EnableBit
-TxtRPMDieselMax3.Enabled = EnableBit
-TxtHSUDiesel1.Enabled = EnableBit
-TxtHSUDiesel2.Enabled = EnableBit
-TxtHSUDiesel3.Enabled = EnableBit
 
 End Sub
 
@@ -2566,56 +2425,31 @@ TxtCO.BackColor = ColorGreen
 Else: TxtCO.BackColor = ColorOrange
 End If
 End Sub
-Private Sub CheckCO2()
-If Val(TxtCO2) <= CO2Max Then
-TxtCO2.BackColor = ColorGreen
-Else: TxtCO2.BackColor = ColorOrange
+
+Private Sub CheckBrakeFront()
+If Val(TxtBrakeFront) <= BrakeFrontMax And Val(TxtBrakeFront) >= BrakeFrontMin Then
+TxtBrakeFront.BackColor = ColorGreen
+Else: TxtBrakeFront.BackColor = ColorOrange
 End If
 End Sub
-Private Sub CheckO2()
-If Val(TxtO2) <= O2Max Then
-TxtO2.BackColor = ColorGreen
-Else: TxtO2.BackColor = ColorOrange
+ 
+Private Sub CheckBrakeRear()
+If Val(TxtBrakeRear) <= BrakeRearMax And Val(TxtBrakeRear) >= BrakeRearMin Then
+TxtBrakeRear.BackColor = ColorGreen
+Else: TxtBrakeRear.BackColor = ColorOrange
 End If
 End Sub
-Private Sub CheckNO()
-If Val(TxtNO) <= NOMax Then
-TxtNO.BackColor = ColorGreen
-Else: TxtNO.BackColor = ColorOrange
+
+Private Sub CheckHLHighInt()
+If Val(TxtHLHighInt) >= HLHighIntMin Then
+TxtHLHighInt.BackColor = ColorGreen
+Else: TxtHLHighInt.BackColor = ColorOrange
 End If
 End Sub
-Private Sub CheckHLHighLeftInt()
+Private Sub CheckHLHighLR()
  
 End Sub
-Private Sub CheckHLHighLeftLR()
- 
-End Sub
-Private Sub CheckHLHighLeftUD()
- 
-End Sub
-Private Sub CheckHLHighRightInt()
- 
-End Sub
-Private Sub CheckHLHighRightLR()
- 
-End Sub
-Private Sub CheckHLHighRightUD()
- 
-End Sub
-
-
-Private Sub CheckHLLowLeftInt()
- 
-End Sub
-
- 
-
-
-
-Private Sub CheckHLLowLeftLR()
-End Sub
- 
-Private Sub CheckHLLowRightInt()
+Private Sub CheckHLHighUD()
  
 End Sub
  
@@ -3667,17 +3501,11 @@ CheckAlign
 CheckBuzzer
 CheckCO
 CheckHC
-
-CheckHLHighLeftInt
-CheckHLHighLeftLR
-CheckHLHighLeftUD
-CheckHLHighRightInt
-CheckHLHighRightLR
-CheckHLHighRightUD
-
-CheckHLLowLeftInt
-CheckHLLowLeftLR
-CheckHLLowRightInt
+CheckBrakeFront
+CheckBrakeRear
+CheckHLHighInt
+CheckHLHighLR
+CheckHLHighUD
 CheckNoise
 CheckSpeed
 End Sub
@@ -3686,9 +3514,7 @@ Private Sub TxtAlign_Change()
 CheckAlign
 End Sub
 
-Private Sub TxtBrakeFrontDif_Change()
-CheckBrakeFrontDif
-End Sub
+ 
 
 Private Sub TxtBrakeFrontLeft_KeyUp(KeyCode As Integer, Shift As Integer)
 CalBrakeFrontSum
@@ -3739,6 +3565,14 @@ Private Sub TxtBrakeStopSum_Change()
 CheckBrakeStopSum
 End Sub
 
+Private Sub TxtBrakeFront_Change()
+CheckBrakeFront
+End Sub
+
+Private Sub TxtBrakeRear_Change()
+CheckBrakeRear
+End Sub
+
 Private Sub TxtBuzzer_Change()
 CheckBuzzer
 End Sub
@@ -3746,71 +3580,21 @@ End Sub
 Private Sub TxtCO_Change()
 CheckCO
 End Sub
-
  
-
 Private Sub TxtHC_Change()
 CheckHC
 End Sub
 
- 
-Private Sub TxtHLHighLeftInt_Change()
-CheckHLHighLeftInt
+Private Sub TxtHLHighInt_Change()
+CheckHLHighInt
 End Sub
 
-Private Sub TxtHLHighLeftLR_Change()
-CheckHLHighLeftLR
+Private Sub TxtHLHighLR_Change()
+CheckHLHighLR
 End Sub
 
-Private Sub TxtHLHighLeftUD_Change()
-CheckHLHighLeftUD
-End Sub
-
-Private Sub TxtHLHighRightInt_Change()
-CheckHLHighRightInt
-End Sub
-
-Private Sub TxtHLHighRightLR_Change()
-CheckHLHighRightLR
-End Sub
-
-Private Sub TxtHLHighRightUD_Change()
-CheckHLHighRightUD
-End Sub
-
-Private Sub TxtHLLowLeftInt_Change()
-CheckHLLowLeftInt
-End Sub
-
-Private Sub TxtHLLowLeftLR_Change()
-CheckHLLowLeftLR
-End Sub
-
-Private Sub TxtHLLowLeftUD_Change()
-CheckHLLowLeftUD
-End Sub
-
-Private Sub TxtHLLowRightInt_Change()
-CheckHLLowRightInt
-End Sub
-
-Private Sub TxtHLLowRightLR_Change()
-CheckHLLowRightLR
-End Sub
-
-Private Sub TxtHLLowRightUD_Change()
-CheckHLLowRightUD
-End Sub
-
-Private Sub TxtHSUDiesel_Change()
-CheckHSUDiesel
-End Sub
-
-
- 
-
-Private Sub TxtNO_Change()
-CheckNO
+Private Sub TxtHLHighUD_Change()
+CheckHLHighUD
 End Sub
 
 Private Sub TxtNoise_Change()
