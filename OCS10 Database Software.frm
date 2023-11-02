@@ -19,21 +19,376 @@ Begin VB.Form FrmMain
    ScaleWidth      =   23030.3
    StartUpPosition =   2  'CenterScreen
    WindowState     =   2  'Maximized
-   Begin VB.TextBox TxtType 
-      DataField       =   "Type"
-      DataSource      =   "DatTestingParameter"
-      Height          =   375
-      Left            =   16440
-      TabIndex        =   176
-      Text            =   "Type"
-      Top             =   12720
-      Visible         =   0   'False
-      Width           =   1095
+   Begin VB.Frame Frame2 
+      Caption         =   "Khí xaû -  Ñoäng cô xaêng"
+      BeginProperty Font 
+         Name            =   "VNI-Centur"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00FF0000&
+      Height          =   1455
+      Left            =   5520
+      TabIndex        =   16
+      Top             =   8400
+      Width           =   4695
+      Begin VB.TextBox TxtCO 
+         DataField       =   "CO"
+         DataSource      =   "DatTestingParameter"
+         Enabled         =   0   'False
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   375
+         Left            =   1680
+         TabIndex        =   7
+         Top             =   840
+         Width           =   2175
+      End
+      Begin VB.TextBox TxtHC 
+         DataField       =   "HC"
+         DataSource      =   "DatTestingParameter"
+         Enabled         =   0   'False
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   375
+         Left            =   1680
+         TabIndex        =   6
+         Top             =   360
+         Width           =   2175
+      End
+      Begin VB.Label Label15 
+         AutoSize        =   -1  'True
+         Caption         =   "CO:"
+         BeginProperty Font 
+            Name            =   "VNI-Centur"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Left            =   240
+         TabIndex        =   98
+         Top             =   892
+         Width           =   345
+      End
+      Begin VB.Label Label14 
+         AutoSize        =   -1  'True
+         Caption         =   "HC:"
+         BeginProperty Font 
+            Name            =   "VNI-Centur"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Left            =   240
+         TabIndex        =   97
+         Top             =   412
+         Width           =   360
+      End
+      Begin VB.Label Label25 
+         AutoSize        =   -1  'True
+         Caption         =   "%"
+         BeginProperty Font 
+            Name            =   "VNI-Centur"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Left            =   3960
+         TabIndex        =   18
+         Top             =   885
+         Width           =   165
+      End
+      Begin VB.Label Label24 
+         AutoSize        =   -1  'True
+         Caption         =   "ppm"
+         BeginProperty Font 
+            Name            =   "VNI-Centur"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Left            =   3960
+         TabIndex        =   17
+         Top             =   405
+         Width           =   420
+      End
+   End
+   Begin VB.Frame Frame12 
+      Caption         =   "Toác ñoä - Tröôït ngang- AÂm thanh"
+      BeginProperty Font 
+         Name            =   "VNI-Centur"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00FF0000&
+      Height          =   2655
+      Left            =   5520
+      TabIndex        =   28
+      Top             =   5460
+      Width           =   4695
+      Begin VB.TextBox TxtBuzzer 
+         DataField       =   "Buzzer"
+         DataSource      =   "DatTestingParameter"
+         Enabled         =   0   'False
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   375
+         Left            =   1680
+         TabIndex        =   14
+         Top             =   1920
+         Width           =   2175
+      End
+      Begin VB.TextBox TxtNoise 
+         DataField       =   "Noise"
+         DataSource      =   "DatTestingParameter"
+         Enabled         =   0   'False
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   375
+         Left            =   1680
+         TabIndex        =   13
+         Top             =   1400
+         Width           =   2175
+      End
+      Begin VB.TextBox TxtAlign 
+         DataField       =   "Align"
+         DataSource      =   "DatTestingParameter"
+         Enabled         =   0   'False
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   375
+         Left            =   1680
+         TabIndex        =   12
+         Top             =   880
+         Width           =   2175
+      End
+      Begin VB.TextBox TxtSpeed 
+         DataField       =   "Speed"
+         DataSource      =   "DatTestingParameter"
+         Enabled         =   0   'False
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   375
+         Left            =   1680
+         TabIndex        =   11
+         Top             =   360
+         Width           =   2175
+      End
+      Begin VB.Label Label51 
+         AutoSize        =   -1  'True
+         Caption         =   "Coøi :"
+         BeginProperty Font 
+            Name            =   "VNI-Centur"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Left            =   240
+         TabIndex        =   96
+         Top             =   1965
+         Width           =   420
+      End
+      Begin VB.Label Label50 
+         AutoSize        =   -1  'True
+         Caption         =   "Ñoä oàn :"
+         BeginProperty Font 
+            Name            =   "VNI-Centur"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Left            =   240
+         TabIndex        =   95
+         Top             =   1446
+         Width           =   660
+      End
+      Begin VB.Label Label49 
+         AutoSize        =   -1  'True
+         Caption         =   "Tröôït ngang T:"
+         BeginProperty Font 
+            Name            =   "VNI-Centur"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Left            =   240
+         TabIndex        =   94
+         Top             =   929
+         Width           =   1380
+      End
+      Begin VB.Label Label48 
+         AutoSize        =   -1  'True
+         Caption         =   "Toác ñoä :"
+         BeginProperty Font 
+            Name            =   "VNI-Centur"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Left            =   240
+         TabIndex        =   93
+         Top             =   412
+         Width           =   735
+      End
+      Begin VB.Label Label82 
+         AutoSize        =   -1  'True
+         Caption         =   "dB"
+         BeginProperty Font 
+            Name            =   "VNI-Centur"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Left            =   3960
+         TabIndex        =   32
+         Top             =   1965
+         Width           =   255
+      End
+      Begin VB.Label Label81 
+         AutoSize        =   -1  'True
+         Caption         =   "dB"
+         BeginProperty Font 
+            Name            =   "VNI-Centur"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Left            =   3960
+         TabIndex        =   31
+         Top             =   1445
+         Width           =   255
+      End
+      Begin VB.Label Label80 
+         AutoSize        =   -1  'True
+         Caption         =   "m/Km"
+         BeginProperty Font 
+            Name            =   "VNI-Centur"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Left            =   3960
+         TabIndex        =   30
+         Top             =   925
+         Width           =   570
+      End
+      Begin VB.Label Label79 
+         AutoSize        =   -1  'True
+         Caption         =   "Km/h"
+         BeginProperty Font 
+            Name            =   "VNI-Centur"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   270
+         Left            =   3960
+         TabIndex        =   29
+         Top             =   405
+         Width           =   510
+      End
    End
    Begin MSACAL.Calendar cldFromDate 
       Height          =   3375
       Left            =   360
-      TabIndex        =   71
+      TabIndex        =   60
       Top             =   8640
       Visible         =   0   'False
       Width           =   3615
@@ -90,7 +445,7 @@ Begin VB.Form FrmMain
    Begin MSACAL.Calendar cldToDate 
       Height          =   3495
       Left            =   4080
-      TabIndex        =   72
+      TabIndex        =   61
       Top             =   8520
       Visible         =   0   'False
       Width           =   3615
@@ -144,235 +499,10 @@ Begin VB.Form FrmMain
          Strikethrough   =   0   'False
       EndProperty
    End
-   Begin VB.Frame Frame8 
-      Caption         =   "Khí xaû - Ñoäng cô Diesel"
-      BeginProperty Font 
-         Name            =   "VNI-Centur"
-         Size            =   9.75
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      ForeColor       =   &H00FF0000&
-      Height          =   2535
-      Left            =   10560
-      TabIndex        =   31
-      Top             =   9600
-      Width           =   9255
-      Begin VB.TextBox TxtHSUDiesel3 
-         DataField       =   "HSUDiesel3"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         Height          =   375
-         Left            =   6840
-         TabIndex        =   110
-         Top             =   1680
-         Width           =   1935
-      End
-      Begin VB.TextBox TxtRPMDieselMax3 
-         DataField       =   "RPMDieselMax3"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         Height          =   405
-         Left            =   4200
-         TabIndex        =   109
-         Top             =   1680
-         Width           =   1935
-      End
-      Begin VB.TextBox TxtRPMDieselMin3 
-         DataField       =   "RPMDieselMin3"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         Height          =   405
-         Left            =   1800
-         TabIndex        =   108
-         Top             =   1680
-         Width           =   1935
-      End
-      Begin VB.TextBox TxtHSUDiesel2 
-         DataField       =   "HSUDiesel2"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         Height          =   375
-         Left            =   6840
-         TabIndex        =   107
-         Top             =   1200
-         Width           =   1935
-      End
-      Begin VB.TextBox TxtRPMDieselMax2 
-         DataField       =   "RPMDieselMax2"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         Height          =   405
-         Left            =   4200
-         TabIndex        =   106
-         Top             =   1200
-         Width           =   1935
-      End
-      Begin VB.TextBox TxtRPMDieselMin2 
-         DataField       =   "RPMDieselMin2"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         Height          =   375
-         Left            =   1800
-         TabIndex        =   105
-         Top             =   1200
-         Width           =   1935
-      End
-      Begin VB.TextBox TxtRPMDieselMax1 
-         DataField       =   "RPMDieselMax1"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         Height          =   375
-         Left            =   4200
-         TabIndex        =   104
-         Top             =   720
-         Width           =   1935
-      End
-      Begin VB.TextBox TxtRPMDieselMin1 
-         DataField       =   "RPMDieselMin1"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         Height          =   375
-         Left            =   1800
-         TabIndex        =   103
-         Top             =   720
-         Width           =   1935
-      End
-      Begin VB.TextBox TxtHSUDiesel1 
-         DataField       =   "HSUDiesel1"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   6840
-         TabIndex        =   17
-         Top             =   720
-         Width           =   1935
-      End
-      Begin VB.Label Label13 
-         AutoSize        =   -1  'True
-         Caption         =   "HSU"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   6840
-         TabIndex        =   158
-         Top             =   375
-         Width           =   450
-      End
-      Begin VB.Label Label12 
-         AutoSize        =   -1  'True
-         Caption         =   "Toác ñoä Max"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   4200
-         TabIndex        =   150
-         Top             =   375
-         Width           =   1065
-      End
-      Begin VB.Label Label10 
-         AutoSize        =   -1  'True
-         Caption         =   "Toác ñoä Min"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   1800
-         TabIndex        =   149
-         Top             =   375
-         Width           =   1035
-      End
-      Begin VB.Label Label22 
-         AutoSize        =   -1  'True
-         Caption         =   "Laàn 3:"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   480
-         TabIndex        =   148
-         Top             =   1680
-         Width           =   585
-      End
-      Begin VB.Label Label21 
-         AutoSize        =   -1  'True
-         Caption         =   "Laàn 2:"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   480
-         TabIndex        =   147
-         Top             =   1200
-         Width           =   585
-      End
-      Begin VB.Label Label20 
-         AutoSize        =   -1  'True
-         Caption         =   "Laàn 1:"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   480
-         TabIndex        =   146
-         Top             =   720
-         Width           =   585
-      End
-   End
    Begin MSACAL.Calendar cldDate 
       Height          =   3735
       Left            =   7200
-      TabIndex        =   49
+      TabIndex        =   38
       Top             =   5160
       Visible         =   0   'False
       Width           =   3495
@@ -426,286 +556,6 @@ Begin VB.Form FrmMain
          Strikethrough   =   0   'False
       EndProperty
    End
-   Begin VB.Frame Frame12 
-      Caption         =   "Toác ñoä - Tröôït ngang- AÂm thanh"
-      BeginProperty Font 
-         Name            =   "VNI-Centur"
-         Size            =   9.75
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      ForeColor       =   &H00FF0000&
-      Height          =   2775
-      Left            =   5520
-      TabIndex        =   39
-      Top             =   5460
-      Width           =   4695
-      Begin VB.TextBox TxtAlignRear 
-         DataField       =   "AlignRear"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         Height          =   375
-         Left            =   1680
-         TabIndex        =   111
-         Top             =   1320
-         Width           =   2175
-      End
-      Begin VB.TextBox TxtBuzzer 
-         DataField       =   "Buzzer"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   1680
-         TabIndex        =   21
-         Top             =   2280
-         Width           =   2175
-      End
-      Begin VB.TextBox TxtNoise 
-         DataField       =   "Noise"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   1680
-         TabIndex        =   20
-         Top             =   1800
-         Width           =   2175
-      End
-      Begin VB.TextBox TxtAlign 
-         DataField       =   "Align"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   1680
-         TabIndex        =   19
-         Top             =   840
-         Width           =   2175
-      End
-      Begin VB.TextBox TxtSpeed 
-         DataField       =   "Speed"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   1680
-         TabIndex        =   18
-         Top             =   360
-         Width           =   2175
-      End
-      Begin VB.Label Label51 
-         AutoSize        =   -1  'True
-         Caption         =   "Coøi :"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   240
-         TabIndex        =   141
-         Top             =   2332
-         Width           =   420
-      End
-      Begin VB.Label Label50 
-         AutoSize        =   -1  'True
-         Caption         =   "Ñoä oàn :"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   240
-         TabIndex        =   140
-         Top             =   1852
-         Width           =   660
-      End
-      Begin VB.Label Label34 
-         AutoSize        =   -1  'True
-         Caption         =   "Tröôït ngang S:"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   240
-         TabIndex        =   139
-         Top             =   1372
-         Width           =   1365
-      End
-      Begin VB.Label Label49 
-         AutoSize        =   -1  'True
-         Caption         =   "Tröôït ngang T:"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   240
-         TabIndex        =   138
-         Top             =   892
-         Width           =   1380
-      End
-      Begin VB.Label Label48 
-         AutoSize        =   -1  'True
-         Caption         =   "Toác ñoä :"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   240
-         TabIndex        =   137
-         Top             =   412
-         Width           =   735
-      End
-      Begin MSForms.Label Label37 
-         Height          =   270
-         Left            =   3960
-         TabIndex        =   112
-         Top             =   1365
-         Width           =   585
-         VariousPropertyBits=   276824091
-         Caption         =   "m/Km"
-         Size            =   "1032;476"
-         FontName        =   "VNI-Centur"
-         FontHeight      =   195
-         FontCharSet     =   0
-         FontPitchAndFamily=   2
-      End
-      Begin VB.Label Label82 
-         AutoSize        =   -1  'True
-         Caption         =   "dB"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   3960
-         TabIndex        =   43
-         Top             =   2325
-         Width           =   255
-      End
-      Begin VB.Label Label81 
-         AutoSize        =   -1  'True
-         Caption         =   "dB"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   3960
-         TabIndex        =   42
-         Top             =   1845
-         Width           =   255
-      End
-      Begin VB.Label Label80 
-         AutoSize        =   -1  'True
-         Caption         =   "m/Km"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   3960
-         TabIndex        =   41
-         Top             =   885
-         Width           =   570
-      End
-      Begin VB.Label Label79 
-         AutoSize        =   -1  'True
-         Caption         =   "Km/h"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   3960
-         TabIndex        =   40
-         Top             =   405
-         Width           =   510
-      End
-   End
    Begin MSComDlg.CommonDialog CommonDialog2 
       Left            =   9480
       Top             =   12480
@@ -728,7 +578,7 @@ Begin VB.Form FrmMain
       ForeColor       =   &H000000FF&
       Height          =   420
       Left            =   16440
-      TabIndex        =   167
+      TabIndex        =   107
       Top             =   960
       Width           =   3015
    End
@@ -747,7 +597,7 @@ Begin VB.Form FrmMain
       ForeColor       =   &H000000FF&
       Height          =   420
       Left            =   12030
-      TabIndex        =   166
+      TabIndex        =   106
       Top             =   930
       Width           =   3015
    End
@@ -766,7 +616,7 @@ Begin VB.Form FrmMain
       ForeColor       =   &H000000FF&
       Height          =   420
       Left            =   7860
-      TabIndex        =   165
+      TabIndex        =   105
       Top             =   930
       Width           =   3015
    End
@@ -785,7 +635,7 @@ Begin VB.Form FrmMain
       ForeColor       =   &H000000FF&
       Height          =   420
       Left            =   3690
-      TabIndex        =   164
+      TabIndex        =   104
       Top             =   930
       Width           =   3015
    End
@@ -803,7 +653,7 @@ Begin VB.Form FrmMain
       EndProperty
       Height          =   420
       Left            =   480
-      TabIndex        =   163
+      TabIndex        =   103
       Top             =   930
       Width           =   2055
    End
@@ -812,7 +662,7 @@ Begin VB.Form FrmMain
       Left            =   13920
       ScaleHeight     =   420
       ScaleWidth      =   1140
-      TabIndex        =   162
+      TabIndex        =   102
       Top             =   12360
       Visible         =   0   'False
       Width           =   1200
@@ -822,7 +672,7 @@ Begin VB.Form FrmMain
       Height          =   2145
       Index           =   0
       Left            =   480
-      TabIndex        =   57
+      TabIndex        =   46
       Top             =   9720
       Width           =   4260
       Begin VB.TextBox TxtNameSearch 
@@ -837,7 +687,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   120
-         TabIndex        =   61
+         TabIndex        =   50
          Top             =   120
          Width           =   3375
       End
@@ -855,14 +705,14 @@ Begin VB.Form FrmMain
          ItemData        =   "OCS10 Database Software.frx":0442
          Left            =   120
          List            =   "OCS10 Database Software.frx":0444
-         TabIndex        =   58
+         TabIndex        =   47
          Top             =   600
          Width           =   4095
       End
       Begin MSForms.CommandButton CmdNameSearch 
          Height          =   375
          Left            =   3600
-         TabIndex        =   73
+         TabIndex        =   62
          Top             =   120
          Width           =   615
          VariousPropertyBits=   25
@@ -888,10 +738,10 @@ Begin VB.Form FrmMain
          Strikethrough   =   0   'False
       EndProperty
       ForeColor       =   &H00FF0000&
-      Height          =   1695
+      Height          =   1335
       Left            =   10560
-      TabIndex        =   92
-      Top             =   7680
+      TabIndex        =   65
+      Top             =   5880
       Width           =   9255
       Begin VB.TextBox TxtHLLowLeftLR 
          DataField       =   "HLLowLeftLR"
@@ -908,7 +758,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   6840
-         TabIndex        =   98
+         TabIndex        =   68
          Top             =   720
          Width           =   1935
       End
@@ -927,7 +777,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   4200
-         TabIndex        =   97
+         TabIndex        =   67
          Top             =   720
          Width           =   1935
       End
@@ -946,65 +796,8 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   1800
-         TabIndex        =   96
+         TabIndex        =   66
          Top             =   720
-         Width           =   1935
-      End
-      Begin VB.TextBox TxtHLLowRightInt 
-         DataField       =   "HLLowRightInt"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   1800
-         TabIndex        =   95
-         Top             =   1200
-         Width           =   1935
-      End
-      Begin VB.TextBox TxtHLLowRightUD 
-         DataField       =   "HLLowRightUD"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   4200
-         TabIndex        =   94
-         Top             =   1200
-         Width           =   1935
-      End
-      Begin VB.TextBox TxtHLLowRightLR 
-         DataField       =   "HLLowRightLR"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   6840
-         TabIndex        =   93
-         Top             =   1200
          Width           =   1935
       End
       Begin VB.Label Label2 
@@ -1021,27 +814,9 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   480
-         TabIndex        =   130
+         TabIndex        =   86
          Top             =   720
          Width           =   810
-      End
-      Begin VB.Label Label1 
-         AutoSize        =   -1  'True
-         Caption         =   "Beân phaûi:"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   480
-         TabIndex        =   129
-         Top             =   1200
-         Width           =   885
       End
       Begin VB.Label Label3 
          AutoSize        =   -1  'True
@@ -1057,7 +832,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   6840
-         TabIndex        =   126
+         TabIndex        =   85
          Top             =   360
          Width           =   1920
       End
@@ -1075,7 +850,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   4200
-         TabIndex        =   125
+         TabIndex        =   84
          Top             =   360
          Width           =   1980
       End
@@ -1093,7 +868,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   1800
-         TabIndex        =   124
+         TabIndex        =   83
          Top             =   360
          Width           =   1650
       End
@@ -1103,7 +878,7 @@ Begin VB.Form FrmMain
       DataSource      =   "DatTestingParameter"
       Height          =   375
       Left            =   12120
-      TabIndex        =   70
+      TabIndex        =   59
       Text            =   "CurrentID"
       Top             =   12480
       Visible         =   0   'False
@@ -1112,7 +887,7 @@ Begin VB.Form FrmMain
    Begin VB.TextBox txtSqlReport 
       Height          =   405
       Left            =   10680
-      TabIndex        =   69
+      TabIndex        =   58
       Text            =   "SqlToReport"
       Top             =   12600
       Visible         =   0   'False
@@ -1123,7 +898,7 @@ Begin VB.Form FrmMain
       Height          =   2500
       Index           =   4
       Left            =   10200
-      TabIndex        =   65
+      TabIndex        =   54
       Top             =   10080
       Width           =   4359
       Begin VB.ListBox LstAll 
@@ -1140,7 +915,7 @@ Begin VB.Form FrmMain
          ItemData        =   "OCS10 Database Software.frx":0446
          Left            =   120
          List            =   "OCS10 Database Software.frx":0448
-         TabIndex        =   67
+         TabIndex        =   56
          Top             =   600
          Width           =   4095
       End
@@ -1157,7 +932,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   120
-         TabIndex        =   66
+         TabIndex        =   55
          Top             =   120
          Width           =   4095
       End
@@ -1167,7 +942,7 @@ Begin VB.Form FrmMain
       Height          =   2500
       Index           =   3
       Left            =   13200
-      TabIndex        =   52
+      TabIndex        =   41
       Top             =   9960
       Width           =   4359
       Begin VB.ListBox LstDate 
@@ -1184,7 +959,7 @@ Begin VB.Form FrmMain
          ItemData        =   "OCS10 Database Software.frx":044A
          Left            =   120
          List            =   "OCS10 Database Software.frx":044C
-         TabIndex        =   68
+         TabIndex        =   57
          Top             =   600
          Width           =   4095
       End
@@ -1201,7 +976,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   720
-         TabIndex        =   64
+         TabIndex        =   53
          Text            =   "1/1/2012"
          Top             =   120
          Width           =   1455
@@ -1219,7 +994,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   2280
-         TabIndex        =   55
+         TabIndex        =   44
          Top             =   120
          Width           =   495
       End
@@ -1236,7 +1011,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   120
-         TabIndex        =   54
+         TabIndex        =   43
          Top             =   120
          Width           =   495
       End
@@ -1253,7 +1028,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   2880
-         TabIndex        =   53
+         TabIndex        =   42
          Text            =   "12/30/2012"
          Top             =   120
          Width           =   1335
@@ -1264,7 +1039,7 @@ Begin VB.Form FrmMain
       Height          =   2500
       Index           =   1
       Left            =   11640
-      TabIndex        =   51
+      TabIndex        =   40
       Top             =   10560
       Width           =   4359
       Begin VB.TextBox TxtChassisSearch 
@@ -1279,7 +1054,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   120
-         TabIndex        =   63
+         TabIndex        =   52
          Top             =   120
          Width           =   3375
       End
@@ -1297,14 +1072,14 @@ Begin VB.Form FrmMain
          ItemData        =   "OCS10 Database Software.frx":044E
          Left            =   120
          List            =   "OCS10 Database Software.frx":0450
-         TabIndex        =   60
+         TabIndex        =   49
          Top             =   600
          Width           =   4095
       End
       Begin MSForms.CommandButton CmdChassisSearch 
          Height          =   375
          Left            =   3600
-         TabIndex        =   75
+         TabIndex        =   64
          Top             =   120
          Width           =   615
          VariousPropertyBits=   25
@@ -1323,7 +1098,7 @@ Begin VB.Form FrmMain
       Height          =   2500
       Index           =   2
       Left            =   480
-      TabIndex        =   56
+      TabIndex        =   45
       Top             =   3120
       Width           =   4380
       Begin VB.TextBox TxtEngineSearch 
@@ -1338,7 +1113,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   120
-         TabIndex        =   62
+         TabIndex        =   51
          Top             =   120
          Width           =   3375
       End
@@ -1356,14 +1131,14 @@ Begin VB.Form FrmMain
          ItemData        =   "OCS10 Database Software.frx":0452
          Left            =   120
          List            =   "OCS10 Database Software.frx":0454
-         TabIndex        =   59
+         TabIndex        =   48
          Top             =   600
          Width           =   4095
       End
       Begin MSForms.CommandButton CmdEngineSearch 
          Height          =   375
          Left            =   3600
-         TabIndex        =   74
+         TabIndex        =   63
          Top             =   120
          Width           =   615
          VariousPropertyBits=   25
@@ -1391,7 +1166,7 @@ Begin VB.Form FrmMain
       ItemData        =   "OCS10 Database Software.frx":0456
       Left            =   7200
       List            =   "OCS10 Database Software.frx":0458
-      TabIndex        =   50
+      TabIndex        =   39
       Top             =   2640
       Width           =   2535
    End
@@ -1413,7 +1188,7 @@ Begin VB.Form FrmMain
       ItemData        =   "OCS10 Database Software.frx":045A
       Left            =   7200
       List            =   "OCS10 Database Software.frx":045C
-      TabIndex        =   47
+      TabIndex        =   36
       Top             =   3720
       Width           =   2535
    End
@@ -1496,7 +1271,7 @@ Begin VB.Form FrmMain
       Align           =   1  'Align Top
       Height          =   360
       Left            =   0
-      TabIndex        =   44
+      TabIndex        =   33
       Top             =   0
       Width           =   20115
       _ExtentX        =   35481
@@ -1652,7 +1427,7 @@ Begin VB.Form FrmMain
       ForeColor       =   &H00FF0000&
       Height          =   3375
       Left            =   5520
-      TabIndex        =   34
+      TabIndex        =   23
       Top             =   1920
       Width           =   4695
       Begin VB.CommandButton CmdTester 
@@ -1670,7 +1445,7 @@ Begin VB.Form FrmMain
          Height          =   354
          Left            =   3840
          MaskColor       =   &H00FF0000&
-         TabIndex        =   102
+         TabIndex        =   72
          Top             =   1440
          Width           =   375
       End
@@ -1689,7 +1464,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   354
          Left            =   1680
-         TabIndex        =   101
+         TabIndex        =   71
          Top             =   1440
          Width           =   2175
       End
@@ -1708,7 +1483,7 @@ Begin VB.Form FrmMain
          Height          =   375
          Left            =   3840
          MaskColor       =   &H00FF0000&
-         TabIndex        =   100
+         TabIndex        =   70
          Top             =   360
          Width           =   375
       End
@@ -1727,7 +1502,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   1680
-         TabIndex        =   99
+         TabIndex        =   69
          Top             =   360
          Width           =   2175
       End
@@ -1747,7 +1522,7 @@ Begin VB.Form FrmMain
          Height          =   375
          Left            =   3840
          MouseIcon       =   "OCS10 Database Software.frx":1F36
-         TabIndex        =   48
+         TabIndex        =   37
          Top             =   2880
          Width           =   375
       End
@@ -1766,7 +1541,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   1680
-         TabIndex        =   38
+         TabIndex        =   27
          Top             =   2880
          Width           =   2175
       End
@@ -1785,7 +1560,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   1680
-         TabIndex        =   36
+         TabIndex        =   25
          Top             =   1920
          Width           =   2535
       End
@@ -1804,7 +1579,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   1680
-         TabIndex        =   37
+         TabIndex        =   26
          Top             =   2400
          Width           =   2535
       End
@@ -1823,7 +1598,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   1680
-         TabIndex        =   35
+         TabIndex        =   24
          Top             =   960
          Width           =   2535
       End
@@ -1840,7 +1615,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   255
          Left            =   240
-         TabIndex        =   136
+         TabIndex        =   92
          Top             =   2880
          Width           =   1215
       End
@@ -1858,7 +1633,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   135
+         TabIndex        =   91
          Top             =   2400
          Width           =   735
       End
@@ -1876,7 +1651,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   134
+         TabIndex        =   90
          Top             =   1920
          Width           =   1110
       End
@@ -1894,7 +1669,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   133
+         TabIndex        =   89
          Top             =   1440
          Width           =   1005
       End
@@ -1912,7 +1687,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   132
+         TabIndex        =   88
          Top             =   960
          Width           =   915
       End
@@ -1930,7 +1705,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   131
+         TabIndex        =   87
          Top             =   480
          Width           =   735
       End
@@ -1949,7 +1724,7 @@ Begin VB.Form FrmMain
       ForeColor       =   &H00FF0000&
       Height          =   6975
       Left            =   240
-      TabIndex        =   33
+      TabIndex        =   22
       Top             =   1920
       Width           =   4935
       Begin MSDBGrid.DBGrid DBGTestingUpdate 
@@ -1957,7 +1732,7 @@ Begin VB.Form FrmMain
          Height          =   6255
          Left            =   240
          OleObjectBlob   =   "OCS10 Database Software.frx":239A
-         TabIndex        =   46
+         TabIndex        =   35
          Top             =   480
          Width           =   4575
       End
@@ -1974,173 +1749,11 @@ Begin VB.Form FrmMain
          Strikethrough   =   0   'False
       EndProperty
       ForeColor       =   &H00FF0000&
-      Height          =   2175
+      Height          =   1215
       Left            =   10560
-      TabIndex        =   30
-      Top             =   3750
+      TabIndex        =   20
+      Top             =   3150
       Width           =   9255
-      Begin VB.TextBox TxtBrakeStopDif 
-         DataField       =   "BrakeStopDif"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   7680
-         TabIndex        =   85
-         Top             =   1560
-         Width           =   1215
-      End
-      Begin VB.TextBox TxtBrakeStopSum 
-         DataField       =   "BrakeStopSum"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   5640
-         TabIndex        =   84
-         Top             =   1560
-         Width           =   1335
-      End
-      Begin VB.TextBox TxtBrakeStopRight 
-         DataField       =   "BrakeStopRight"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   3840
-         TabIndex        =   83
-         Top             =   1560
-         Width           =   1215
-      End
-      Begin VB.TextBox TxtBrakeStopLeft 
-         DataField       =   "BrakeStopLeft"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   1800
-         TabIndex        =   82
-         Top             =   1560
-         Width           =   1335
-      End
-      Begin VB.TextBox TxtBrakeRearDif 
-         DataField       =   "BrakeRearDif"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   7680
-         TabIndex        =   81
-         Top             =   1080
-         Width           =   1215
-      End
-      Begin VB.TextBox TxtBrakeRearSum 
-         DataField       =   "BrakeRearSum"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   5640
-         TabIndex        =   80
-         Top             =   1080
-         Width           =   1335
-      End
-      Begin VB.TextBox TxtBrakeRearRight 
-         DataField       =   "BrakeRearRight"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   3840
-         TabIndex        =   79
-         Top             =   1080
-         Width           =   1215
-      End
-      Begin VB.TextBox TxtBrakeRearLeft 
-         DataField       =   "BrakeRearLeft"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         Height          =   375
-         Left            =   1800
-         TabIndex        =   78
-         Top             =   1080
-         Width           =   1335
-      End
-      Begin VB.TextBox TxtBrakeFrontDif 
-         DataField       =   "BrakeFrontDif"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   7680
-         TabIndex        =   3
-         Top             =   600
-         Width           =   1215
-      End
       Begin VB.TextBox TxtBrakeFrontSum 
          DataField       =   "BrakeFrontSum"
          DataSource      =   "DatTestingParameter"
@@ -2155,13 +1768,13 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   375
-         Left            =   5640
+         Left            =   6960
          TabIndex        =   2
          Top             =   600
-         Width           =   1335
+         Width           =   1935
       End
-      Begin VB.TextBox TxtBrakeFrontRight 
-         DataField       =   "BrakeFrontRight"
+      Begin VB.TextBox TxtBrakeRear 
+         DataField       =   "BrakeRear"
          DataSource      =   "DatTestingParameter"
          Enabled         =   0   'False
          BeginProperty Font 
@@ -2174,13 +1787,13 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   375
-         Left            =   3840
+         Left            =   4320
          TabIndex        =   1
          Top             =   600
-         Width           =   1215
+         Width           =   2055
       End
-      Begin VB.TextBox TxtBrakeFrontLeft 
-         DataField       =   "BrakeFrontLeft"
+      Begin VB.TextBox TxtBrakeFront 
+         DataField       =   "BrakeFront"
          DataSource      =   "DatTestingParameter"
          Enabled         =   0   'False
          BeginProperty Font 
@@ -2196,25 +1809,7 @@ Begin VB.Form FrmMain
          Left            =   1800
          TabIndex        =   0
          Top             =   600
-         Width           =   1335
-      End
-      Begin VB.Label Label41 
-         AutoSize        =   -1  'True
-         Caption         =   "Sai leäch(%)"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   7680
-         TabIndex        =   117
-         Top             =   240
-         Width           =   1005
+         Width           =   1935
       End
       Begin VB.Label Label40 
          AutoSize        =   -1  'True
@@ -2229,14 +1824,14 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   270
-         Left            =   5640
-         TabIndex        =   116
+         Left            =   6960
+         TabIndex        =   76
          Top             =   240
          Width           =   750
       End
       Begin VB.Label Label39 
          AutoSize        =   -1  'True
-         Caption         =   "Beân phaûi(N)"
+         Caption         =   "Baùnh sau(N)"
          BeginProperty Font 
             Name            =   "VNI-Centur"
             Size            =   9.75
@@ -2247,14 +1842,14 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   270
-         Left            =   3840
-         TabIndex        =   115
+         Left            =   4320
+         TabIndex        =   75
          Top             =   240
-         Width           =   1110
+         Width           =   1125
       End
       Begin VB.Label Label38 
          AutoSize        =   -1  'True
-         Caption         =   "Beân traùi(N)"
+         Caption         =   "Baùnh tröôùc(N)"
          BeginProperty Font 
             Name            =   "VNI-Centur"
             Size            =   9.75
@@ -2266,13 +1861,12 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   1800
-         TabIndex        =   114
+         TabIndex        =   74
          Top             =   240
-         Width           =   1035
+         Width           =   1290
       End
       Begin VB.Label Label32 
          AutoSize        =   -1  'True
-         Caption         =   "Baùnh tröôùc:"
          BeginProperty Font 
             Name            =   "VNI-Centur"
             Size            =   9.75
@@ -2284,45 +1878,9 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   480
-         TabIndex        =   113
+         TabIndex        =   73
          Top             =   645
-         Width           =   1065
-      End
-      Begin VB.Label Label85 
-         AutoSize        =   -1  'True
-         Caption         =   "Phanh tay:"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   480
-         TabIndex        =   77
-         Top             =   1605
-         Width           =   1005
-      End
-      Begin VB.Label Label84 
-         AutoSize        =   -1  'True
-         Caption         =   "Baùnh sau:"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   480
-         TabIndex        =   76
-         Top             =   1125
-         Width           =   900
+         Width           =   60
       End
    End
    Begin VB.Frame Frame3 
@@ -2337,13 +1895,13 @@ Begin VB.Form FrmMain
          Strikethrough   =   0   'False
       EndProperty
       ForeColor       =   &H00FF0000&
-      Height          =   1695
+      Height          =   1215
       Left            =   10560
-      TabIndex        =   29
+      TabIndex        =   19
       Top             =   1920
       Width           =   9255
-      Begin VB.TextBox TxtWeightRearSum 
-         DataField       =   "WeightRearSum"
+      Begin VB.TextBox TxtWeightSum 
+         DataField       =   "WeightSum"
          DataSource      =   "DatTestingParameter"
          Enabled         =   0   'False
          BeginProperty Font 
@@ -2357,88 +1915,31 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   6960
-         TabIndex        =   88
-         Top             =   1080
-         Width           =   1935
-      End
-      Begin VB.TextBox TxtWeightRearRight 
-         DataField       =   "WeightRearRight"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   4320
-         TabIndex        =   87
-         Top             =   1080
-         Width           =   1935
-      End
-      Begin VB.TextBox TxtWeightRearLeft 
-         DataField       =   "WeightRearLeft"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   1800
-         TabIndex        =   86
-         Top             =   1080
-         Width           =   1935
-      End
-      Begin VB.TextBox TxtWeightFrontSum 
-         DataField       =   "WeightFrontSum"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   6960
-         TabIndex        =   6
-         Top             =   600
-         Width           =   1935
-      End
-      Begin VB.TextBox TxtWeightFrontRight 
-         DataField       =   "WeightFrontRight"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   4320
          TabIndex        =   5
          Top             =   600
          Width           =   1935
       End
-      Begin VB.TextBox TxtWeightFrontLeft 
-         DataField       =   "WeightFrontLeft"
+      Begin VB.TextBox TxtWeightRear 
+         DataField       =   "WeightRear"
+         DataSource      =   "DatTestingParameter"
+         Enabled         =   0   'False
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   375
+         Left            =   4320
+         TabIndex        =   4
+         Top             =   600
+         Width           =   1935
+      End
+      Begin VB.TextBox TxtWeightFront 
+         DataField       =   "WeightFront"
          DataSource      =   "DatTestingParameter"
          Enabled         =   0   'False
          BeginProperty Font 
@@ -2452,45 +1953,9 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   1800
-         TabIndex        =   4
+         TabIndex        =   3
          Top             =   600
          Width           =   1935
-      End
-      Begin VB.Label Label36 
-         AutoSize        =   -1  'True
-         Caption         =   "Baùnh sau:"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   480
-         TabIndex        =   145
-         Top             =   1125
-         Width           =   900
-      End
-      Begin VB.Label Label35 
-         AutoSize        =   -1  'True
-         Caption         =   "Baùnh tröôùc:"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   480
-         TabIndex        =   144
-         Top             =   645
-         Width           =   1065
       End
       Begin VB.Label Label31 
          AutoSize        =   -1  'True
@@ -2506,13 +1971,13 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   6960
-         TabIndex        =   120
+         TabIndex        =   79
          Top             =   240
          Width           =   810
       End
       Begin VB.Label Label30 
          AutoSize        =   -1  'True
-         Caption         =   "Beân phaûi(kg)"
+         Caption         =   "Baùnh sau:(kg)"
          BeginProperty Font 
             Name            =   "VNI-Centur"
             Size            =   9.75
@@ -2524,13 +1989,13 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   4320
-         TabIndex        =   119
+         TabIndex        =   78
          Top             =   240
-         Width           =   1170
+         Width           =   1245
       End
       Begin VB.Label Label29 
          AutoSize        =   -1  'True
-         Caption         =   "Beân traùi(kg)"
+         Caption         =   "Baùnh tröôùc:(kg)"
          BeginProperty Font 
             Name            =   "VNI-Centur"
             Size            =   9.75
@@ -2542,9 +2007,9 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   1800
-         TabIndex        =   118
+         TabIndex        =   77
          Top             =   240
-         Width           =   1095
+         Width           =   1410
       End
    End
    Begin VB.Frame Frame1 
@@ -2559,51 +2024,13 @@ Begin VB.Form FrmMain
          Strikethrough   =   0   'False
       EndProperty
       ForeColor       =   &H00FF0000&
-      Height          =   1575
+      Height          =   1215
       Left            =   10560
-      TabIndex        =   22
-      Top             =   6060
+      TabIndex        =   15
+      Top             =   4500
       Width           =   9255
-      Begin VB.TextBox TxtHLHighRightLR 
-         DataField       =   "HLHighRightLR"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   6840
-         TabIndex        =   91
-         Top             =   1080
-         Width           =   1935
-      End
-      Begin VB.TextBox TxtHLHighRightUD 
-         DataField       =   "HLHighRightUD"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   4200
-         TabIndex        =   90
-         Top             =   1080
-         Width           =   1935
-      End
-      Begin VB.TextBox TxtHLHighRightInt 
-         DataField       =   "HLHighRightInt"
+      Begin VB.TextBox TxtHLHighInt 
+         DataField       =   "HLHighInt"
          DataSource      =   "DatTestingParameter"
          Enabled         =   0   'False
          BeginProperty Font 
@@ -2617,31 +2044,12 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   1800
-         TabIndex        =   89
-         Top             =   1080
-         Width           =   1935
-      End
-      Begin VB.TextBox TxtHLHighLeftInt 
-         DataField       =   "HLHighLeftInt"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   1800
-         TabIndex        =   14
+         TabIndex        =   8
          Top             =   600
          Width           =   1935
       End
-      Begin VB.TextBox TxtHLHighLeftUD 
-         DataField       =   "HLHighLeftUD"
+      Begin VB.TextBox TxtHLHighUD 
+         DataField       =   "HLHighUD"
          DataSource      =   "DatTestingParameter"
          Enabled         =   0   'False
          BeginProperty Font 
@@ -2655,11 +2063,11 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   4200
-         TabIndex        =   15
+         TabIndex        =   9
          Top             =   600
          Width           =   1935
       End
-      Begin VB.TextBox TxtHLHighLeftLR 
+      Begin VB.TextBox TxtHLHighLR 
          DataField       =   "HLHighLeftLR"
          DataSource      =   "DatTestingParameter"
          Enabled         =   0   'False
@@ -2674,7 +2082,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   6840
-         TabIndex        =   16
+         TabIndex        =   10
          Top             =   600
          Width           =   1935
       End
@@ -2692,45 +2100,9 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   4200
-         TabIndex        =   161
+         TabIndex        =   101
          Top             =   240
          Width           =   1980
-      End
-      Begin VB.Label Label11 
-         AutoSize        =   -1  'True
-         Caption         =   "Beân phaûi:"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   480
-         TabIndex        =   128
-         Top             =   1080
-         Width           =   885
-      End
-      Begin VB.Label Label8 
-         AutoSize        =   -1  'True
-         Caption         =   "Beân traùi:"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   480
-         TabIndex        =   127
-         Top             =   600
-         Width           =   810
       End
       Begin VB.Label Label5 
          AutoSize        =   -1  'True
@@ -2746,7 +2118,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   6840
-         TabIndex        =   123
+         TabIndex        =   82
          Top             =   240
          Width           =   1920
       End
@@ -2763,7 +2135,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   0
-         TabIndex        =   122
+         TabIndex        =   81
          Top             =   1560
          Width           =   2055
       End
@@ -2781,7 +2153,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   1800
-         TabIndex        =   121
+         TabIndex        =   80
          Top             =   240
          Width           =   1650
       End
@@ -2800,13 +2172,13 @@ Begin VB.Form FrmMain
       ForeColor       =   &H00FF0000&
       Height          =   3255
       Left            =   240
-      TabIndex        =   32
+      TabIndex        =   21
       Top             =   8880
       Width           =   4935
       Begin MSComctlLib.TabStrip TabSearch 
          Height          =   2775
          Left            =   120
-         TabIndex        =   45
+         TabIndex        =   34
          Top             =   360
          Width           =   4575
          _ExtentX        =   8070
@@ -2865,7 +2237,7 @@ Begin VB.Form FrmMain
       ForeColor       =   &H000000FF&
       Height          =   1455
       Left            =   240
-      TabIndex        =   168
+      TabIndex        =   108
       Top             =   360
       Width           =   19591
       Begin VB.Label Label64 
@@ -2881,7 +2253,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   16200
-         TabIndex        =   175
+         TabIndex        =   115
          Top             =   225
          Width           =   675
       End
@@ -2898,7 +2270,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   11760
-         TabIndex        =   174
+         TabIndex        =   114
          Top             =   225
          Width           =   1050
       End
@@ -2916,7 +2288,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   7680
-         TabIndex        =   173
+         TabIndex        =   113
          Top             =   240
          Width           =   855
       End
@@ -2934,411 +2306,9 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   3480
-         TabIndex        =   171
+         TabIndex        =   111
          Top             =   240
          Width           =   675
-      End
-   End
-   Begin VB.Frame Frame2 
-      Caption         =   "Khí xaû -  Ñoäng cô xaêng"
-      BeginProperty Font 
-         Name            =   "VNI-Centur"
-         Size            =   9.75
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      ForeColor       =   &H00FF0000&
-      Height          =   3735
-      Left            =   5520
-      TabIndex        =   23
-      Top             =   8400
-      Width           =   4695
-      Begin VB.TextBox TxtRPMGasOnline 
-         DataField       =   "RPMGasOnline"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   1680
-         TabIndex        =   13
-         Top             =   3240
-         Width           =   2175
-      End
-      Begin VB.TextBox TxtTempGasOnline 
-         DataField       =   "TempGasOnline"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   1680
-         TabIndex        =   12
-         Top             =   2760
-         Width           =   2175
-      End
-      Begin VB.TextBox TxtNO 
-         DataField       =   "NO"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   1680
-         TabIndex        =   11
-         Top             =   2280
-         Width           =   2175
-      End
-      Begin VB.TextBox TxtO2 
-         DataField       =   "O2"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   1680
-         TabIndex        =   10
-         Top             =   1800
-         Width           =   2175
-      End
-      Begin VB.TextBox TxtCO2 
-         DataField       =   "CO2"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   1680
-         TabIndex        =   9
-         Top             =   1320
-         Width           =   2175
-      End
-      Begin VB.TextBox TxtCO 
-         DataField       =   "CO"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   1680
-         TabIndex        =   8
-         Top             =   840
-         Width           =   2175
-      End
-      Begin VB.TextBox TxtHC 
-         DataField       =   "HC"
-         DataSource      =   "DatTestingParameter"
-         Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   1680
-         TabIndex        =   7
-         Top             =   360
-         Width           =   2175
-      End
-      Begin VB.Label Label52 
-         AutoSize        =   -1  'True
-         Caption         =   "RPM"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   240
-         TabIndex        =   157
-         Top             =   3292
-         Width           =   450
-      End
-      Begin VB.Label Label33 
-         Caption         =   "Oil Temp"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   375
-         Left            =   240
-         TabIndex        =   156
-         Top             =   2760
-         Width           =   975
-      End
-      Begin VB.Label Label18 
-         AutoSize        =   -1  'True
-         Caption         =   "NO:"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   240
-         TabIndex        =   155
-         Top             =   2332
-         Width           =   375
-      End
-      Begin VB.Label Label17 
-         AutoSize        =   -1  'True
-         Caption         =   "O2:"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   240
-         TabIndex        =   154
-         Top             =   1852
-         Width           =   315
-      End
-      Begin VB.Label Label16 
-         AutoSize        =   -1  'True
-         Caption         =   "CO2:"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   240
-         TabIndex        =   153
-         Top             =   1372
-         Width           =   450
-      End
-      Begin VB.Label Label15 
-         AutoSize        =   -1  'True
-         Caption         =   "CO:"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   240
-         TabIndex        =   152
-         Top             =   892
-         Width           =   345
-      End
-      Begin VB.Label Label14 
-         AutoSize        =   -1  'True
-         Caption         =   "HC:"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   240
-         TabIndex        =   151
-         Top             =   412
-         Width           =   360
-      End
-      Begin VB.Label Label55 
-         AutoSize        =   -1  'True
-         Caption         =   "vg/phut"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   225
-         Left            =   3960
-         TabIndex        =   143
-         Top             =   3315
-         Width           =   570
-      End
-      Begin VB.Label Label54 
-         AutoSize        =   -1  'True
-         Caption         =   "do C"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   225
-         Left            =   3960
-         TabIndex        =   142
-         Top             =   2835
-         Width           =   360
-      End
-      Begin VB.Label Label28 
-         AutoSize        =   -1  'True
-         Caption         =   "%"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   3960
-         TabIndex        =   28
-         Top             =   2325
-         Width           =   165
-      End
-      Begin VB.Label Label27 
-         AutoSize        =   -1  'True
-         Caption         =   "%"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   3960
-         TabIndex        =   27
-         Top             =   1845
-         Width           =   165
-      End
-      Begin VB.Label Label26 
-         AutoSize        =   -1  'True
-         Caption         =   "%"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   3960
-         TabIndex        =   26
-         Top             =   1365
-         Width           =   165
-      End
-      Begin VB.Label Label25 
-         AutoSize        =   -1  'True
-         Caption         =   "%"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   3960
-         TabIndex        =   25
-         Top             =   885
-         Width           =   165
-      End
-      Begin VB.Label Label24 
-         AutoSize        =   -1  'True
-         Caption         =   "ppm"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   3960
-         TabIndex        =   24
-         Top             =   405
-         Width           =   420
       End
    End
    Begin VB.Label Label62 
@@ -3354,7 +2324,7 @@ Begin VB.Form FrmMain
       EndProperty
       Height          =   375
       Left            =   0
-      TabIndex        =   172
+      TabIndex        =   112
       Top             =   0
       Width           =   1095
    End
@@ -3371,7 +2341,7 @@ Begin VB.Form FrmMain
       EndProperty
       Height          =   255
       Left            =   0
-      TabIndex        =   170
+      TabIndex        =   110
       Top             =   0
       Width           =   1215
    End
@@ -3388,7 +2358,7 @@ Begin VB.Form FrmMain
       EndProperty
       Height          =   255
       Left            =   0
-      TabIndex        =   169
+      TabIndex        =   109
       Top             =   0
       Width           =   1215
    End
@@ -3406,7 +2376,7 @@ Begin VB.Form FrmMain
       EndProperty
       Height          =   240
       Left            =   0
-      TabIndex        =   160
+      TabIndex        =   100
       Top             =   0
       Width           =   1605
    End
@@ -3424,7 +2394,7 @@ Begin VB.Form FrmMain
       EndProperty
       Height          =   240
       Left            =   0
-      TabIndex        =   159
+      TabIndex        =   99
       Top             =   0
       Width           =   1605
    End
@@ -3802,40 +2772,22 @@ Else: TxtNO.BackColor = ColorOrange
 End If
 End Sub
 Private Sub CheckHLHighLeftInt()
-If Val(TxtHLHighLeftInt) >= HLHighIntMin Then
-TxtHLHighLeftInt.BackColor = ColorGreen
-Else: TxtHLHighLeftInt.BackColor = ColorOrange
-End If
+ 
 End Sub
 Private Sub CheckHLHighLeftLR()
-If (Val(TxtHLHighLeftLR) >= HLHighLeftLRMin) And (Val(TxtHLHighLeftLR) <= HLHighLeftLRMax) Then
-TxtHLHighLeftLR.BackColor = ColorGreen
-Else: TxtHLHighLeftLR.BackColor = ColorOrange
-End If
+ 
 End Sub
 Private Sub CheckHLHighLeftUD()
-If (Val(TxtHLHighLeftUD) >= HLHighUDMin) And (Val(TxtHLHighLeftUD) <= HLHighUDMax) Then
-TxtHLHighLeftUD.BackColor = ColorGreen
-Else: TxtHLHighLeftUD.BackColor = ColorOrange
-End If
+ 
 End Sub
 Private Sub CheckHLHighRightInt()
-If Val(TxtHLHighRightInt) >= HLHighIntMin Then
-TxtHLHighRightInt.BackColor = ColorGreen
-Else: TxtHLHighRightInt.BackColor = ColorOrange
-End If
+ 
 End Sub
 Private Sub CheckHLHighRightLR()
-If (Val(TxtHLHighRightLR) >= HLHighRightLRMin) And (Val(TxtHLHighRightLR) <= HLHighRightLRMax) Then
-TxtHLHighRightLR.BackColor = ColorGreen
-Else: TxtHLHighRightLR.BackColor = ColorOrange
-End If
+ 
 End Sub
 Private Sub CheckHLHighRightUD()
-If (Val(TxtHLHighRightUD) >= HLHighUDMin) And (Val(TxtHLHighRightUD) <= HLHighUDMax) Then
-TxtHLHighRightUD.BackColor = ColorGreen
-Else: TxtHLHighRightUD.BackColor = ColorOrange
-End If
+ 
 End Sub
 
 
@@ -3856,38 +2808,12 @@ TxtHLLowLeftLR.BackColor = ColorGreen
 Else: TxtHLLowLeftLR.BackColor = ColorOrange
 End If
 End Sub
-Private Sub CheckHLLowLeftUD()
-If (Val(TxtHLLowLeftUD) >= HLLowUDMin) And (Val(TxtHLLowLeftUD) <= HLLowUDMax) Then
-TxtHLLowLeftUD.BackColor = ColorGreen
-Else: TxtHLLowLeftUD.BackColor = ColorOrange
-End If
-End Sub
+ 
 Private Sub CheckHLLowRightInt()
-If Val(TxtHLLowRightInt) >= HLLowIntMin Then
-TxtHLLowRightInt.BackColor = ColorGreen
-Else: TxtHLLowRightInt.BackColor = ColorOrange
-End If
+ 
 End Sub
-Private Sub CheckHLLowRightLR()
-If (Val(TxtHLLowRightLR) >= HLLowLRMin) And (Val(TxtHLLowRightLR) <= HLLowLRMax) Then
-TxtHLLowRightLR.BackColor = ColorGreen
-Else: TxtHLLowRightLR.BackColor = ColorOrange
-End If
-End Sub
-Private Sub CheckHLLowRightUD()
-If (Val(TxtHLLowRightUD) >= HLLowUDMin) And (Val(TxtHLLowRightUD) <= HLLowUDMax) Then
-TxtHLLowRightUD.BackColor = ColorGreen
-Else: TxtHLLowRightUD.BackColor = ColorOrange
-End If
-End Sub
-
-
-Private Sub CheckHSUDiesel()
-If Val(TxtHSUDiesel1) < HSUMax Then
-TxtHSUDiesel1.BackColor = ColorGreen
-Else: TxtHSUDiesel1.BackColor = ColorOrange
-End If
-End Sub
+ 
+ 
 Private Sub CheckSpeed()
 If (Val(TxtSpeed) >= SpeedMin) And (Val(TxtSpeed) <= SpeedMax) Then
 TxtSpeed.BackColor = ColorGreen
@@ -3912,42 +2838,7 @@ TxtBuzzer.BackColor = ColorGreen
 Else: TxtBuzzer.BackColor = ColorOrange
 End If
 End Sub
-Private Sub CheckBrakeFrontSum()
-If Val(TxtBrakeFrontSum) < BrakeFrontSumMin Then
-TxtBrakeFrontSum.BackColor = ColorOrange
-Else: TxtBrakeFrontSum.BackColor = ColorGreen
-End If
-End Sub
-Private Sub CheckBrakeRearSum()
-If Val(TxtBrakeRearSum) < BrakeRearSumMin Then
-TxtBrakeRearSum.BackColor = ColorOrange
-Else: TxtBrakeRearSum.BackColor = ColorGreen
-End If
-End Sub
-Private Sub CheckBrakeStopSum()
-If Val(TxtBrakeStopSum) < BrakeStopSumMin Then
-TxtBrakeStopSum.BackColor = ColorOrange
-Else: TxtBrakeStopSum.BackColor = ColorGreen
-End If
-End Sub
-Private Sub CheckBrakeFrontDif()
-If Val(TxtBrakeFrontDif) < BrakeFrontDifMax Then
-TxtBrakeFrontDif.BackColor = ColorGreen
-Else: TxtBrakeFrontDif.BackColor = ColorOrange
-End If
-End Sub
-Private Sub CheckBrakeRearDif()
-If Val(TxtBrakeRearDif) < BrakeRearDifMax Then
-TxtBrakeRearDif.BackColor = ColorGreen
-Else: TxtBrakeRearDif.BackColor = ColorOrange
-End If
-End Sub
-Private Sub CheckBrakeStopDif()
-If Val(TxtBrakeStopDif) < BrakeStopDifMax Then
-TxtBrakeStopDif.BackColor = ColorGreen
-Else: TxtBrakeStopDif.BackColor = ColorOrange
-End If
-End Sub
+  
 
 Private Sub CalBrakeFrontSum()
 Dim BS As Long
@@ -4967,17 +3858,8 @@ End Sub
 
 Private Sub CheckAll()
 CheckAlign
-CheckBrakeFrontDif
-CheckBrakeFrontSum
-CheckBrakeRearDif
-CheckBrakeRearSum
-CheckBrakeStopDif
-CheckBrakeStopSum
-CheckHLHighRightUD
-CheckHLHighRightLR
 CheckBuzzer
 CheckCO
-CheckCO2
 CheckHC
 
 CheckHLHighLeftInt
@@ -4989,16 +3871,8 @@ CheckHLHighRightUD
 
 CheckHLLowLeftInt
 CheckHLLowLeftLR
-CheckHLLowLeftUD
 CheckHLLowRightInt
-CheckHLLowRightLR
-CheckHLLowRightUD
-
-
-'CheckHSUDiesel
-CheckNO
 CheckNoise
-CheckO2
 CheckSpeed
 End Sub
 
@@ -5065,22 +3939,15 @@ End Sub
 
 Private Sub TxtCO_Change()
 CheckCO
-TxtType.Text = "1"
-End Sub
-
-Private Sub TxtCO2_Change()
-CheckCO2
-End Sub
-
-Private Sub TxtHC_Change()
-CheckHC
-TxtType.Text = "0"
 End Sub
 
  
 
+Private Sub TxtHC_Change()
+CheckHC
+End Sub
 
-
+ 
 Private Sub TxtHLHighLeftInt_Change()
 CheckHLHighLeftInt
 End Sub
@@ -5134,17 +4001,7 @@ CheckHSUDiesel
 End Sub
 
 
-Private Sub TxtHSUDiesel1_Change()
-TxtType.Text = "1"
-End Sub
-
-Private Sub TxtHSUDiesel2_Change()
-TxtType.Text = "1"
-End Sub
-
-Private Sub TxtHSUDiesel3_Change()
-TxtType.Text = "1"
-End Sub
+ 
 
 Private Sub TxtNO_Change()
 CheckNO
@@ -5154,41 +4011,10 @@ Private Sub TxtNoise_Change()
 CheckNoise
 End Sub
 
-Private Sub TxtO2_Change()
-CheckO2
-End Sub
-
-
-
-
-
  
 
  
-
-Private Sub TxtRPMDieselMax1_Change()
-TxtType.Text = "1"
-End Sub
-
-Private Sub TxtRPMDieselMax2_Change()
-TxtType.Text = "1"
-End Sub
-
-Private Sub TxtRPMDieselMax3_Change()
-TxtType.Text = "1"
-End Sub
-
-Private Sub TxtRPMDieselMin1_Change()
-TxtType.Text = "1"
-End Sub
-
-Private Sub TxtRPMDieselMin2_Change()
-TxtType.Text = "1"
-End Sub
-
-Private Sub TxtRPMDieselMin3_Change()
-TxtType.Text = "1"
-End Sub
+ 
 
 Private Sub TxtSpeed_Change()
 CheckSpeed
