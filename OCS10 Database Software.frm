@@ -1848,7 +1848,7 @@ Begin VB.Form FrmMain
          Width           =   1935
       End
       Begin VB.TextBox TxtHLHighLR 
-         DataField       =   "HLHighLeftLR"
+         DataField       =   "HLHighLR"
          DataSource      =   "DatTestingParameter"
          Enabled         =   0   'False
          BeginProperty Font 
@@ -2402,9 +2402,7 @@ TxtHLHighUD.Enabled = EnableBit
 TxtName.Enabled = EnableBit
 TxtNoise.Enabled = EnableBit
 TxtProducedNumber.Enabled = EnableBit
-TxtRPMGasOnline.Enabled = EnableBit
 TxtSpeed.Enabled = EnableBit
-TxtTempGasOnline.Enabled = EnableBit
 TxtTester.Enabled = EnableBit
 TxtWeightFront.Enabled = EnableBit
 TxtWeightRear.Enabled = EnableBit
@@ -2447,10 +2445,16 @@ Else: TxtHLHighInt.BackColor = ColorOrange
 End If
 End Sub
 Private Sub CheckHLHighLR()
- 
+If (Val(TxtHLHighLR) >= HLHighLRMin) And (Val(TxtHLHighLR) <= HLHighLRMax) Then
+TxtHLHighLR.BackColor = ColorGreen
+Else: TxtHLHighLR.BackColor = ColorOrange
+End If
 End Sub
 Private Sub CheckHLHighUD()
- 
+If (Val(TxtHLHighUD) >= HLHighUDMin) And (Val(TxtHLHighUD) <= HLHighUDMax) Then
+TxtHLHighUD.BackColor = ColorGreen
+Else: TxtHLHighUD.BackColor = ColorOrange
+End If
 End Sub
  
  
@@ -2479,103 +2483,7 @@ Else: TxtBuzzer.BackColor = ColorOrange
 End If
 End Sub
   
-
-Private Sub CalBrakeFrontSum()
-Dim BS As Long
-Dim a As Long
-Dim b As Long
-a = Val(TxtBrakeFrontLeft)
-b = Val(TxtBrakeFrontRight)
-BS = a + b
-TxtBrakeFrontSum.Text = Str(BS)
-
-End Sub
-Private Sub CalBrakeRearSum()
-Dim BS As Long
-Dim a As Long
-Dim b As Long
-a = Val(TxtBrakeRearLeft)
-b = Val(TxtBrakeRearRight)
-BS = a + b
-TxtBrakeRearSum.Text = Str(BS)
-
-End Sub
-Private Sub CalBrakeStopSum()
-Dim BS As Long
-Dim a As Long
-Dim b As Long
-a = Val(TxtBrakeStopLeft)
-b = Val(TxtBrakeStopRight)
-BS = a + b
-TxtBrakeStopSum.Text = Str(BS)
-
-End Sub
-
-Private Sub CalWeightFrontSum()
-Dim WS As Long
-Dim a As Long
-Dim b As Long
-a = Val(TxtWeightFrontLeft)
-b = Val(TxtWeightFrontRight)
-WS = a + b
-TxtWeightFrontSum.Text = Str(WS)
-End Sub
-
-Private Sub CalWeightRearSum()
-Dim WS As Long
-Dim a As Long
-Dim b As Long
-a = Val(TxtWeightRearLeft)
-b = Val(TxtWeightRearRight)
-WS = a + b
-TxtWeightRearSum.Text = Str(WS)
-End Sub
-
-Private Sub CalBrakeFrontDif()
-Dim BD As Double
-Dim a As Long
-Dim b As Long
-a = Val(TxtBrakeFrontLeft)
-b = Val(TxtBrakeFrontRight)
-If (a >= b) And (a <> 0) Then
-BD = (a - b) / a * 100
-ElseIf ((b >= a) And (b <> 0)) Then BD = (b - a) / b * 100
-Else: BD = BD
-End If
-BD = FormatNumber(BD, 2, True, True, True)
-TxtBrakeFrontDif.Text = Str(BD)
-End Sub
-
-Private Sub CalBrakeRearDif()
-Dim BD As Double
-Dim a As Long
-Dim b As Long
-a = Val(TxtBrakeRearLeft)
-b = Val(TxtBrakeRearRight)
-If (a >= b) And (a <> 0) Then
-BD = (a - b) / a * 100
-ElseIf ((b >= a) And (b <> 0)) Then BD = (b - a) / b * 100
-Else: BD = BD
-End If
-BD = FormatNumber(BD, 2, True, True, True)
-TxtBrakeRearDif.Text = Str(BD)
-End Sub
-
-Private Sub CalBrakeStopDif()
-Dim BD As Double
-Dim a As Long
-Dim b As Long
-a = Val(TxtBrakeStopLeft)
-b = Val(TxtBrakeStopRight)
-If (a >= b) And (a <> 0) Then
-BD = (a - b) / a * 100
-ElseIf ((b >= a) And (b <> 0)) Then BD = (b - a) / b * 100
-Else: BD = BD
-End If
-BD = FormatNumber(BD, 2, True, True, True)
-TxtBrakeStopDif.Text = Str(BD)
-End Sub
-
+ 
 Private Sub btnSelectTest_Click()
 Dim connect As New ADODB.Connection
 Dim RST As New ADODB.Recordset
@@ -3393,14 +3301,6 @@ TbrMain.Buttons(3).Enabled = True
 TbrMain.Buttons(5).Enabled = True
 LstName.Visible = False
 LstTester.Visible = False
-CalBrakeFrontDif
-CalBrakeFrontSum
-CalBrakeRearDif
-CalBrakeRearSum
-CalBrakeStopDif
-CalBrakeStopSum
-CalWeightFrontSum
-CalWeightRearSum
 
 SubDisableAll
 On Error GoTo ErrHandling
