@@ -88,7 +88,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   98
+         TabIndex        =   97
          Top             =   892
          Width           =   345
       End
@@ -106,7 +106,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   97
+         TabIndex        =   96
          Top             =   412
          Width           =   360
       End
@@ -254,7 +254,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   96
+         TabIndex        =   95
          Top             =   1965
          Width           =   420
       End
@@ -272,7 +272,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   95
+         TabIndex        =   94
          Top             =   1446
          Width           =   660
       End
@@ -290,7 +290,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   94
+         TabIndex        =   93
          Top             =   929
          Width           =   1380
       End
@@ -308,7 +308,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   93
+         TabIndex        =   92
          Top             =   412
          Width           =   735
       End
@@ -578,7 +578,7 @@ Begin VB.Form FrmMain
       ForeColor       =   &H000000FF&
       Height          =   420
       Left            =   16440
-      TabIndex        =   107
+      TabIndex        =   106
       Top             =   960
       Width           =   3015
    End
@@ -597,7 +597,7 @@ Begin VB.Form FrmMain
       ForeColor       =   &H000000FF&
       Height          =   420
       Left            =   12030
-      TabIndex        =   106
+      TabIndex        =   105
       Top             =   930
       Width           =   3015
    End
@@ -616,7 +616,7 @@ Begin VB.Form FrmMain
       ForeColor       =   &H000000FF&
       Height          =   420
       Left            =   7860
-      TabIndex        =   105
+      TabIndex        =   104
       Top             =   930
       Width           =   3015
    End
@@ -635,7 +635,7 @@ Begin VB.Form FrmMain
       ForeColor       =   &H000000FF&
       Height          =   420
       Left            =   3690
-      TabIndex        =   104
+      TabIndex        =   103
       Top             =   930
       Width           =   3015
    End
@@ -653,7 +653,7 @@ Begin VB.Form FrmMain
       EndProperty
       Height          =   420
       Left            =   480
-      TabIndex        =   103
+      TabIndex        =   102
       Top             =   930
       Width           =   2055
    End
@@ -662,7 +662,7 @@ Begin VB.Form FrmMain
       Left            =   13920
       ScaleHeight     =   420
       ScaleWidth      =   1140
-      TabIndex        =   102
+      TabIndex        =   101
       Top             =   12360
       Visible         =   0   'False
       Width           =   1200
@@ -799,24 +799,6 @@ Begin VB.Form FrmMain
          TabIndex        =   66
          Top             =   720
          Width           =   1935
-      End
-      Begin VB.Label Label2 
-         AutoSize        =   -1  'True
-         Caption         =   "Beân traùi:"
-         BeginProperty Font 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   270
-         Left            =   480
-         TabIndex        =   86
-         Top             =   720
-         Width           =   810
       End
       Begin VB.Label Label3 
          AutoSize        =   -1  'True
@@ -1615,7 +1597,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   255
          Left            =   240
-         TabIndex        =   92
+         TabIndex        =   91
          Top             =   2880
          Width           =   1215
       End
@@ -1633,7 +1615,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   91
+         TabIndex        =   90
          Top             =   2400
          Width           =   735
       End
@@ -1651,7 +1633,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   90
+         TabIndex        =   89
          Top             =   1920
          Width           =   1110
       End
@@ -1669,7 +1651,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   89
+         TabIndex        =   88
          Top             =   1440
          Width           =   1005
       End
@@ -1687,7 +1669,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   88
+         TabIndex        =   87
          Top             =   960
          Width           =   915
       End
@@ -1705,7 +1687,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   240
-         TabIndex        =   87
+         TabIndex        =   86
          Top             =   480
          Width           =   735
       End
@@ -2100,7 +2082,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   4200
-         TabIndex        =   101
+         TabIndex        =   100
          Top             =   240
          Width           =   1980
       End
@@ -2237,7 +2219,7 @@ Begin VB.Form FrmMain
       ForeColor       =   &H000000FF&
       Height          =   1455
       Left            =   240
-      TabIndex        =   108
+      TabIndex        =   107
       Top             =   360
       Width           =   19591
       Begin VB.Label Label64 
@@ -2253,7 +2235,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   16200
-         TabIndex        =   115
+         TabIndex        =   114
          Top             =   225
          Width           =   675
       End
@@ -2270,7 +2252,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   11760
-         TabIndex        =   114
+         TabIndex        =   113
          Top             =   225
          Width           =   1050
       End
@@ -2288,7 +2270,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   7680
-         TabIndex        =   113
+         TabIndex        =   112
          Top             =   240
          Width           =   855
       End
@@ -2306,7 +2288,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   270
          Left            =   3480
-         TabIndex        =   111
+         TabIndex        =   110
          Top             =   240
          Width           =   675
       End
@@ -2324,7 +2306,7 @@ Begin VB.Form FrmMain
       EndProperty
       Height          =   375
       Left            =   0
-      TabIndex        =   112
+      TabIndex        =   111
       Top             =   0
       Width           =   1095
    End
@@ -2341,7 +2323,7 @@ Begin VB.Form FrmMain
       EndProperty
       Height          =   255
       Left            =   0
-      TabIndex        =   110
+      TabIndex        =   109
       Top             =   0
       Width           =   1215
    End
@@ -2358,7 +2340,7 @@ Begin VB.Form FrmMain
       EndProperty
       Height          =   255
       Left            =   0
-      TabIndex        =   109
+      TabIndex        =   108
       Top             =   0
       Width           =   1215
    End
@@ -2376,7 +2358,7 @@ Begin VB.Form FrmMain
       EndProperty
       Height          =   240
       Left            =   0
-      TabIndex        =   100
+      TabIndex        =   99
       Top             =   0
       Width           =   1605
    End
@@ -2394,7 +2376,7 @@ Begin VB.Form FrmMain
       EndProperty
       Height          =   240
       Left            =   0
-      TabIndex        =   99
+      TabIndex        =   98
       Top             =   0
       Width           =   1605
    End
@@ -2483,12 +2465,10 @@ Dim RowCount As Integer
 ' initialize Checking Valve
 Dim SpeedMin As Integer
 Dim SpeedMax As Integer
-Dim BrakeFrontSumMin As Integer
-Dim BrakeRearSumMin As Integer
-Dim BrakeStopSumMin As Integer
-Dim BrakeFrontDifMax As Integer
-Dim BrakeRearDifMax As Integer
-Dim BrakeStopDifMax As Integer
+Dim BrakeFrontMin As Integer
+Dim BrakeRearMin As Integer
+Dim BrakeRearMax As Integer
+Dim BrakeFrontMax As Integer
 Dim NoiseMax As Integer
 Dim BuzzerMin As Integer
 Dim BuzzerMax As Integer
@@ -2496,26 +2476,13 @@ Dim AlignMin As Integer
 Dim AlignMax As Integer
 Dim HCMax As Integer
 Dim COMax As Integer
-Dim CO2Max As Integer
-Dim O2Max As Integer
-Dim NOMax As Integer
-Dim HSUMax As Integer
-Dim HeSoDieselMax As Integer
 
 Dim HLHighIntMin As Integer
-Dim HLHighLeftLRMin As Integer
-Dim HLHighLeftLRMax As Integer
-
-Dim HLHighRightLRMin As Integer
-Dim HLHighRightLRMax As Integer
+Dim HLHighLRMin As Integer
+Dim HLHighLRMax As Integer
+ 
 Dim HLHighUDMin As Integer
 Dim HLHighUDMax As Integer
-
-Dim HLLowIntMin As Integer
-Dim HLLowLRMin As Integer
-Dim HLLowLRMax As Integer
-Dim HLLowUDMin As Integer
-Dim HLLowUDMax As Integer
 
 
 '----------------------Khoi tao gia tri checking Parameter -----------
@@ -2548,12 +2515,6 @@ Updateparameter:
 'DatCheckingParameter.Recordset.MovePrevious
 SpeedMin = DatCheckingParameter.Recordset.Fields(1).Value
 SpeedMax = DatCheckingParameter.Recordset.Fields(2).Value
-BrakeFrontSumMin = DatCheckingParameter.Recordset.Fields(3).Value
-BrakeRearSumMin = DatCheckingParameter.Recordset.Fields(4).Value
-BrakeStopSumMin = DatCheckingParameter.Recordset.Fields(5).Value
-BrakeFrontDifMax = DatCheckingParameter.Recordset.Fields(6).Value
-BrakeRearDifMax = DatCheckingParameter.Recordset.Fields(7).Value
-BrakeStopDifMax = DatCheckingParameter.Recordset.Fields(8).Value
 NoiseMax = DatCheckingParameter.Recordset.Fields(9).Value
 BuzzerMin = DatCheckingParameter.Recordset.Fields(10).Value
 BuzzerMax = DatCheckingParameter.Recordset.Fields(11).Value
@@ -2561,25 +2522,6 @@ AlignMin = DatCheckingParameter.Recordset.Fields(12).Value
 AlignMax = DatCheckingParameter.Recordset.Fields(13).Value
 HCMax = DatCheckingParameter.Recordset.Fields(14).Value
 COMax = DatCheckingParameter.Recordset.Fields(15).Value
-CO2Max = DatCheckingParameter.Recordset.Fields(16).Value
-O2Max = DatCheckingParameter.Recordset.Fields(17).Value
-NOMax = DatCheckingParameter.Recordset.Fields(18).Value
-HSUMax = DatCheckingParameter.Recordset.Fields(19).Value
-
-HeSoDieselMax = DatCheckingParameter.Recordset.Fields(20).Value
-HLHighIntMin = DatCheckingParameter.Recordset.Fields(21).Value
-HLHighLeftLRMin = DatCheckingParameter.Recordset.Fields(22).Value
-HLHighLeftLRMax = DatCheckingParameter.Recordset.Fields(23).Value
-HLHighRightLRMin = DatCheckingParameter.Recordset.Fields(24).Value
-HLHighRightLRMax = DatCheckingParameter.Recordset.Fields(25).Value
-HLHighUDMin = DatCheckingParameter.Recordset.Fields(26).Value
-HLHighUDMax = DatCheckingParameter.Recordset.Fields(27).Value
-
-HLLowIntMin = DatCheckingParameter.Recordset.Fields(28).Value
-HLLowLRMin = DatCheckingParameter.Recordset.Fields(29).Value
-HLLowLRMax = DatCheckingParameter.Recordset.Fields(30).Value
-HLLowUDMin = DatCheckingParameter.Recordset.Fields(31).Value
-HLLowUDMax = DatCheckingParameter.Recordset.Fields(32).Value
 
 CheckAll
 NoName:
@@ -2792,10 +2734,7 @@ End Sub
 
 
 Private Sub CheckHLLowLeftInt()
-If Val(TxtHLLowLeftInt) >= HLLowIntMin Then
-TxtHLLowLeftInt.BackColor = ColorGreen
-Else: TxtHLLowLeftInt.BackColor = ColorOrange
-End If
+ 
 End Sub
 
  
@@ -2803,10 +2742,6 @@ End Sub
 
 
 Private Sub CheckHLLowLeftLR()
-If (Val(TxtHLLowLeftLR) >= HLLowLRMin) And (Val(TxtHLLowLeftLR) <= HLLowLRMax) Then
-TxtHLLowLeftLR.BackColor = ColorGreen
-Else: TxtHLLowLeftLR.BackColor = ColorOrange
-End If
 End Sub
  
 Private Sub CheckHLLowRightInt()
