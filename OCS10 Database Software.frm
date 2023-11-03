@@ -2324,11 +2324,11 @@ BuzzerMax = DatCheckingParameter.Recordset.Fields(9).Value
 AlignMin = DatCheckingParameter.Recordset.Fields(10).Value
 HCMax = DatCheckingParameter.Recordset.Fields(11).Value
 COMax = DatCheckingParameter.Recordset.Fields(12).Value
-HLHighIntMin = DatCheckingParameter.Recordset.Fields(13).Value
-HLHighLRMin = DatCheckingParameter.Recordset.Fields(14).Value
-HLHighLRMax = DatCheckingParameter.Recordset.Fields(15).Value
-HLHighUDMin = DatCheckingParameter.Recordset.Fields(16).Value
-HLHighUDMax = DatCheckingParameter.Recordset.Fields(17).Value
+'HLHighIntMin = DatCheckingParameter.Recordset.Fields(13).Value
+'HLHighLRMin = DatCheckingParameter.Recordset.Fields(14).Value
+'HLHighLRMax = DatCheckingParameter.Recordset.Fields(15).Value
+'HLHighUDMin = DatCheckingParameter.Recordset.Fields(16).Value
+'HLHighUDMax = DatCheckingParameter.Recordset.Fields(17).Value
 
 
 CheckAll
