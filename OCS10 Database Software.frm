@@ -1734,6 +1734,7 @@ Begin VB.Form FrmMain
          Height          =   375
          Left            =   1800
          TabIndex        =   2
+         Text            =   "4"
          Top             =   600
          Width           =   1935
       End
