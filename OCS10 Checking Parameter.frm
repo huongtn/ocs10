@@ -6,11 +6,11 @@ Begin VB.Form FrmCheckingParameter
    ClientHeight    =   5595
    ClientLeft      =   60
    ClientTop       =   345
-   ClientWidth     =   19080
+   ClientWidth     =   20595
    LinkTopic       =   "Form1"
    ScaleHeight     =   12000
    ScaleMode       =   0  'User
-   ScaleWidth      =   19200
+   ScaleWidth      =   20724.53
    Begin MSDBGrid.DBGrid DBGCheckingUpdate 
       Bindings        =   "OCS10 Checking Parameter.frx":0000
       Height          =   4455
@@ -18,7 +18,7 @@ Begin VB.Form FrmCheckingParameter
       OleObjectBlob   =   "OCS10 Checking Parameter.frx":0023
       TabIndex        =   0
       Top             =   720
-      Width           =   18495
+      Width           =   20130
    End
    Begin VB.Data DatCheckingParameter 
       Caption         =   "Database Checking Parameter"
@@ -93,8 +93,8 @@ Begin VB.Form FrmCheckingParameter
       Left            =   0
       TabIndex        =   1
       Top             =   0
-      Width           =   19080
-      _ExtentX        =   33655
+      Width           =   20595
+      _ExtentX        =   36327
       _ExtentY        =   635
       ButtonWidth     =   1984
       ButtonHeight    =   582
