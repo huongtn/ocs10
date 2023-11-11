@@ -241,7 +241,7 @@ End Sub
 
 Private Sub Form_Load()
 
-DataTester.DatabaseName = FrmMain.DataBaseFolder & "\OCS10_DataBase_97.mdb"
+DataTester.DataBaseName = FrmMain.DataBaseFolder & FrmMain.DataBaseName
 DataTester.RecordSource = "select * from TblTesters  order by ID DESC"
 
 DisableAll

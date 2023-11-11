@@ -107,7 +107,7 @@ Else
     MsgBox ("Chon ten file luu tru")
     Else
     On Error GoTo ErrHandling
-    FileSystem.FileCopy "C:\Program Files\OCS10\OCS10OCS10_DataBase_97.mdb", txtLocation.Text & "\" & txtFileName.Text & ".bak"
+    FileSystem.FileCopy "C:\Program Files\OCS10" & FrmMain.DataBaseName, txtLocation.Text & "\" & txtFileName.Text & ".bak"
     MsgBox "Backup Database Successful!"
     Unload Me
     FrmMain.Show

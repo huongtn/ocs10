@@ -205,7 +205,7 @@ Dim rs As New ADODB.Recordset
 Sub dbconnection()
 If connect.State = 1 Then connect.Close
 If rs.State = 1 Then rs.Close
-connect.Open "Provider=Microsoft.jet.OLEDB.4.0;Data Source=" & FrmMain.DataBaseFolder & "\OCS10_DataBase_97.mdb;Persist Security Info=False"
+connect.Open "Provider=Microsoft.jet.OLEDB.4.0;Data Source=" & FrmMain.DataBaseFolder & FrmMain.DataBaseName & ";Persist Security Info=False"
 End Sub
 Private Sub addTester()
 dbconnection

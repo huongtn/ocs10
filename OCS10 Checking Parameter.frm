@@ -197,7 +197,8 @@ End Sub
 
 Private Sub Form_Load()
 
-DatCheckingParameter.DatabaseName = FrmMain.DataBaseFolder & "\OCS10_DataBase_97.mdb"
+DatCheckingParameter.DataBaseName = FrmMain.DataBaseFolder & FrmMain.DataBaseName
+
 DatCheckingParameter.RecordSource = "select * from TblCheckingParameter"
 
 TbrMain.Buttons(7).Enabled = False

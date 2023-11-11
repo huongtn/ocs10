@@ -6,7 +6,7 @@ Object = "{8E27C92E-1264-101C-8A2F-040224009C02}#7.0#0"; "MSCAL.OCX"
 Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "comdlg32.ocx"
 Begin VB.Form FrmMain 
    BorderStyle     =   0  'None
-   Caption         =   "DBS10 - Database Software  -  Designed by INDUSTRY SOLUTION Co.  -   www.thietbicongnghiep.vn"
+   Caption         =   "MCS02 - Database Software  -  Designed by INDUSTRY SOLUTION Co.  -   www.thietbicongnghiep.vn"
    ClientHeight    =   10980
    ClientLeft      =   45
    ClientTop       =   615
@@ -2235,6 +2235,7 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
 Public DataBaseFolder As String
+Public DataBaseName As String
 Dim ColorGreen As String
 Dim ColorOrange As String
 Private SelectedTab As Integer
@@ -2473,7 +2474,7 @@ Dim RST As New ADODB.Recordset
 
 If connect.State = 1 Then connect.Close
 If RST.State = 1 Then RST.Close
-connect.Open "Provider=Microsoft.jet.OLEDB.4.0;Data Source=" & DataBaseFolder & "\OCS10_DataBase_97.mdb;Persist Security Info=False"
+connect.Open "Provider=Microsoft.jet.OLEDB.4.0;Data Source=" & DataBaseFolder & "\MCS02_DataBase_97.mdb;Persist Security Info=False"
 
 Dim sSQL As String
 sSQL = "Select * From TblTestingParameter Where STT = " & Val(txtCurrentID.Text) & ""
@@ -2638,11 +2639,12 @@ Private Sub Form_Load()
 
 'DataBaseFolder = "\\Master\OCS10"
 DataBaseFolder = App.Path
+DataBaseName = "\MCS02_DataBase_97.mdb"
 txtSqlReport.Text = "SELECT * FROM TblTestingParameter"
-DatTestingParameter.DatabaseName = DataBaseFolder & "\OCS10_DataBase_97.mdb"
+DatTestingParameter.DataBaseName = DataBaseFolder & DataBaseName
 DatTestingParameter.RecordSource = "select * from TblTestingParameter order by STT desc"
 
-DatCheckingParameter.DatabaseName = DataBaseFolder & "\OCS10_DataBase_97.mdb"
+DatCheckingParameter.DataBaseName = DataBaseFolder & DataBaseName
 DatCheckingParameter.RecordSource = "select * from TblCheckingParameter"
 
 
@@ -2686,7 +2688,7 @@ Dim rs_ln As Recordset
     ' Open the database.
     dbname_ln = DataBaseFolder
     If Right$(dbname_ln, 1) <> "\" Then dbname_ln = dbname_ln & "\"
-    dbname_ln = dbname_ln & "OCS10_DataBase_97.mdb"
+    dbname_ln = dbname_ln & DataBaseName
 
     Set db_ln = OpenDatabase(dbname_ln)
     Set rs_ln = db_ln.OpenRecordset( _
@@ -2704,7 +2706,7 @@ Dim rs_ln As Recordset
     db_ln.Close
 
     ' Connect the Data control to the database.
-   DatTestingParameter.DatabaseName = dbname_ln
+   DatTestingParameter.DataBaseName = dbname_ln
 
     ' Select the first choice.
     LstName.ListIndex = 0
@@ -2718,7 +2720,7 @@ Dim rs_ln As Recordset
     ' Open the database.
     dbname_ln = DataBaseFolder
     If Right$(dbname_ln, 1) <> "\" Then dbname_ln = dbname_ln & "\"
-    dbname_ln = dbname_ln & "OCS10_DataBase_97.mdb"
+    dbname_ln = dbname_ln & DataBaseName
 
     Set db_ln = OpenDatabase(dbname_ln)
     Set rs_ln = db_ln.OpenRecordset( _
@@ -2738,7 +2740,7 @@ Dim rs_ln As Recordset
     db_ln.Close
 
     ' Connect the Data control to the database.
-   DatTestingParameter.DatabaseName = dbname_ln
+   DatTestingParameter.DataBaseName = dbname_ln
 
     ' Select the first choice.
     If LstNameSearch.ListCount > 0 Then
@@ -2756,7 +2758,7 @@ Dim rs_ln As Recordset
     ' Open the database.
     dbname_ln = DataBaseFolder
     If Right$(dbname_ln, 1) <> "\" Then dbname_ln = dbname_ln & "\"
-    dbname_ln = dbname_ln & "OCS10_DataBase_97.mdb"
+    dbname_ln = dbname_ln & DataBaseName
 
     Set db_ln = OpenDatabase(dbname_ln)
     Set rs_ln = db_ln.OpenRecordset( _
@@ -2779,7 +2781,7 @@ Dim rs_ln As Recordset
     db_ln.Close
 
     ' Connect the Data control to the database.
-   DatTestingParameter.DatabaseName = dbname_ln
+   DatTestingParameter.DataBaseName = dbname_ln
 
     ' Select the first choice.
      If LstEngineSearch.ListCount > 0 Then
@@ -2796,7 +2798,7 @@ Dim rs_ln As Recordset
     ' Open the database.
     dbname_ln = DataBaseFolder
     If Right$(dbname_ln, 1) <> "\" Then dbname_ln = dbname_ln & "\"
-    dbname_ln = dbname_ln & "OCS10_DataBase_97.mdb"
+    dbname_ln = dbname_ln & DataBaseName
 
     Set db_ln = OpenDatabase(dbname_ln)
     Set rs_ln = db_ln.OpenRecordset( _
@@ -2817,7 +2819,7 @@ Dim rs_ln As Recordset
     db_ln.Close
 
     ' Connect the Data control to the database.
-   DatTestingParameter.DatabaseName = dbname_ln
+   DatTestingParameter.DataBaseName = dbname_ln
  
     ' Select the first choice.
     If LstChassisSearch.ListCount > 0 Then
@@ -2834,7 +2836,7 @@ Dim rs_lt As Recordset
     ' Open the database.
     dbname_lt = DataBaseFolder
     If Right$(dbname_lt, 1) <> "\" Then dbname_lt = dbname_lt & "\"
-    dbname_lt = dbname_lt & "OCS10_DataBase_97.mdb"
+    dbname_lt = dbname_lt & DataBaseName
 
     Set db_lt = OpenDatabase(dbname_lt)
     Set rs_lt = db_lt.OpenRecordset( _
@@ -2852,7 +2854,7 @@ Dim rs_lt As Recordset
     db_lt.Close
 
     ' Connect the Data control to the database.
-   DatTestingParameter.DatabaseName = dbname_lt
+   DatTestingParameter.DataBaseName = dbname_lt
 
     ' Select the first choice.
     LstTester.ListIndex = 0
@@ -2900,7 +2902,7 @@ Function GetPassword() As String
     Dim password As String
     If connect.State = 1 Then connect.Close
     If RST.State = 1 Then RST.Close
-    connect.Open "Provider=Microsoft.jet.OLEDB.4.0;Data Source=" & DataBaseFolder & "\OCS10_DataBase_97.mdb;Persist Security Info=False"
+    connect.Open "Provider=Microsoft.jet.OLEDB.4.0;Data Source=" & DataBaseFolder & "\MCS02_DataBase_97.mdb;Persist Security Info=False"
     
     Dim sSQL As String
     sSQL = "Select * From TblPassword"
@@ -2918,7 +2920,7 @@ Sub SetPassword(newPassword As String)
     Dim password As String
     If connect.State = 1 Then connect.Close
     If RST.State = 1 Then RST.Close
-    connect.Open "Provider=Microsoft.jet.OLEDB.4.0;Data Source=" & DataBaseFolder & "\OCS10_DataBase_97.mdb;Persist Security Info=False"
+    connect.Open "Provider=Microsoft.jet.OLEDB.4.0;Data Source=" & DataBaseFolder & "\MCS02_DataBase_97.mdb;Persist Security Info=False"
     
     Dim sSQL As String
     sSQL = "Select * From TblPassword"
@@ -3047,7 +3049,7 @@ Private Sub LoadSelectVehicle()
     
     If connect.State = 1 Then connect.Close
     If RST.State = 1 Then RST.Close
-    connect.Open "Provider=Microsoft.jet.OLEDB.4.0;Data Source=" & DataBaseFolder & "\OCS10_DataBase_97.mdb;Persist Security Info=False"
+    connect.Open "Provider=Microsoft.jet.OLEDB.4.0;Data Source=" & DataBaseFolder & "\MCS02_DataBase_97.mdb;Persist Security Info=False"
     
     Dim sSQL As String
     sSQL = "Select * From TblTestingParameter ORDER BY SelectedDateTime DESC"
@@ -3482,7 +3484,7 @@ Private Sub TxtNameSearch_Change()
     
     dbname_ln = DataBaseFolder
     If Right$(dbname_ln, 1) <> "\" Then dbname_ln = dbname_ln & "\"
-    dbname_ln = dbname_ln & "OCS10_DataBase_97.mdb"
+    dbname_ln = dbname_ln & DataBaseName
     Set db_ln = OpenDatabase(dbname_ln)
     Set rs_ln = db_ln.OpenRecordset( _
         strSql, _
@@ -3500,7 +3502,7 @@ Private Sub TxtNameSearch_Change()
     
     rs_ln.Close
     db_ln.Close
-    DatTestingParameter.DatabaseName = dbname_ln
+    DatTestingParameter.DataBaseName = dbname_ln
 End Sub
 
 
@@ -3527,7 +3529,7 @@ Private Sub TxtChassisSearch_Change()
     
     dbname_ln = DataBaseFolder
     If Right$(dbname_ln, 1) <> "\" Then dbname_ln = dbname_ln & "\"
-    dbname_ln = dbname_ln & "OCS10_DataBase_97.mdb"
+    dbname_ln = dbname_ln & DataBaseName
     Set db_ln = OpenDatabase(dbname_ln)
     Set rs_ln = db_ln.OpenRecordset( _
         strSql, _
@@ -3545,7 +3547,7 @@ Private Sub TxtChassisSearch_Change()
     
     rs_ln.Close
     db_ln.Close
-    DatTestingParameter.DatabaseName = dbname_ln
+    DatTestingParameter.DataBaseName = dbname_ln
 End Sub
 
 Private Sub TxtEngineSearch_Change()
@@ -3571,7 +3573,7 @@ Private Sub TxtEngineSearch_Change()
     
     dbname_ln = DataBaseFolder
     If Right$(dbname_ln, 1) <> "\" Then dbname_ln = dbname_ln & "\"
-    dbname_ln = dbname_ln & "OCS10_DataBase_97.mdb"
+    dbname_ln = dbname_ln & DataBaseName
     Set db_ln = OpenDatabase(dbname_ln)
     Set rs_ln = db_ln.OpenRecordset( _
         strSql, _
@@ -3589,7 +3591,7 @@ Private Sub TxtEngineSearch_Change()
     
     rs_ln.Close
     db_ln.Close
-    DatTestingParameter.DatabaseName = dbname_ln
+    DatTestingParameter.DataBaseName = dbname_ln
 End Sub
 
 'enter key was pressed in txtNameSearch

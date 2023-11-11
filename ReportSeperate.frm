@@ -66,12 +66,12 @@ Dim Report As New CRAXDRT.Report
 Private Sub Form_Load()
 Dim sqlToReport As String
 sqlToReport = FrmMain.txtSqlReport.Text
-Set myDB = OpenDatabase(FrmMain.DataBaseFolder & "\OCS10_DataBase_97.mdb")
+Set myDB = OpenDatabase(FrmMain.DataBaseFolder & FrmMain.DataBaseName)
 
 Set myRS = myDB.OpenRecordset(sqlToReport)
-Set Report = Appl.OpenReport(".\OCS10Rpt.Rpt")
+Set Report = Appl.OpenReport(".\MCS02Rpt.Rpt")
 
-Report.Database.Tables(1).Location = FrmMain.DataBaseFolder & "\OCS10_DataBase_97.mdb"
+Report.Database.Tables(1).Location = FrmMain.DataBaseFolder & FrmMain.DataBaseName
 
 Report.Database.SetDataSource myRS
 

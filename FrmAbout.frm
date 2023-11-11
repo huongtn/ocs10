@@ -1,6 +1,6 @@
 VERSION 5.00
 Begin VB.Form FrmAbout 
-   Caption         =   "Thong Tin Phan Mem OCS10"
+   Caption         =   "Thong Tin Phan Mem MCS02"
    ClientHeight    =   3780
    ClientLeft      =   120
    ClientTop       =   465
@@ -78,12 +78,12 @@ Begin VB.Form FrmAbout
    End
    Begin VB.Label Label42 
       AutoSize        =   -1  'True
-      Caption         =   "Teân phaàn meàm: CS10"
+      Caption         =   "Teân phaàn meàm: MCS02"
       Height          =   270
       Left            =   1680
       TabIndex        =   0
       Top             =   120
-      Width           =   1995
+      Width           =   2175
    End
 End
 Attribute VB_Name = "FrmAbout"
