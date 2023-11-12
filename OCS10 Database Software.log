@@ -1,12 +1,3 @@
-Line 247: Class MSACAL.Calendar of control cldDate was not a loaded control class.
-Line 497: Class MSForms.Label of control Label37 was not a loaded control class.
-Line 584: Class MSComDlg.CommonDialog of control CommonDialog2 was not a loaded control class.
-Line 695: Class MSACAL.Calendar of control cldToDate was not a loaded control class.
-Line 752: Class MSACAL.Calendar of control cldFromDate was not a loaded control class.
-Line 851: Class MSForms.CommandButton of control CmdNameSearch was not a loaded control class.
-Line 1293: Class MSForms.CommandButton of control CmdChassisSearch was not a loaded control class.
-Line 1352: Class MSForms.CommandButton of control CmdEngineSearch was not a loaded control class.
-Line 1426: Class MSComctlLib.ImageList of control ImageList1 was not a loaded control class.
-Line 1484: Class MSComctlLib.Toolbar of control TbrMain was not a loaded control class.
-Line 1944: Class MSDBGrid.DBGrid of control DBGTestingUpdate was not a loaded control class.
-Line 2795: Class MSComctlLib.TabStrip of control TabSearch was not a loaded control class.
+Line 1734: Property DragIcon in CmdCalendarCall could not be set.
+Line 1955: Property OleObjectBlob in DBGTestingUpdate could not be set.
+Line 1955: Cannot load control DBGTestingUpdate.

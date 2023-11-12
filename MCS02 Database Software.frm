@@ -4,19 +4,19 @@ Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.1#0"; "MSCOMCTL.OCX"
 Object = "{00028C01-0000-0000-0000-000000000046}#1.0#0"; "DBGRID32.OCX"
 Object = "{8E27C92E-1264-101C-8A2F-040224009C02}#7.0#0"; "MSCAL.OCX"
 Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "comdlg32.ocx"
-Begin VB.Form FrmMain 
+Begin VB.Form FrmMainMotor 
    BorderStyle     =   0  'None
    Caption         =   "MCS02 - Database Software  -  Designed by INDUSTRY SOLUTION Co.  -   www.thietbicongnghiep.vn"
-   ClientHeight    =   10980
+   ClientHeight    =   8775
    ClientLeft      =   45
    ClientTop       =   615
-   ClientWidth     =   18645
+   ClientWidth     =   18630
    FillColor       =   &H00808080&
-   Icon            =   "OCS10 Database Software.frx":0000
+   Icon            =   "MCS02 Database Software.frx":0000
    LinkTopic       =   "Form1"
-   ScaleHeight     =   10538.82
+   ScaleHeight     =   8422.419
    ScaleMode       =   0  'User
-   ScaleWidth      =   21347.25
+   ScaleWidth      =   21330.08
    StartUpPosition =   2  'CenterScreen
    WindowState     =   2  'Maximized
    Begin VB.Frame Frame2 
@@ -111,21 +111,21 @@ Begin VB.Form FrmMain
          Width           =   840
       End
    End
-   Begin MSACAL.Calendar cldFromDate 
-      Height          =   3375
-      Left            =   360
-      TabIndex        =   57
-      Top             =   6720
+   Begin MSACAL.Calendar cldDate 
+      Height          =   3735
+      Left            =   7200
+      TabIndex        =   35
+      Top             =   5640
       Visible         =   0   'False
-      Width           =   3615
+      Width           =   3495
       _Version        =   524288
-      _ExtentX        =   6376
-      _ExtentY        =   5953
+      _ExtentX        =   6165
+      _ExtentY        =   6588
       _StockProps     =   1
       BackColor       =   -2147483633
       Year            =   2012
-      Month           =   3
-      Day             =   20
+      Month           =   1
+      Day             =   26
       DayLength       =   1
       MonthLength     =   1
       DayFontColor    =   0
@@ -225,21 +225,21 @@ Begin VB.Form FrmMain
          Strikethrough   =   0   'False
       EndProperty
    End
-   Begin MSACAL.Calendar cldDate 
-      Height          =   3735
-      Left            =   7200
-      TabIndex        =   35
-      Top             =   5640
+   Begin MSACAL.Calendar cldFromDate 
+      Height          =   3375
+      Left            =   360
+      TabIndex        =   57
+      Top             =   6720
       Visible         =   0   'False
-      Width           =   3495
+      Width           =   3615
       _Version        =   524288
-      _ExtentX        =   6165
-      _ExtentY        =   6588
+      _ExtentX        =   6376
+      _ExtentY        =   5953
       _StockProps     =   1
       BackColor       =   -2147483633
       Year            =   2012
-      Month           =   1
-      Day             =   26
+      Month           =   3
+      Day             =   20
       DayLength       =   1
       MonthLength     =   1
       DayFontColor    =   0
@@ -428,9 +428,9 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   1500
-         ItemData        =   "OCS10 Database Software.frx":0442
+         ItemData        =   "MCS02 Database Software.frx":0442
          Left            =   120
-         List            =   "OCS10 Database Software.frx":0444
+         List            =   "MCS02 Database Software.frx":0444
          TabIndex        =   44
          Top             =   600
          Width           =   4095
@@ -491,9 +491,9 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   1500
-         ItemData        =   "OCS10 Database Software.frx":0446
+         ItemData        =   "MCS02 Database Software.frx":0446
          Left            =   120
-         List            =   "OCS10 Database Software.frx":0448
+         List            =   "MCS02 Database Software.frx":0448
          TabIndex        =   53
          Top             =   600
          Width           =   4095
@@ -535,9 +535,9 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   1500
-         ItemData        =   "OCS10 Database Software.frx":044A
+         ItemData        =   "MCS02 Database Software.frx":044A
          Left            =   120
-         List            =   "OCS10 Database Software.frx":044C
+         List            =   "MCS02 Database Software.frx":044C
          TabIndex        =   54
          Top             =   600
          Width           =   4095
@@ -648,9 +648,9 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   1500
-         ItemData        =   "OCS10 Database Software.frx":044E
+         ItemData        =   "MCS02 Database Software.frx":044E
          Left            =   120
-         List            =   "OCS10 Database Software.frx":0450
+         List            =   "MCS02 Database Software.frx":0450
          TabIndex        =   46
          Top             =   600
          Width           =   4095
@@ -707,9 +707,9 @@ Begin VB.Form FrmMain
             Strikethrough   =   0   'False
          EndProperty
          Height          =   1500
-         ItemData        =   "OCS10 Database Software.frx":0452
+         ItemData        =   "MCS02 Database Software.frx":0452
          Left            =   120
-         List            =   "OCS10 Database Software.frx":0454
+         List            =   "MCS02 Database Software.frx":0454
          TabIndex        =   45
          Top             =   600
          Width           =   4095
@@ -731,24 +731,6 @@ Begin VB.Form FrmMain
          ParagraphAlign  =   3
       End
    End
-   Begin VB.ListBox LstName 
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   9.75
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      Height          =   3420
-      ItemData        =   "OCS10 Database Software.frx":0456
-      Left            =   7200
-      List            =   "OCS10 Database Software.frx":0458
-      TabIndex        =   36
-      Top             =   2640
-      Width           =   2535
-   End
    Begin VB.Timer Tmr1 
       Left            =   8520
       Top             =   10200
@@ -764,9 +746,9 @@ Begin VB.Form FrmMain
          Strikethrough   =   0   'False
       EndProperty
       Height          =   3660
-      ItemData        =   "OCS10 Database Software.frx":045A
+      ItemData        =   "MCS02 Database Software.frx":0456
       Left            =   7200
-      List            =   "OCS10 Database Software.frx":045C
+      List            =   "MCS02 Database Software.frx":0458
       TabIndex        =   33
       Top             =   3960
       Width           =   2535
@@ -801,47 +783,47 @@ Begin VB.Form FrmMain
       BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
          NumListImages   =   11
          BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "OCS10 Database Software.frx":045E
+            Picture         =   "MCS02 Database Software.frx":045A
             Key             =   "KeyNew"
          EndProperty
          BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "OCS10 Database Software.frx":0570
+            Picture         =   "MCS02 Database Software.frx":056C
             Key             =   "KeyEdit"
          EndProperty
          BeginProperty ListImage3 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "OCS10 Database Software.frx":0682
+            Picture         =   "MCS02 Database Software.frx":067E
             Key             =   "KeyAbort"
          EndProperty
          BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "OCS10 Database Software.frx":0794
+            Picture         =   "MCS02 Database Software.frx":0790
             Key             =   "KeySave"
          EndProperty
          BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "OCS10 Database Software.frx":08A6
+            Picture         =   "MCS02 Database Software.frx":08A2
             Key             =   "KeyDelete"
          EndProperty
          BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "OCS10 Database Software.frx":09B8
+            Picture         =   "MCS02 Database Software.frx":09B4
             Key             =   "KeyUddate"
          EndProperty
          BeginProperty ListImage7 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "OCS10 Database Software.frx":0ACA
+            Picture         =   "MCS02 Database Software.frx":0AC6
             Key             =   "KeyReport"
          EndProperty
          BeginProperty ListImage8 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "OCS10 Database Software.frx":0BDC
+            Picture         =   "MCS02 Database Software.frx":0BD8
             Key             =   "KeyParameter"
          EndProperty
          BeginProperty ListImage9 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "OCS10 Database Software.frx":0CEE
+            Picture         =   "MCS02 Database Software.frx":0CEA
             Key             =   "KeyExit"
          EndProperty
          BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "OCS10 Database Software.frx":0E00
+            Picture         =   "MCS02 Database Software.frx":0DFC
             Key             =   ""
          EndProperty
          BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "OCS10 Database Software.frx":147A
+            Picture         =   "MCS02 Database Software.frx":1476
             Key             =   ""
          EndProperty
       EndProperty
@@ -852,8 +834,8 @@ Begin VB.Form FrmMain
       Left            =   0
       TabIndex        =   30
       Top             =   0
-      Width           =   18645
-      _ExtentX        =   32888
+      Width           =   18630
+      _ExtentX        =   32861
       _ExtentY        =   635
       ButtonWidth     =   2619
       ButtonHeight    =   582
@@ -1010,10 +992,10 @@ Begin VB.Form FrmMain
       Top             =   1920
       Width           =   4935
       Begin MSDBGrid.DBGrid DBGTestingUpdate 
-         Bindings        =   "OCS10 Database Software.frx":1AF4
+         Bindings        =   "MCS02 Database Software.frx":1AF0
          Height          =   2940
          Left            =   240
-         OleObjectBlob   =   "OCS10 Database Software.frx":1B16
+         OleObjectBlob   =   "MCS02 Database Software.frx":1B12
          TabIndex        =   32
          Top             =   480
          Width           =   4575
@@ -1539,6 +1521,24 @@ Begin VB.Form FrmMain
          Width           =   675
       End
    End
+   Begin VB.ListBox LstName 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   3420
+      ItemData        =   "MCS02 Database Software.frx":24EE
+      Left            =   7200
+      List            =   "MCS02 Database Software.frx":24F0
+      TabIndex        =   36
+      Top             =   2640
+      Width           =   2535
+   End
    Begin VB.Frame Frame11 
       Caption         =   "Thoâng tin chung"
       BeginProperty Font 
@@ -1634,7 +1634,7 @@ Begin VB.Form FrmMain
       End
       Begin VB.CommandButton CmdCalendarCall 
          Caption         =   "..."
-         DragIcon        =   "OCS10 Database Software.frx":24F2
+         DragIcon        =   "MCS02 Database Software.frx":24F2
          Enabled         =   0   'False
          BeginProperty Font 
             Name            =   "MS Sans Serif"
@@ -1647,7 +1647,7 @@ Begin VB.Form FrmMain
          EndProperty
          Height          =   375
          Left            =   3840
-         MouseIcon       =   "OCS10 Database Software.frx":2934
+         MouseIcon       =   "MCS02 Database Software.frx":2934
          TabIndex        =   34
          Top             =   3480
          Width           =   375
@@ -2228,7 +2228,7 @@ Begin VB.Form FrmMain
       End
    End
 End
-Attribute VB_Name = "FrmMain"
+Attribute VB_Name = "FrmMainMotor"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
@@ -3442,21 +3442,7 @@ CheckSpeed
 End Sub
 
 
-Private Sub TxtWeightFrontLeft_KeyUp(KeyCode As Integer, Shift As Integer)
-CalWeightFrontSum
-End Sub
-
-Private Sub TxtWeightFrontRight_KeyUp(KeyCode As Integer, Shift As Integer)
-CalWeightFrontSum
-End Sub
-
-Private Sub TxtWeightRearLeft_KeyUp(KeyCode As Integer, Shift As Integer)
-CalWeightRearSum
-End Sub
-
-Private Sub TxtWeightRearRight_KeyUp(KeyCode As Integer, Shift As Integer)
-CalWeightRearSum
-End Sub
+ 
 
 'Author: Thinh Ga COn
 'Date : 15/03/2012

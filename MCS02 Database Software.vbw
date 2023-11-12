@@ -1,0 +1,12 @@
+FrmMain = 130, 130, 1160, 776, C, 26, 26, 1294, 847, C
+FrmCheckingParameter = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+FrmReportSeperate = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+FrmReportSelected = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+FrmTester = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+FrmBackupDB = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+FrmPassword = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+FrmLogin = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+FrmAbout = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+FrmContactUs = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+FrmAddCar = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+FrmMainMotor = 104, 104, 1134, 750, C, 191, 78, 1286, 908, C
