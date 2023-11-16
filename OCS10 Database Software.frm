@@ -2219,7 +2219,7 @@ Begin VB.Form FrmMain
    Begin VB.Menu MnuHelp 
       Caption         =   "Tro Giup"
       Begin VB.Menu MnuHelpGuide 
-         Caption         =   "Phan Mem OCS10"
+         Caption         =   "Phan Mem MCS02"
       End
       Begin VB.Menu k 
          Caption         =   "-"
@@ -2624,9 +2624,11 @@ End Sub
 
 Private Sub DatTestingParameter_Reposition()
 'Command1_Click
-'InitializeCheckingParameter
+InitializeCheckingParameter
 End Sub
 
+
+ 
 
  
 
