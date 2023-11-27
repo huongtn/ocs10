@@ -2624,7 +2624,7 @@ End Sub
 
 Private Sub DatTestingParameter_Reposition()
 'Command1_Click
-InitializeCheckingParameter
+'InitializeCheckingParameter
 End Sub
 
 
