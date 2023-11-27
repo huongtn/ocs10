@@ -731,7 +731,7 @@ Private Sub CommandButton3_Click()
 End Sub
 
 Private Sub Form_Load()
-DataBaseFolder = "\\Master\OCS10"
+'DataBaseFolder = "\\Master\OCS10"
 'DataBaseFolder = App.Path
 txtSqlReport.Text = "SELECT * FROM TblTestingParameter"
 DatTestingParameter.DatabaseName = DataBaseFolder & "\OCS10_DataBase_97.mdb"
