@@ -2271,6 +2271,7 @@ Dim HLHighUDMax As Integer
 '----------------------Khoi tao gia tri checking Parameter -----------
 
 Private Sub InitializeCheckingParameter()
+On Error GoTo ErrHandler
 '--------------------------------------------------------------------------
 DatCheckingParameter.Recordset.MoveFirst
 
@@ -2319,6 +2320,8 @@ BrakeRearMax = DatCheckingParameter.Recordset.Fields(17).Value
 
 CheckAll
 NoName:
+ErrHandler:
+'MsgBox "Error #" & Err.Number & ": '" & Err.Description & "' from '" & Err.Source & "'"
 End Sub
 
 Private Sub SubErrHandling()
@@ -2624,7 +2627,7 @@ End Sub
 
 Private Sub DatTestingParameter_Reposition()
 'Command1_Click
-'InitializeCheckingParameter
+InitializeCheckingParameter
 End Sub
 
 
