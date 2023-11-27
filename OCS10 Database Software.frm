@@ -1745,8 +1745,100 @@ Begin VB.Form FrmMain
          Width           =   1215
       End
    End
+   Begin VB.Frame Frame10 
+      Caption         =   "Danh saùch xe"
+      BeginProperty Font 
+         Name            =   "VNI-Centur"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00FF0000&
+      Height          =   3615
+      Left            =   240
+      TabIndex        =   40
+      Top             =   1920
+      Width           =   4935
+      Begin MSDBGrid.DBGrid DBGTestingUpdate 
+         Bindings        =   "OCS10 Database Software.frx":2378
+         Height          =   2940
+         Left            =   240
+         OleObjectBlob   =   "OCS10 Database Software.frx":239A
+         TabIndex        =   41
+         Top             =   480
+         Width           =   4575
+      End
+   End
+   Begin VB.Frame Frame9 
+      Caption         =   "Tìm kieám theo"
+      BeginProperty Font 
+         Name            =   "VNI-Centur"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00FF0000&
+      Height          =   3255
+      Left            =   240
+      TabIndex        =   62
+      Top             =   5520
+      Width           =   4935
+      Begin MSComctlLib.TabStrip TabSearch 
+         Height          =   2775
+         Left            =   120
+         TabIndex        =   63
+         Top             =   360
+         Width           =   4575
+         _ExtentX        =   8070
+         _ExtentY        =   4895
+         _Version        =   393216
+         BeginProperty Tabs {1EFB6598-857C-11D1-B16A-00C0F0283628} 
+            NumTabs         =   5
+            BeginProperty Tab1 {1EFB659A-857C-11D1-B16A-00C0F0283628} 
+               Caption         =   "Soá SX"
+               Key             =   "KeyName"
+               ImageVarType    =   2
+            EndProperty
+            BeginProperty Tab2 {1EFB659A-857C-11D1-B16A-00C0F0283628} 
+               Caption         =   "Soá khung"
+               Key             =   "KeyChassisNo"
+               ImageVarType    =   2
+            EndProperty
+            BeginProperty Tab3 {1EFB659A-857C-11D1-B16A-00C0F0283628} 
+               Caption         =   "Soâ maùy"
+               Key             =   "KeyEngineNo"
+               ImageVarType    =   2
+            EndProperty
+            BeginProperty Tab4 {1EFB659A-857C-11D1-B16A-00C0F0283628} 
+               Caption         =   "Ngaøy KT"
+               Key             =   "KeyDate"
+               ImageVarType    =   2
+            EndProperty
+            BeginProperty Tab5 {1EFB659A-857C-11D1-B16A-00C0F0283628} 
+               Caption         =   "Taát caû"
+               Key             =   "KeyAll"
+               ImageVarType    =   2
+            EndProperty
+         EndProperty
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "VNI-Centur"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+      End
+   End
    Begin VB.Frame Frame12 
-      Caption         =   "Toác ñoä - Tröôït ngang- AÂm thanh"
+      Caption         =   "Toác ñoä - Truøng veát - AÂm thanh"
       BeginProperty Font 
          Name            =   "VNI-Centur"
          Size            =   9.75
@@ -1930,7 +2022,7 @@ Begin VB.Form FrmMain
       End
       Begin VB.Label Label49 
          AutoSize        =   -1  'True
-         Caption         =   "Tröôït ngang:"
+         Caption         =   "Truøng veát:"
          BeginProperty Font 
             Name            =   "VNI-Centur"
             Size            =   9.75
@@ -1943,8 +2035,8 @@ Begin VB.Form FrmMain
          Height          =   270
          Left            =   240
          TabIndex        =   92
-         Top             =   972
-         Width           =   1185
+         Top             =   975
+         Width           =   960
       End
       Begin VB.Label Label50 
          AutoSize        =   -1  'True
@@ -1981,98 +2073,6 @@ Begin VB.Form FrmMain
          TabIndex        =   90
          Top             =   2085
          Width           =   420
-      End
-   End
-   Begin VB.Frame Frame10 
-      Caption         =   "Danh saùch xe"
-      BeginProperty Font 
-         Name            =   "VNI-Centur"
-         Size            =   9.75
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      ForeColor       =   &H00FF0000&
-      Height          =   3615
-      Left            =   240
-      TabIndex        =   40
-      Top             =   1920
-      Width           =   4935
-      Begin MSDBGrid.DBGrid DBGTestingUpdate 
-         Bindings        =   "OCS10 Database Software.frx":2378
-         Height          =   2940
-         Left            =   240
-         OleObjectBlob   =   "OCS10 Database Software.frx":239A
-         TabIndex        =   41
-         Top             =   480
-         Width           =   4575
-      End
-   End
-   Begin VB.Frame Frame9 
-      Caption         =   "Tìm kieám theo"
-      BeginProperty Font 
-         Name            =   "VNI-Centur"
-         Size            =   9.75
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      ForeColor       =   &H00FF0000&
-      Height          =   3255
-      Left            =   240
-      TabIndex        =   62
-      Top             =   5520
-      Width           =   4935
-      Begin MSComctlLib.TabStrip TabSearch 
-         Height          =   2775
-         Left            =   120
-         TabIndex        =   63
-         Top             =   360
-         Width           =   4575
-         _ExtentX        =   8070
-         _ExtentY        =   4895
-         _Version        =   393216
-         BeginProperty Tabs {1EFB6598-857C-11D1-B16A-00C0F0283628} 
-            NumTabs         =   5
-            BeginProperty Tab1 {1EFB659A-857C-11D1-B16A-00C0F0283628} 
-               Caption         =   "Soá SX"
-               Key             =   "KeyName"
-               ImageVarType    =   2
-            EndProperty
-            BeginProperty Tab2 {1EFB659A-857C-11D1-B16A-00C0F0283628} 
-               Caption         =   "Soá khung"
-               Key             =   "KeyChassisNo"
-               ImageVarType    =   2
-            EndProperty
-            BeginProperty Tab3 {1EFB659A-857C-11D1-B16A-00C0F0283628} 
-               Caption         =   "Soâ maùy"
-               Key             =   "KeyEngineNo"
-               ImageVarType    =   2
-            EndProperty
-            BeginProperty Tab4 {1EFB659A-857C-11D1-B16A-00C0F0283628} 
-               Caption         =   "Ngaøy KT"
-               Key             =   "KeyDate"
-               ImageVarType    =   2
-            EndProperty
-            BeginProperty Tab5 {1EFB659A-857C-11D1-B16A-00C0F0283628} 
-               Caption         =   "Taát caû"
-               Key             =   "KeyAll"
-               ImageVarType    =   2
-            EndProperty
-         EndProperty
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "VNI-Centur"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
       End
    End
    Begin VB.Label Label53 
